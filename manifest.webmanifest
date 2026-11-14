@@ -1,0 +1,18 @@
+{
+  "name": "FIG Prep — IB Technicals",
+  "short_name": "FIG Prep",
+  "description": "Investment banking technicals and FIG interview prep: flashcards, terminology, equations, drills, error log and progress.",
+  "id": "./",
+  "start_url": "./#/home",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f3f4f6",
+  "theme_color": "#1c5cab",
+  "categories": ["education", "finance", "productivity"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

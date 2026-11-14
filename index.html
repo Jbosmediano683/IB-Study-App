@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>FIG Prep</title>
+    <meta name="description" content="Investment banking technicals and FIG interview prep: flashcards, terminology, equations, math drills, error log and progress tracking. Works offline." />
+    <meta name="theme-color" content="#f3f4f6" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="FIG Prep" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+    <link rel="stylesheet" href="css/app.css" />
+    <script>
+      // Apply a saved light/dark choice before first paint (avoids a flash).
+      try {
+        var t = (JSON.parse(localStorage.getItem('figprep.v1') || '{}').settings || {}).theme;
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <main id="app"></main>
+    <nav class="tabbar" id="tabbar" aria-label="Main"></nav>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <noscript><p style="padding:24px">FIG Prep needs JavaScript turned on.</p></noscript>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

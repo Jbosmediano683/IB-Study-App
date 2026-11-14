@@ -18,6 +18,7 @@
   --series-1: #2a78d6;
   /* ordinal mastery ramp (validated: light-end ≥2:1, ΔL ≥0.06) */
   --ord-track: #cde2fb;
+  --seg-empty: #e1e0d9; /* "not started" = neutral, reads as empty */
   --ord-1: #86b6ef;
   --ord-2: #2a78d6;
   --ord-3: #104281;
@@ -55,6 +56,7 @@
     --link: #86b6ef;
     --series-1: #3987e5;
     --ord-track: #0d366b;
+    --seg-empty: #383835;
     --ord-1: #184f95;
     --ord-2: #3987e5;
     --ord-3: #9ec5f4;
@@ -83,6 +85,7 @@
   --link: #86b6ef;
   --series-1: #3987e5;
   --ord-track: #0d366b;
+  --seg-empty: #383835;
   --ord-1: #184f95;
   --ord-2: #3987e5;
   --ord-3: #9ec5f4;
@@ -1086,7 +1089,7 @@ select:focus {
   background: var(--ord-1);
 }
 .segbar .s-n {
-  background: var(--ord-track);
+  background: var(--seg-empty);
 }
 .legend {
   display: flex;

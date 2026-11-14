@@ -10,6 +10,12 @@
   "background_color": "#f3f4f6",
   "theme_color": "#1c5cab",
   "categories": ["education", "finance", "productivity"],
+  "shortcuts": [
+    { "name": "Quick 10", "short_name": "Quick 10", "url": "./#/go/quick", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Math drill", "short_name": "Drill", "url": "./#/go/drill", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Mock superday", "short_name": "Mock", "url": "./#/go/mock", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Error log", "short_name": "Errors", "url": "./#/errors", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+  ],
   "icons": [
     { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
     { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },

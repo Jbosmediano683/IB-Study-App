@@ -65,7 +65,7 @@ export function segbar(s) {
   return `<div class="segbar" role="img" aria-label="${label}">${part(s.mastered, 's-m')}${part(s.familiar, 's-f')}${part(s.learning, 's-l')}${part(s.new, 's-n')}${total && !s.total ? '<span class="s-n" style="flex:1"></span>' : ''}</div>`;
 }
 export const segLegend = () =>
-  `<div class="legend" aria-hidden="true"><span><i class="sw" style="background:var(--ord-3)"></i>Mastered</span><span><i class="sw" style="background:var(--ord-2)"></i>Familiar</span><span><i class="sw" style="background:var(--ord-1)"></i>Learning</span><span><i class="sw" style="background:var(--ord-track)"></i>Not started</span></div>`;
+  `<div class="legend" aria-hidden="true"><span><i class="sw" style="background:var(--ord-3)"></i>Mastered</span><span><i class="sw" style="background:var(--ord-2)"></i>Familiar</span><span><i class="sw" style="background:var(--ord-1)"></i>Learning</span><span><i class="sw" style="background:var(--seg-empty)"></i>Not started</span></div>`;
 
 export function meter(pctVal, label = '') {
   const p = Math.max(0, Math.min(100, pctVal || 0));
@@ -73,7 +73,7 @@ export function meter(pctVal, label = '') {
 }
 
 const STATUS_LABEL = { new: 'New', learning: 'Learning', familiar: 'Familiar', mastered: 'Mastered' };
-const STATUS_COLOR = { new: 'var(--ord-track)', learning: 'var(--ord-1)', familiar: 'var(--ord-2)', mastered: 'var(--ord-3)' };
+const STATUS_COLOR = { new: 'var(--seg-empty)', learning: 'var(--ord-1)', familiar: 'var(--ord-2)', mastered: 'var(--ord-3)' };
 export function statusTag(id) {
   const st = status(id);
   return `<span class="tag"><i class="dot" style="background:${STATUS_COLOR[st]}"></i>${STATUS_LABEL[st]}</span>`;

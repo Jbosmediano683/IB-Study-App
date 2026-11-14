@@ -122,7 +122,9 @@ export function deckView(tid) {
         topbar(t.name, { back: '#/study', right }) +
         (isMine
           ? empty('note', 'No cards yet', 'Add questions you fumbled in interviews or want to drill. They join your spaced-repetition reviews automatically.', `<a class="btn" href="#/add">${icon('plus', 18)} Add a card</a>`)
-          : empty('cards', 'No cards', 'Turn on “Include advanced cards” in Settings to see more.')),
+          : tid === 'starred'
+            ? empty('star', 'Nothing starred yet', 'Tap ☆ on any flashcard, term or formula to save it here for a focused review.')
+            : empty('cards', 'No cards', 'Turn on “Include advanced cards” in Settings to see more.')),
       tab: 'study',
     };
   }
@@ -281,7 +283,7 @@ export function drillView() {
       body = `<div class="mc">${p.choices.map((c, i) => `<button class="btn plain" data-act="pickDrill" data-i="${i}">${esc(c)}</button>`).join('')}</div>`;
     } else {
       body = `<form class="answer-row" data-submit="checkDrill" autocomplete="off" novalidate>
-        <div class="inp"><input id="drill-in" name="ans" type="text" inputmode="decimal" enterkeyhint="go" placeholder="Your answer" aria-label="Your answer" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"><span class="unit">${esc(UNIT_LABEL[p.unit] || '')}</span></div>
+        <div class="inp"><input id="drill-in" name="ans" type="text" inputmode="decimal" enterkeyhint="go" placeholder="Answer" aria-label="Your answer" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"><span class="unit">${esc(UNIT_LABEL[p.unit] || '')}</span></div>
         ${SIGNED.has(p.type) ? `<button class="btn plain" type="button" data-act="negate" aria-label="Toggle minus sign" style="padding:0 14px">±</button>` : ''}
         <button class="btn" type="submit">Check</button>
       </form>

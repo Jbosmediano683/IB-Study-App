@@ -37,6 +37,7 @@ export const GROUPS = [
   { id: 'mine', name: 'Your cards' },
 ];
 const TOPIC_MAP = Object.fromEntries(TOPICS.map((t) => [t.id, t]));
+TOPIC_MAP.starred = { id: 'starred', name: 'Starred', short: 'Starred', group: 'mine' };
 export const topic = (id) => TOPIC_MAP[id] || { id, name: id, short: id, group: 'core' };
 export const TECH_TOPICS = TOPICS.filter((t) => ['fig', 'core', 'interview'].includes(t.group)).map((t) => t.id);
 export const FIG_TOPICS = TOPICS.filter((t) => t.group === 'fig').map((t) => t.id);

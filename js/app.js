@@ -10,7 +10,17 @@ import { firmsView, firmView, marketView } from './views/firms.js';
 import { errorsView, progressView } from './views/track.js';
 import { settingsView, applyTheme } from './views/settings.js';
 
+// One-tap entry points (home-screen shortcuts): replace the entry so Back returns Home.
+function launch(kind) {
+  history.replaceState(null, '', '#/home');
+  if (kind === 'quick') ACT.quick();
+  else if (kind === 'drill') ACT.drill({ dataset: { cat: 'mix' } });
+  else if (kind === 'mock') ACT.mock();
+  return { redirect: null };
+}
+
 const ROUTES = [
+  [/^\/go\/(quick|drill|mock)$/, (m) => launch(m[1])],
   [/^\/home$/, () => homeView()],
   [/^\/study$/, () => studyView()],
   [/^\/deck\/([^/]+)$/, (m) => deckView(decodeURIComponent(m[1]))],
@@ -84,7 +94,7 @@ function render() {
   if (!view.immersive) renderTabs(view.tab);
   const titleEl = root.querySelector('h1');
   document.title = titleEl && path !== '/home' ? `${titleEl.textContent} · FIG Prep` : 'FIG Prep';
-  if (path !== lastPath && !['/session', '/drill'].includes(path)) window.scrollTo(0, 0);
+  if (path !== lastPath) window.scrollTo(0, 0);
   lastPath = path;
   if (view.mount) cleanup = view.mount(root) || null;
 }

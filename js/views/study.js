@@ -296,7 +296,7 @@ export function drillView() {
   } else {
     const r = d.result;
     body = `<div class="result ${r.ok ? 'ok' : 'bad'}">${icon(r.ok ? 'check' : 'x', 20)}<div>${
-      r.ok ? `Correct — ${esc(fmtAnswer(p))}` : `${r.input != null && r.input !== '' && !r.self ? `You said ${esc(String(r.input))}. ` : ''}Answer: ${esc(fmtAnswer(p))}${r.self ? '' : ' · logged to your error log'}`
+      r.ok ? `Correct — ${esc(fmtAnswer(p))}` : `${r.input != null && r.input !== '' && !r.self ? `You said ${esc(String(r.input))}. ` : ''}Answer: ${esc(fmtAnswer(p))} · logged to your error log`
     }</div></div>
     <div class="solution"><div class="label">How to get there</div><div class="md">${md(p.solution)}</div></div>`;
   }

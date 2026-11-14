@@ -8,7 +8,7 @@ export const FIRMS = [
 
 ## Strategic story
 - **Simplification:** exiting consumer banking in many international markets, removing management layers, and separating Banamex (Mexico consumer) — sold a 25% stake to a Mexican investor in 2025 ahead of a planned IPO (verify timing).
-- **Risk & controls remediation:** operating under 2020 Fed/OCC consent orders on risk management and data; regulators added penalties in 2024 over slow progress on data. Remediation remains a key investor focus (verify current status).
+- **Risk & controls remediation:** operating under 2020 Fed/OCC consent orders on risk management and data; regulators added penalties in 2024 over slow progress on data, and the OCC lifted its July 2024 amendment in Dec 2025 while the 2020 orders remain (verify current status). Remediation remains a key investor focus.
 - **Returns:** the market judges Citi on ROTCE progress vs. management's medium-term targets and on buybacks (check latest guidance).
 - **Banking:** investing to regain investment banking share after leadership changes in 2024.
 
@@ -110,7 +110,8 @@ export const FIRMS = [
 - **UK ring-fencing:** UK retail deposits sit in the ring-fenced bank (Barclays Bank UK PLC), separate from the investment bank (Barclays Bank PLC).
 
 ## Strategic story
-- **February 2024 plan:** Group RoTE >12% in 2026; return ≥£10B to shareholders over 2024–26; ~£2B of gross efficiency savings; rebalance capital so the Investment Bank is ~50% of Group RWAs; grow the UK businesses (check for any updated targets).
+- **Targets (Feb 2026 update — verify):** Group RoTE >12% in 2026 and >14% in 2028; >£15B returned to shareholders over 2026–28; CET1 of 13–14%; >£2B of gross efficiency savings over 2026–28; Investment Bank kept at ~50% of Group RWAs.
+- **Built on the February 2024 plan:** RoTE >12% in 2026, ≥£10B of returns over 2024–26, ~£2B of savings, and rebalancing capital toward the UK businesses.
 - **UK growth:** bought Tesco Bank's retail banking business (completed November 2024).
 - **US IB roots:** acquired Lehman Brothers' North American investment banking and capital markets business in September 2008 — the foundation of its US franchise.
 - **US Consumer Bank:** a US co-brand credit card issuer — in-house consumer finance expertise.
@@ -126,11 +127,11 @@ export const FIRMS = [
 
 ## Likely FIG talking points
 - UK/European topics: ring-fencing, Basel 3.1 in the UK (implementation pushed to January 2027), the AT1 market after Credit Suisse, UK bank consolidation (Nationwide/Virgin Money, Santander/TSB), the UK motor finance commission redress issue (verify Barclays' exposure).
-- Barclays' own targets (RoTE >12% in 2026, capital returns) and the cap on Investment Bank RWAs.
+- Barclays' own targets (RoTE >12% in 2026 and >14% by 2028, capital returns) and the cap on Investment Bank RWAs.
 - US topics: regional bank M&A, private credit, card issuers (Barclays US Consumer Bank's market).
 `, research: [
-    `Read the latest results: Group RoTE vs. the >12% 2026 target, CET1, IB income by business, capital returns`,
-    `Review the February 2024 strategy plan and any later update (divisions, targets, IB RWA share)`,
+    `Read the latest results: Group RoTE vs. the 2026 and 2028 targets, CET1, IB income by business, capital returns`,
+    `Review the Feb 2026 targets update and the Feb 2024 plan it built on (divisions, targets, IB RWA share)`,
     `Find 2–3 recent FIG deals or financings Barclays led (US and Europe)`,
     `Know UK specifics: ring-fencing, Basel 3.1 timing, the AT1 market, UK bank consolidation`,
     `Prepare "Why Barclays" in 3 bullets — transatlantic platform + FIG capital markets`,

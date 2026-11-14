@@ -100,7 +100,7 @@ export default [
 - Brokers are capital-light, generate high free cash flow and have recurring revenue, so they're valued like services businesses: **EV/EBITDA (or EBITDAC)** and **P/E**, not P/BV.
 - Key metrics: **organic revenue growth** (driven by premium rates, exposure growth, new business and retention), **adjusted EBITDAC margin**, M&A contribution and fiduciary investment income (interest on client premiums held in trust).
 - EBITDAC = EBITDA adjusted for changes in acquisition earnout payables.
-- Major players: Marsh McLennan, Aon, WTW, Arthur J. Gallagher, Brown & Brown, plus many PE-backed brokers running roll-up strategies.
+- Major players: Marsh (formerly Marsh McLennan; rebranded 2026), Aon, WTW, Arthur J. Gallagher, Brown & Brown, plus many PE-backed brokers running roll-up strategies.
 - Recent example: Gallagher agreed to acquire AssuredPartners for $13.45B (announced Dec 2024).` },
 
   { id: 'ins-17', t: 'ins', q: `Combined ratio 95%, net investment income equal to 8% of earned premium. What's the operating ratio and pretax margin?`, a: `**Operating ratio = combined ratio − investment income ratio = 95% − 8% = 87%.**
@@ -253,7 +253,7 @@ export default [
 
   { id: 'fin-02', t: 'fin', q: `What is interchange and who earns it?`, a: `**Interchange = the fee the merchant's acquirer pays the cardholder's issuer on each card transaction.** The networks (Visa/Mastercard) set it, not the issuer.
 - US credit interchange is typically ~1.5–2.5% (premium rewards cards at the high end). It funds rewards, fraud losses and the interest-free grace period.
-- **Debit** interchange is lower. For issuers with ≥ $10B in assets, it's capped under the **Durbin Amendment** by Fed Regulation II at 21¢ + 0.05% of the transaction + a 1¢ fraud-prevention adjustment (the 2011 standard). Verify current: a 2025 federal court ruling (Corner Post) found that standard unlawful, appeals followed (reportedly upheld by the Eighth Circuit in Oct 2026), and the Fed's 2023 proposal to lower the cap was not finalized.
+- **Debit** interchange is lower. For issuers with ≥ $10B in assets, it's capped under the **Durbin Amendment** by Fed Regulation II at 21¢ + 0.05% of the transaction + a 1¢ fraud-prevention adjustment (the 2011 standard). Verify current: a 2025 federal court ruling (Corner Post) struck down that standard, the Eighth Circuit affirmed in Oct 2026 (the cap applies until the ruling takes effect or appeals end), and the Fed's 2023 proposal to lower the cap was never finalized.
 - Interchange is the biggest piece of the merchant discount rate, which makes it the target of merchant lawsuits and legislation (e.g., the proposed Credit Card Competition Act).
 - Networks charge their own assessment/scheme fees on top.` },
 

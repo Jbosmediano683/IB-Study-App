@@ -64,7 +64,7 @@ V = E + D + P (market values or target capital structure)`,
 
   { id: 'tv-ggm', cat: 'val', name: 'Terminal value — perpetuity growth (Gordon growth)',
     f: `TV = FCFn × (1 + g) ÷ (WACC − g)`,
-    note: `Value at the end of year n of all cash flows after year n; discount it back n years. g should not exceed long-run nominal GDP growth (~2–3%). In a bank DDM, use dividends and the cost of equity instead.`,
+    note: `Value at the end of year n of all cash flows after year n; discount it back n years. g should not exceed long-run nominal GDP growth (~4% in the U.S.: ~2% real + ~2% inflation); 2–3% is the usual choice. In a bank DDM, use dividends and the cost of equity instead.`,
     ex: `FCF 100, g 2%, WACC 9% → 102 ÷ 0.07 = 1,457.` },
 
   { id: 'tv-exit', cat: 'val', name: 'Terminal value — exit multiple',
@@ -368,7 +368,7 @@ Minimum 4%; 5% to be well capitalized (bank level)`,
 
   { id: 'slr', cat: 'cap', name: 'Supplementary leverage ratio (SLR)',
     f: `SLR = Tier 1 capital ÷ Total leverage exposure (on-balance-sheet + off-balance-sheet)`,
-    note: `Applies to Category I–III banks (3% minimum); US G-SIBs face an enhanced SLR. Regulators moved in 2025 to recalibrate the eSLR to ease Treasury-market intermediation (verify the current rule).` },
+    note: `Applies to Category I–III banks (3% minimum); US G-SIBs face an enhanced SLR. A Nov 2025 final rule (effective Apr 2026) recalibrated the eSLR — holdco buffer = 50% of the G-SIB method 1 surcharge, bank-subsidiary buffer capped at 1% — to ease Treasury-market intermediation (verify current).` },
 
   { id: 'required-cet1', cat: 'cap', name: 'Required CET1 (large US bank)',
     f: `Required CET1 = 4.5% minimum + Stress capital buffer (≥ 2.5%) + G-SIB surcharge (if applicable)`,
@@ -377,7 +377,7 @@ Minimum 4%; 5% to be well capitalized (bank level)`,
 
   { id: 'scb', cat: 'cap', name: 'Stress capital buffer (SCB)',
     f: `SCB = Max(2.5%, Starting CET1 ratio − Minimum projected CET1 ratio + 4 quarters of planned common dividends ÷ RWA)`,
-    note: `Set from the Fed's severely adverse stress test for banks with $100B+ of assets. A bigger projected drawdown → higher buffer → less capital available for buybacks.`,
+    note: `Set from the Fed's severely adverse stress test for banks with $100B+ of assets. A bigger projected drawdown → higher buffer → less capital available for buybacks. A Sep 2026 final rule averages the decline over the two latest stress tests and makes SCBs effective each Jan 1 (verify current).`,
     ex: `CET1 falls from 12.0% to 9.6% (2.4%) + dividends of 0.6% of RWA → SCB 3.0%.` },
 
   { id: 'excess-capital', cat: 'cap', name: 'Excess capital',
@@ -571,8 +571,8 @@ FRE margin = FRE ÷ Fee-related revenues`,
   { id: 'carry', cat: 'am', name: 'Carried interest (simplified)',
     f: `Carry = Carry % × Fund profits (subject to the preferred return/hurdle and GP catch-up)
 Typical PE terms: 20% carry, 8% hurdle, full catch-up`,
-    note: `With a full catch-up, the GP ends up with 20% of all profits once returns clear the hurdle. Realized on exits and subject to clawback.`,
-    ex: `Fund invests $1,000 and returns $1,600: profits of $600 clear the hurdle, so the GP earns 20% × $600 = $120 and LPs keep $480 of profit.` },
+    note: `With a full catch-up, the GP ends up with 20% of all profits once profits are large enough to complete the catch-up (≥ preferred return ÷ 0.8); below that the GP gets less. Realized on exits and subject to clawback.`,
+    ex: `Fund invests $1,000 and returns $1,600 after 5 years (8% compounding pref): LPs get the pref (~$469), the GP catches up ~$117, the last ~$13 splits 80/20 → GP $120 (20% of $600), LPs $480.` },
 
   { id: 'pct-aum', cat: 'am', name: 'Valuation: % of AUM and multiples',
     f: `EV ÷ AUM (%) = Enterprise value ÷ AUM
@@ -621,7 +621,7 @@ LTV ÷ CAC ≥ ~3x is a common benchmark`,
   // ───────────── Rates & Fixed Income ─────────────
   { id: 'duration', cat: 'mkt', name: 'Price change from a yield change (duration)',
     f: `% Δ Price ≈ −Modified duration × Δ Yield (+ ½ × Convexity × Δ Yield²)`,
-    note: `Why rising rates create unrealized losses on bank and insurer bond portfolios (AOCI / HTM). Agency MBS have negative convexity because prepayments slow when rates rise.`,
+    note: `Why rising rates create unrealized losses on bank and insurer bond portfolios (AOCI / HTM). Agency MBS have negative convexity: prepayments rise when rates fall (capping price gains) and slow when rates rise (extending duration as prices fall).`,
     ex: `Duration 6, yields +1.00% → price ≈ −6%.` },
 
   { id: 'dv01', cat: 'mkt', name: 'DV01',

@@ -249,17 +249,17 @@ US standardized approach examples:
 - The largest banks compute both standardized and advanced RWA and are bound by the lower resulting ratio` },
 
   { id: 'cap-04', t: 'cap', q: `What is the stress capital buffer (SCB), and how is it calculated?`, a: `**A firm-specific CET1 buffer for banks with ≥ $100B in assets, set by the Fed's supervisory stress test (since 2020).**
-- **SCB = max(2.5%, peak-to-trough decline in the projected CET1 ratio under the severely adverse scenario + four quarters of planned common dividends as a % of RWA)**
+- **SCB = max(2.5%, start-to-trough decline in the projected CET1 ratio under the severely adverse scenario — starting ratio minus the minimum projected ratio — + four quarters of planned common dividends as a % of RWA)**
 - Replaces the static 2.5% capital conservation buffer for these banks
 - **Required CET1 = 4.5% minimum + SCB + G-SIB surcharge** (if applicable)
 - **Illustration:** 4.5% + 3.0% SCB + 2.0% surcharge = 9.5% requirement; add a ~1% management buffer → ~10.5% target
 - Higher SCB → less excess capital → smaller buybacks; banks manage it via business mix and stress-sensitive exposures
-- Reform direction: averaging results over two years and publishing models and scenarios for comment to reduce volatility (verify current status)` },
+- **Sep 2026 final rule:** the stress decline is averaged over the two most recent tests to reduce volatility, new SCBs take effect each Jan 1 (previously Oct 1), and scenarios/models get public comment (verify current status)` },
 
   { id: 'cap-05', t: 'cap', q: `What is the G-SIB surcharge, and which US banks are G-SIBs?`, a: `**An extra CET1 buffer for global systemically important banks, scaled to their systemic footprint.**
 - **8 US G-SIBs:** JPMorgan Chase, Bank of America, Citigroup, Wells Fargo, Goldman Sachs, Morgan Stanley, BNY, State Street
 - Scored on size, interconnectedness, complexity, cross-jurisdictional activity and substitutability; the US uses the **higher of Method 1 (Basel) and Method 2** (which swaps substitutability for reliance on short-term wholesale funding)
-- US surcharges range from 1.0% up to roughly 4.5%, with JPMorgan's the highest — check each bank's current level (verify current status)
+- US surcharges range from 1.0% up to roughly 4.5%, with JPMorgan's the highest; a March 2026 proposal would recalibrate method 2 lower — check each bank's current level (verify current status)
 - G-SIBs also face the enhanced SLR, TLAC, resolution planning and the strictest liquidity rules
 - Barclays is on the FSB's global G-SIB list too — so all four of your target banks are G-SIBs` },
 
@@ -268,7 +268,7 @@ US standardized approach examples:
 - **Enhanced SLR (G-SIBs):** 5% at the holding company (3% + 2% buffer) and 6% at insured bank subsidiaries (pre-reform)
 - **Why both:** risk weights can understate risk (model risk; Treasuries at 0%), so leverage ratios are a non-risk-based backstop
 - **Which binds:** banks with big Treasury and reserve balances (G-SIBs, custody banks) → leverage; loan-heavy banks → CET1
-- Reform direction: regulators moved in 2025 to recalibrate the eSLR (tying the buffer to the G-SIB surcharge) to free balance sheet for Treasury market intermediation (verify current status)` },
+- **Reform:** a Nov 2025 final rule (effective Apr 1, 2026) recalibrated the eSLR — holdco buffer = 50% of the method 1 G-SIB surcharge, bank-subsidiary buffer capped at 1%, and the 6% well-capitalized test dropped — to free balance sheet for Treasury market intermediation (verify current status)` },
 
   { id: 'cap-07', t: 'cap', q: `What are the Prompt Corrective Action (PCA) thresholds for a "well-capitalized" bank?`, a: `**Well-capitalized (insured depository institutions) requires all of:**
 - CET1 ratio ≥ **6.5%**
@@ -299,7 +299,7 @@ US standardized approach examples:
 - Results set each bank's **stress capital buffer** → effectively determine capital return capacity
 - CCAR's qualitative "objection" has been eliminated; banks still submit annual capital plans
 - Results come out in late June; banks announce dividend plans shortly after
-- Reform direction: more transparency on models and scenarios, averaging results across years (verify current status)` },
+- **Reform:** a Sep 2026 final rule averages results over the two latest tests (SCBs effective each Jan 1) and adds annual public comment on scenarios and models (verify current status)` },
 
   { id: 'cap-11', t: 'cap', q: `What are TLAC and long-term debt requirements?`, a: `**Total loss-absorbing capacity: enough equity plus bail-in-able long-term debt to recapitalize a failed G-SIB without taxpayer money.**
 - US G-SIB holdcos: external TLAC ≥ **18% of RWA** and **7.5% of total leverage exposure** (plus buffers), with a separate minimum of eligible long-term debt
@@ -321,14 +321,14 @@ US standardized approach examples:
 - **OCC:** national banks and federal savings associations (e.g., the main bank subsidiaries of JPMorgan, BofA, Citi and Wells Fargo)
 - **FDIC:** deposit insurance (**$250,000 per depositor, per insured bank, per ownership category**), state non-member banks, failed-bank resolution, the Deposit Insurance Fund
 - **State regulators:** state-chartered banks (the "dual banking system")
-- **CFPB:** consumer financial protection; supervises banks > $10B for consumer laws
+- **CFPB:** consumer financial protection; by statute supervises banks > $10B for consumer laws (its activity has been sharply curtailed since 2025 — verify current status)
 - **Also:** SEC (public companies, securities activities), FINRA (broker-dealers), DOJ (merger competition)
 - **UK (Barclays):** PRA (prudential) and FCA (conduct), with the Bank of England as resolution authority` },
 
   { id: 'cap-14', t: 'cap', q: `What is Basel III endgame, and where does it stand?`, a: `**The final set of Basel III reforms (sometimes called "Basel IV") that changes how RWA are calculated.**
 - Revises standardized credit risk, market risk (**FRTB**), operational risk and CVA; adds an **output floor** (modeled RWA can't fall below 72.5% of standardized)
 - **US July 2023 proposal:** applied to all banks ≥ $100B, would have raised CET1 requirements for affected large banks by an estimated ~16–19% in aggregate, and removed the AOCI opt-out
-- Heavy industry pushback; regulators have signaled a re-proposal much closer to capital-neutral (verify current status)
+- Heavy industry pushback → the agencies **re-proposed in March 2026**: the expanded risk-based approach limited to Category I–II banks, a revised standardized approach, AOCI phased into CET1 for Category III–IV banks, and an overall impact much closer to capital-neutral; comments closed June 2026 (verify details and whether finalized)
 - **Elsewhere:** the EU implemented most rules from 2025 with FRTB delayed; the UK ("Basel 3.1") moved to January 2027
 - **Why it matters:** capital requirements → ROTCE → valuation, buybacks and M&A capacity` },
 
@@ -337,14 +337,15 @@ US standardized approach examples:
 - Typically callable after ~5 years; coupons are discretionary and non-cumulative
 - **Credit Suisse (March 2023):** in the UBS rescue, FINMA wrote ~CHF 16B of AT1s down to zero while shareholders received ~CHF 3B in UBS stock — inverting the usual creditor hierarchy
 - EU and UK authorities quickly said they would respect the hierarchy (equity absorbs losses first); the AT1 market recovered within months
+- **Oct 2025:** Switzerland's Federal Administrative Court ruled the write-down lacked a legal basis; FINMA and UBS appealed to the Federal Supreme Court, so it isn't final (verify current status)
 - In the US, AT1 = non-cumulative perpetual preferred stock (no conversion trigger)` },
 
   { id: 'cap-16', t: 'cap', q: `What is the Durbin Amendment, and why is $10B an important threshold?`, a: `**A Dodd-Frank cap on debit card interchange for issuers with ≥ $10B in assets (Fed Regulation II).**
 - **Cap:** 21¢ + 5 bps of the transaction + 1¢ fraud-prevention adjustment — versus an average of roughly 44¢ before the rule
-- Crossing $10B → immediate loss of much of debit interchange revenue, plus **CFPB supervision** and heavier compliance
-- So banks near $10B often wait and "cross big" with an acquisition
+- Crossing $10B (measured at Dec 31) → the cap applies from **July 1 of the following year**, cutting much of debit interchange revenue; **CFPB supervision** starts once assets exceed $10B for four consecutive quarters
+- So banks near $10B often wait, "cross big" with an acquisition, and time the close around year-end
 - The Fed proposed (2023) lowering the cap to 14.4¢ + 4 bps + 1.3¢; not finalized as of mid-2026
-- **Litigation (verify current):** in 2025 a federal district court (Corner Post v. Fed) held Reg II's fee standard unlawful — stayed pending appeal; the Eighth Circuit reportedly affirmed in Oct 2026, and other cases are pending. The cap's level could change
+- **Litigation (verify current):** in Aug 2025 a federal district court (Corner Post v. Fed) struck down Reg II's fee standard, staying its ruling pending appeal; the Eighth Circuit affirmed in Oct 2026 and a similar Sixth Circuit case is pending. The 21¢ cap applies until that ruling takes effect or further appeals end — its level could change
 - Durbin also requires issuers to enable at least two unaffiliated networks for debit routing` },
 
   { id: 'cap-17', t: 'cap', q: `What is the Community Reinvestment Act (CRA), and why does it matter in bank deals?`, a: `- Requires banks to help meet the credit needs of their **entire communities, including low- and moderate-income (LMI) neighborhoods**
@@ -480,9 +481,9 @@ US standardized approach examples:
 - CECL then requires a full lifetime allowance on those loans via a **Day 2 provision** → hits earnings, TBV and capital again
 - **PCD loans** (purchased credit-deteriorated) use a "gross-up": the allowance is added to the loan's basis, with no P&L hit
 - **Effect:** extra TBV dilution and overstated reserves; acquirers often exclude it from "core" metrics
-- FASB moved in 2025 to extend the gross-up to most acquired seasoned loans, largely eliminating the double count going forward — confirm effective dates for deals you discuss (verify current status)`, adv: true },
+- **Fix:** ASU 2025-08 (Nov 2025) extends the gross-up to purchased "seasoned" non-PCD loans (credit cards excluded) — effective for fiscal years beginning after Dec 15, 2026, applied prospectively, early adoption permitted — largely ending the double count for new deals (verify current status)`, adv: true },
 
-  { id: 'bval-17', t: 'bval', q: `Why are most bank deals all-stock?`, a: `- **Preserves capital:** paying cash creates goodwill and CDI (deducted from CET1) while cash leaves the balance sheet — a double hit; issuing stock brings in equity to offset it
+  { id: 'bval-17', t: 'bval', q: `Why are most bank deals all-stock?`, a: `- **Preserves capital:** paying cash brings in no new equity — the goodwill and CDI created are deducted from existing CET1 while the target's RWA are added, so the ratio is hit in both numerator and denominator; issuing stock adds equity equal to the price, which offsets the deduction
 - Banks rarely hold excess cash for M&A; large cash deals usually require a capital raise
 - **Currency:** an acquirer with a high P/TBV and P/E has strong stock to issue
 - **Target holders** share in upside and cost saves, and a stock-for-stock deal can be a tax-free reorganization
@@ -498,7 +499,8 @@ US standardized approach examples:
 - **Cautionary tale:** TD–First Horizon was terminated in 2023 after approvals stalled over TD's AML problems` },
 
   { id: 'bval-19', t: 'bval', q: `What is pro forma CET1, and why does it matter in a bank deal?`, a: `**The combined CET1 ratio at close after all deal adjustments — it decides whether the deal is affordable.**
-- **Numerator:** acquirer CET1 + target CET1 + new equity issued − goodwill and CDI created (net of DTL) − after-tax merger charges − after-tax fair value marks − any Day 2 CECL provision
+- **Numerator:** acquirer CET1 + new equity issued − goodwill and CDI created (net of DTL; goodwill already reflects the after-tax marks) − after-tax merger charges − any after-tax Day 2 CECL provision
+  - Equivalent shortcut: acquirer CET1 + target CET1 − after-tax marks − cash consideration paid − charges − Day 2 provision (the target's equity is replaced by the price paid, so don't add both)
 - **Denominator:** combined RWA (adjusted for fair value marks and divestitures)
 - Must stay above the regulatory minimum + SCB + management buffer; a shortfall means a capital raise, paused buybacks, or balance sheet repositioning (e.g., selling securities)
 - Investors also watch the **pro forma TCE ratio** and how quickly capital rebuilds
@@ -531,10 +533,10 @@ US standardized approach examples:
 - Deal decks show EPS accretion on GAAP and cash/tangible bases; investors focus on the latter plus TBV earnback
 - **Example:** GAAP EPS $4.00; CDI amortization $50M pre-tax = $37.5M after tax (25%) ÷ 250M shares = $0.15 → **cash EPS $4.15**` },
 
-  { id: 'bval-24', t: 'bval', q: `Why do the $10B, $100B and $250B asset thresholds matter in bank M&A?`, a: `- **$10B:** Durbin debit interchange cap + CFPB supervision → lost fee income and higher compliance cost
+  { id: 'bval-24', t: 'bval', q: `Why do the $10B, $100B and $250B asset thresholds matter in bank M&A?`, a: `- **$10B:** Durbin debit interchange cap (from July 1 after a Dec 31 crossing) + CFPB supervision → lost fee income and higher compliance cost
 - **$100B (Category IV):** supervisory stress tests and SCB, liquidity requirements, resolution planning, enhanced prudential standards; long-term debt and AOCI-in-capital proposals target this tier (verify current status)
 - **$250B (Category III):** SLR, fuller LCR/NSFR, more supervisory intensity
-- Banks tend to **"cross big"** — via a deal large enough that scale benefits outweigh the step-up costs (e.g., Fifth Third–Comerica creates a ~$288B bank, crossing $250B)
+- Banks tend to **"cross big"** — via a deal large enough that scale benefits outweigh the step-up costs (e.g., Fifth Third–Comerica, ~$294B at close, and Huntington–Cadence, ~$279B, both crossed $250B in early 2026)
 - Banks sitting just below a line often manage their size to avoid crossing; regulators have discussed indexing thresholds to economic growth (verify current status)` },
 
   { id: 'bval-25', t: 'bval', q: `What drove the 2025 wave of US bank M&A? Give examples.`, a: `**Scale economics + a friendlier regulatory backdrop + better deal math.**
@@ -542,7 +544,7 @@ US standardized approach examples:
 - **Deal math:** stabilizing rates and a steeper curve shrank interest-rate marks → less TBV dilution; higher bank stock prices made better acquisition currency
 - **Scale:** technology, cybersecurity and compliance costs reward size; larger brands gather deposits more cheaply
 - **Sellers:** succession, easing credit (CRE) worries, limited standalone growth
-- **Examples:** Pinnacle–Synovus (Jul 2025, ~$8.6B all-stock MOE), Huntington–Veritex (Jul 2025), PNC–FirstBank (Sep 2025, ~$4.1B cash and stock), Fifth Third–Comerica (Oct 2025, ~$10.9B all-stock), Huntington–Cadence (Oct 2025, ~$7.4B all-stock)
+- **Examples (announced → all closed between Oct 2025 and Feb 2026):** Pinnacle–Synovus (Jul 2025, ~$8.6B all-stock MOE), Huntington–Veritex (Jul 2025), PNC–FirstBank (Sep 2025, ~$4.1B cash and stock), Fifth Third–Comerica (Oct 2025, ~$10.9B all-stock — closed in under four months), Huntington–Cadence (Oct 2025, ~$7.4B all-stock)
 - Verify the latest status and terms before citing any deal in an interview` },
 
   { id: 'bval-26', t: 'bval', q: `What makes a bank an attractive acquisition target?`, a: `- **Low-cost, sticky core deposits** — high non-interest-bearing share, low beta, granular and operational accounts

@@ -54,7 +54,7 @@ export const SHEETS = [
 ## Purchase accounting
 - Credit mark (lifetime expected losses) plus interest rate mark on fixed-rate loans and securities; discounts accrete into NII over time
 - CDI created for cheap core deposits, amortized over roughly 7–10 years
-- CECL: PCD loans use a gross-up; non-PCD loans have needed a day-2 provision (the "double count"). FASB issued changes in 2025 extending the gross-up to many acquired seasoned loans (verify scope and effective date)
+- CECL: PCD loans use a gross-up; non-PCD loans have needed a day-2 provision (the "double count"). ASU 2025-08 (Nov 2025) extends the gross-up to purchased seasoned non-PCD loans (ex-credit cards), effective for fiscal years beginning after Dec 15, 2026, early adoption permitted (verify)
 - DTL/DTA on the marks; goodwill is the plug
 
 ## Cost saves
@@ -132,7 +132,7 @@ export const SHEETS = [
   { id: 'insurance', title: 'Insurance quick guide', sub: 'P&C vs. life vs. brokers', body: `## Three business models
 - **P&C carriers** – collect premiums up front, pay claims later; earn underwriting profit plus investment income on float
 - **Life & annuity carriers** – long-duration liabilities; earn spread (portfolio yield − crediting rate), mortality/morbidity margins and fees
-- **Brokers** (Marsh McLennan, Aon, WTW, Gallagher, Brown & Brown) – no underwriting risk; earn commissions and fees; capital-light
+- **Brokers** (Marsh, formerly Marsh McLennan; Aon, WTW, Gallagher, Brown & Brown) – no underwriting risk; earn commissions and fees; capital-light
 
 ## P&C metrics
 - Loss ratio = (Losses + LAE) ÷ NEP

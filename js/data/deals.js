@@ -45,11 +45,12 @@ export const DEALS = [
 - Watch: Texas deposit competition, systems conversion, threshold costs.
 - Expect: "Is this a good deal for Fifth Third holders?" — answer with accretion, earnback, IRR vs. cost of equity, capital and strategic fit.
 ` },
-  { id: 'pnfp-snv', title: 'Pinnacle / Synovus', sector: 'Regional banks', date: 'Announced Jul 2025', value: '$8.6B, all-stock MOE', body: `
+  { id: 'pnfp-snv', title: 'Pinnacle / Synovus', sector: 'Regional banks', date: 'Announced Jul 2025 · Closed Jan 2026', value: '$8.6B, all-stock MOE', body: `
 ## Deal
 - **Merger of equals** between Pinnacle Financial Partners (Nashville) and Synovus (Columbus, GA): all-stock, valued at ~$8.6B (July 24, 2025).
 - Synovus holders receive 0.5237 Pinnacle shares per share.
 - Combined bank: ~$116B of assets, operating under the Pinnacle name with its holding company headquartered in Atlanta.
+- Closed at the start of January 2026 (~$117B of assets at close; verify).
 
 ## Rationale
 - Builds a Southeast super-regional concentrated in fast-growing markets (Atlanta, Nashville, the Carolinas, Florida).
@@ -67,10 +68,11 @@ export const DEALS = [
 - Watch: banker/talent retention (critical to Pinnacle's model), cultural integration, systems conversion.
 - Expect: "How do you set the exchange ratio in an MOE?" → relative contribution analysis plus a modest premium, if any.
 ` },
-  { id: 'hban-cadence', title: 'Huntington / Cadence (+ Veritex)', sector: 'Regional banks', date: 'Announced Oct 2025 (Veritex: Jul 2025)', value: '$7.4B, all-stock (Veritex: $1.9B)', body: `
+  { id: 'hban-cadence', title: 'Huntington / Cadence (+ Veritex)', sector: 'Regional banks', date: 'Announced Oct 2025 · Closed Feb 2026 (Veritex: Jul → Oct 2025)', value: '$7.4B, all-stock (Veritex: $1.9B)', body: `
 ## Deal
 - Huntington Bancshares (Columbus, OH) agreed to acquire Cadence Bank (Tupelo, MS and Houston) in an **all-stock** deal valued at ~$7.4B (Oct 2025).
 - Came just months after Huntington's ~$1.9B all-stock acquisition of Veritex Holdings (Dallas), announced July 2025.
+- Both have closed — Veritex in Oct 2025, Cadence in Feb 2026 — taking Huntington to ~$279B of assets, past the $250B Category III line (verify).
 
 ## Rationale
 - Market extension: builds a Texas and broader Southern footprint beyond Huntington's Midwest core, in faster-growing markets.
@@ -87,10 +89,11 @@ export const DEALS = [
 - Watch: Texas competition (big national banks and strong local players), deposit retention, delivery on growth targets.
 - Expect: "Why would a Midwest bank pay up for Texas?" → population and business-formation growth, deposit growth, diversification away from slower-growth markets — weighed against lower cost saves.
 ` },
-  { id: 'pnc-firstbank', title: 'PNC / FirstBank', sector: 'Regional banks', date: 'Announced Sep 2025', value: '$4.1B, cash & stock', body: `
+  { id: 'pnc-firstbank', title: 'PNC / FirstBank', sector: 'Regional banks', date: 'Announced Sep 2025 · Closed Jan 2026', value: '$4.1B, cash & stock', body: `
 ## Deal
 - PNC agreed to acquire FirstBank Holding Co. (Lakewood, Colorado; privately held) for ~$4.1B in **cash and stock** (Sept 2025).
 - FirstBank brings a dense branch and deposit franchise in Colorado and Arizona.
+- Closed in early January 2026 (verify).
 
 ## Rationale
 - Density: PNC had entered these markets through BBVA USA (2021, $11.6B in cash) and de novo branches; buying FirstBank gets it to scale faster than building branch by branch.
@@ -99,7 +102,7 @@ export const DEALS = [
 
 ## Metrics & mechanics to discuss
 - **Private target:** no public-market premium — price it on P/TBV, P/E and core deposit premium.
-- **Cash + stock mix:** the cash portion consumes CET1 (goodwill/intangibles are deducted while cash leaves); the stock portion is issued at PNC's own P/TBV.
+- **Cash + stock mix:** the cash portion brings in no new equity, so the goodwill/CDI it creates comes straight out of PNC's CET1 (while FirstBank's RWA are added); the stock portion adds equity, issued at PNC's own P/TBV.
 - Cost saves from overlap with PNC's existing and de novo branches in Colorado.
 
 ## Interview angle
@@ -109,7 +112,7 @@ export const DEALS = [
 ` },
   { id: 'gpn-worldpay', title: 'Global Payments / Worldpay & FIS / Issuer Solutions', sector: 'Payments', date: 'Announced Apr 2025 · Closed Jan 2026', value: '$24.25B (Worldpay) / $13.5B (Issuer Solutions)', body: `
 ## Deal
-- Three-way transaction (April 2025): **Global Payments** acquires **Worldpay** for $24.25B (net) from GTCR and FIS, and sells its **Issuer Solutions** business to **FIS** for $13.5B.
+- Three-way transaction (April 2025): **Global Payments** acquires **Worldpay** for $24.25B ($22.7B net of anticipated tax assets) from GTCR and FIS, and sells its **Issuer Solutions** business to **FIS** for $13.5B (~$12.0B net).
 - FIS exits its remaining ~45% Worldpay stake (it had sold 55% to GTCR in a deal that closed in early 2024); GTCR takes a stake in Global Payments as part of its consideration.
 - Both legs closed in January 2026 (verify).
 
@@ -181,7 +184,7 @@ export const DEALS = [
 - **Ring-fencing:** UK retail deposits sit in the ring-fenced bank — this deal puts ring-fenced liquidity to work in UK lending.
 
 ## Interview angle
-- For a Barclays interview: tie a small deal to the big targets (Group RoTE >12% in 2026, ≥£10B of capital returns over 2024–26, Investment Bank ~50% of Group RWAs).
+- For a Barclays interview: tie a small deal to the big targets. The Feb 2024 plan aimed for Group RoTE >12% in 2026, ≥£10B of capital returns over 2024–26 and the Investment Bank at ~50% of Group RWAs; the Feb 2026 update added RoTE >14% by 2028 and >£15B of returns over 2026–28 (verify the latest).
 - UK consolidation context: Nationwide/Virgin Money (2024), Coventry Building Society/Co-op Bank (2025), and Santander's ~£2.65B purchase of TSB from Banco Sabadell (announced July 2025).
 - Expect: "Why buy a card book when you already own Barclaycard?" → scale, Tesco's distribution and Clubcard data, putting surplus UK deposits to work.
 ` },
@@ -237,7 +240,7 @@ Why SVB failed:
 
 ## Metrics & mechanics to discuss
 - **Negative goodwill:** UBS booked ~$29B because the price was far below the fair value of net assets.
-- **AT1 hierarchy:** AT1 holders were wiped out while shareholders received CHF 3B — inverting the usual creditor ranking. EU and UK regulators said they would respect the hierarchy; litigation followed.
+- **AT1 hierarchy:** AT1 holders were wiped out while shareholders received CHF 3B — inverting the usual creditor ranking. EU and UK regulators said they would respect the hierarchy; litigation followed — in Oct 2025 Switzerland's Federal Administrative Court ruled the write-down lacked a legal basis, and FINMA and UBS appealed to the Federal Supreme Court (verify current status).
 - Too-big-to-fail: the bail-in resolution plan was not used; Swiss authorities have since proposed tougher capital rules for UBS (verify status).
 
 ## Interview angle

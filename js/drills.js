@@ -523,16 +523,18 @@ const GENERATORS = [
     title: 'Carried interest',
     gen() {
       const fund = pick([500, 1000, 2000, 2500, 5000]);
-      const moic = pick([1.5, 1.8, 2.0, 2.2, 2.5]);
+      const moic = pick([2.0, 2.2, 2.5, 3.0]);
+      const yrs = pick([3, 4, 5]);
       const profit = rnd(fund * (moic - 1), 1);
+      const pref = rnd(fund * (1.08 ** yrs - 1), 0);
       const ans = rnd(profit * 0.2, 1);
       return {
-        q: `A $${f0(fund)}M PE fund returns ${fx(moic)}x gross (all capital invested, full catch-up, so carry is 20% of total profit). How much carried interest does the GP earn, in $M?`,
+        q: `A $${f0(fund)}M PE fund (fully invested) returns ${fx(moic)}x after ${yrs} years. Terms: 20% carry, 8% compounding preferred return, full GP catch-up. How much carried interest does the GP earn, in $M?`,
         answer: ans,
         unit: '$M',
         dp: 0,
         tol: 0.6,
-        solution: `Total value = ${f0(fund)} × ${fx(moic)} = $${f0(fund * moic)}M → profit $${f0(profit)}M\nWith a full catch-up the GP ends up with 20% of all profit: 20% × ${f0(profit)} = **$${f0(ans)}M**\nCarry is volatile, so it earns a lower multiple than fee-related earnings.`,
+        solution: `Profit = ${f0(fund)} × (${fx(moic)} − 1) = $${f0(profit)}M\nPref = ${f0(fund)} × (1.08^${yrs} − 1) ≈ $${f0(pref)}M. The catch-up completes once profit ≥ pref ÷ 0.8 ≈ $${f0(pref / 0.8)}M — it does here.\nSo the GP ends up with 20% of all profit: 20% × ${f0(profit)} = **$${f0(ans)}M**\n(At low returns the catch-up doesn't finish and carry is < 20% of profit.) Carry is volatile, so it earns a lower multiple than fee-related earnings.`,
       };
     },
   },

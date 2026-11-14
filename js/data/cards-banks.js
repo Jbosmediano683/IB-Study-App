@@ -343,7 +343,8 @@ US standardized approach examples:
 - **Cap:** 21¢ + 5 bps of the transaction + 1¢ fraud-prevention adjustment — versus an average of roughly 44¢ before the rule
 - Crossing $10B → immediate loss of much of debit interchange revenue, plus **CFPB supervision** and heavier compliance
 - So banks near $10B often wait and "cross big" with an acquisition
-- The Fed proposed (2023) lowering the cap to 14.4¢ + 4 bps + 1.3¢ (verify current status)
+- The Fed proposed (2023) lowering the cap to 14.4¢ + 4 bps + 1.3¢; not finalized as of mid-2026
+- **Litigation (verify current):** in 2025 a federal district court (Corner Post v. Fed) held Reg II's fee standard unlawful — stayed pending appeal; the Eighth Circuit reportedly affirmed in Oct 2026, and other cases are pending. The cap's level could change
 - Durbin also requires issuers to enable at least two unaffiliated networks for debit routing` },
 
   { id: 'cap-17', t: 'cap', q: `What is the Community Reinvestment Act (CRA), and why does it matter in bank deals?`, a: `- Requires banks to help meet the credit needs of their **entire communities, including low- and moderate-income (LMI) neighborhoods**

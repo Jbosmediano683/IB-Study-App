@@ -74,7 +74,7 @@ export default [
   { id: 'ins-12', t: 'ins', q: `What is the RBC ratio?`, a: `**NAIC risk-based capital ratio = total adjusted capital ÷ authorized control level (ACL) RBC.**
 - A formula-based capital requirement covering asset risk, insurance (underwriting) risk, interest rate risk and business risk.
 - Regulatory action levels: **company action level at 200%** of ACL, with stronger intervention below that (regulatory action at 150%, authorized control at 100%, mandatory control at 70%).
-- Companies typically run well above the minimums (often ~350–450%+ for life insurers) to support ratings and absorb shocks.
+- Companies run well above the minimums to support ratings and absorb shocks. **Watch the basis:** US life insurers usually quote TAC ÷ **company action level** RBC and target roughly 350–450%+ — that is ≈700–900%+ on the ACL definition above (2× the figure).
 - The EU equivalent is the **Solvency II ratio** (own funds ÷ solvency capital requirement).` },
 
   { id: 'ins-13', t: 'ins', q: `What is DAC and how is it treated?`, a: `**Deferred acquisition costs = costs of acquiring new policies (mainly commissions). Under GAAP they are capitalized and amortized over the life of the policy.**
@@ -253,7 +253,7 @@ export default [
 
   { id: 'fin-02', t: 'fin', q: `What is interchange and who earns it?`, a: `**Interchange = the fee the merchant's acquirer pays the cardholder's issuer on each card transaction.** The networks (Visa/Mastercard) set it, not the issuer.
 - US credit interchange is typically ~1.5–2.5% (premium rewards cards at the high end). It funds rewards, fraud losses and the interest-free grace period.
-- **Debit** interchange is lower. For issuers with ≥ $10B in assets, it's capped by the **Durbin Amendment** (Reg II: 21¢ + 0.05% of the transaction + a 1¢ fraud-prevention adjustment).
+- **Debit** interchange is lower. For issuers with ≥ $10B in assets, it's capped under the **Durbin Amendment** by Fed Regulation II at 21¢ + 0.05% of the transaction + a 1¢ fraud-prevention adjustment (the 2011 standard). Verify current: a 2025 federal court ruling (Corner Post) found that standard unlawful, appeals followed (reportedly upheld by the Eighth Circuit in Oct 2026), and the Fed's 2023 proposal to lower the cap was not finalized.
 - Interchange is the biggest piece of the merchant discount rate, which makes it the target of merchant lawsuits and legislation (e.g., the proposed Credit Card Competition Act).
 - Networks charge their own assessment/scheme fees on top.` },
 
@@ -311,7 +311,7 @@ export default [
 - It's recorded as an asset (often at fair value). Its value = PV of expected servicing cash flows.
 - **Rates ↑ → MSR value ↑**: fewer refinancings, so loans prepay more slowly and servicing cash flows last longer.
 - **Rates ↓ → MSR value ↓**: a refi wave speeds up prepayments.
-- **Natural hedge** for mortgage companies: origination volume and gain-on-sale margins rise when rates fall, offsetting MSR write-downs. Example: Rocket's acquisition of Mr. Cooper (announced 2025) paired a big originator with the largest servicer (verify status).
+- **Natural hedge** for mortgage companies: origination volume and gain-on-sale margins rise when rates fall, offsetting MSR write-downs. Example: Rocket's acquisition of Mr. Cooper (announced Mar 2025, closed Oct 2025) paired a big originator with the largest servicer.
 - Bank capital: MSRs above certain thresholds are deducted from CET1.` },
 
   { id: 'fin-11', t: 'fin', q: `How are fintech lenders and neobanks different from banks, and how are they valued?`, a: `**The big difference is funding.**
@@ -360,7 +360,7 @@ export default [
 
   { id: 'fin-17', t: 'fin', q: `What were the Global Payments / Worldpay transactions (2025)?`, a: `**Announced April 2025: a three-way portfolio swap that reshaped merchant acquiring and issuer processing.**
 - Global Payments agreed to acquire **Worldpay** for ~$24.25B from GTCR and FIS.
-- At the same time it agreed to sell its **Issuer Solutions** business to FIS for ~$13.5B, and FIS exited its remaining Worldpay stake.
+- At the same time it agreed to sell its **Issuer Solutions** business to FIS for ~$13.5B, and FIS exited its remaining Worldpay stake. Both legs closed in January 2026 (verify).
 - **Rationale**: Global Payments becomes a pure-play merchant solutions company with more scale (volume, distribution, e-commerce and cross-border capabilities). FIS doubles down on issuer and banking technology. GTCR monetizes its 2023 Worldpay carve-out investment.
 - **Interview angles**: scale economics in acquiring, portfolio simplification vs. the conglomerate discount, financing and leverage, the sponsor exit, and competition from Stripe, Adyen and Fiserv's Clover.` },
 
@@ -477,8 +477,8 @@ export default [
 4. **Market reaction**, and why.
 5. **Your view**: risks, what you'd watch, who might do something similar.
 
-## Example: Fifth Third / Comerica (announced Oct 2025)
-- ~$10.9B all-stock (1.8663 FITB shares per CMA share). Creates roughly the 9th-largest US bank, with ~$288B of assets (verify status and terms).
+## Example: Fifth Third / Comerica (announced Oct 2025, closed Feb 2026)
+- ~$10.9B all-stock (1.8663 FITB shares per CMA share). Created roughly the 9th-largest US bank — ~$288B of assets at announcement, ~$294B at close (verify latest figures).
 - Rationale: speeds up Fifth Third's push into high-growth Texas, Southwest and Southeast markets; adds Comerica's middle-market commercial and treasury management franchise; builds scale for technology and payments investment.
 - Discussion points: crossing $250B in assets (Category III under the tailoring rules), cost saves from overlapping functions, the value of Comerica's deposit franchise, an all-stock structure that preserves capital, and how faster regulatory approvals in 2025 made larger regional deals possible.` },
 

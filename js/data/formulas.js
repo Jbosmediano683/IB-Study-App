@@ -519,7 +519,7 @@ Underwriting margin = 1 − Combined ratio`,
 
   { id: 'rbc', cat: 'ins', name: 'Risk-based capital (RBC) ratio',
     f: `RBC ratio = Total adjusted capital ÷ Authorized control level RBC`,
-    note: `NAIC statutory measure. The company action level is 200% of authorized control level; insurers typically target well above it (e.g., ~350–450%+ for life insurers; verify by company).` },
+    note: `NAIC statutory measure. The company action level (CAL) is 200% of authorized control level (ACL). Watch the basis: US life insurers usually quote TAC ÷ CAL and target ~350–450%+ (≈700–900%+ on the ACL basis above); verify by company.` },
 
   { id: 'life-spread', cat: 'ins', name: 'Life / annuity spread',
     f: `Spread = Portfolio (earned) yield − Crediting rate
@@ -594,7 +594,7 @@ Alternative managers: P/DE, P/FRE`,
 
   { id: 'mdr', cat: 'pay', name: 'Merchant discount rate (MDR)',
     f: `MDR = Interchange (to issuer) + Network/scheme fees + Acquirer markup`,
-    note: `What merchants pay per card transaction; interchange is the biggest piece. Regulated debit interchange (Durbin; issuers with $10B+ in assets) is capped at 21¢ + 0.05% of the transaction (+1¢ fraud-prevention adjustment).`,
+    note: `What merchants pay per card transaction; interchange is the biggest piece. Regulated debit interchange (Durbin; issuers with $10B+ in assets) is capped by Reg II at 21¢ + 0.05% of the transaction (+1¢ fraud-prevention adjustment); that standard is under court challenge (verify current).`,
     ex: `$100 purchase: interchange $1.80 + network $0.13 + acquirer $0.30 = $2.23 MDR (2.23%).` },
 
   { id: 'risk-adj-margin', cat: 'pay', name: 'Risk-adjusted margin (card issuers)',

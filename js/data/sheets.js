@@ -156,7 +156,7 @@ export const SHEETS = [
 ## Accounting & regulation
 - Statutory accounting (NAIC) is conservative: acquisition costs are expensed immediately; statutory surplus is regulatory capital
 - GAAP capitalizes DAC; LDTI (effective 2023 for large SEC filers) changed life liability and DAC accounting
-- RBC ratio = Total adjusted capital ÷ Authorized control level; company action level is 200%
+- RBC ratio = Total adjusted capital ÷ Authorized control level; company action level is 200%. Life insurers often quote it vs. the company action level instead (targets ~350–450%+ on that basis), so check which basis a number uses
 - State rules limit dividends from insurance subsidiaries to the holding company
 
 ## Themes to discuss (verify current)

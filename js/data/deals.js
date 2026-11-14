@@ -23,11 +23,11 @@ export const DEALS = [
 - Watch: debit migration, merchant acceptance of the network, risk/compliance integration.
 - Expect: "How would you value the combined company?" → sum-of-the-parts: the network on payments multiples (like Visa/Mastercard) vs. card lending on P/TBV vs. ROTCE.
 ` },
-  { id: 'fitb-cma', title: 'Fifth Third / Comerica', sector: 'Regional banks', date: 'Announced Oct 2025', value: '$10.9B, all-stock', body: `
+  { id: 'fitb-cma', title: 'Fifth Third / Comerica', sector: 'Regional banks', date: 'Announced Oct 2025 · Closed Feb 2026', value: '$10.9B, all-stock', body: `
 ## Deal
 - Fifth Third (Cincinnati) agreed to acquire Comerica (Dallas) in an **all-stock** deal valued at ~$10.9B (Oct 6, 2025).
 - Fixed exchange ratio of 1.8663 Fifth Third shares per Comerica share.
-- Creates the ~9th-largest US bank with ~$288B of assets; closing was targeted for around the end of Q1 2026 (verify status).
+- Creates the ~9th-largest US bank: ~$288B of assets at announcement, ~$294B at close. Fed approval came in Jan 2026 and the deal closed in early Feb 2026 — about four months from announcement (verify latest figures).
 
 ## Rationale
 - Accelerates Fifth Third's push into faster-growing Southern markets: Comerica brings a large Texas franchise plus California, Arizona and Michigan.
@@ -107,10 +107,11 @@ export const DEALS = [
 - Watch: customer and banker retention at a privately held franchise, systems conversion.
 - Expect: "Why use cash at all?" → shareholder dilution vs. capital usage trade-off, seller preferences (private owners), PNC's capital position.
 ` },
-  { id: 'gpn-worldpay', title: 'Global Payments / Worldpay & FIS / Issuer Solutions', sector: 'Payments', date: 'Announced Apr 2025', value: '$24.25B (Worldpay) / $13.5B (Issuer Solutions)', body: `
+  { id: 'gpn-worldpay', title: 'Global Payments / Worldpay & FIS / Issuer Solutions', sector: 'Payments', date: 'Announced Apr 2025 · Closed Jan 2026', value: '$24.25B (Worldpay) / $13.5B (Issuer Solutions)', body: `
 ## Deal
 - Three-way transaction (April 2025): **Global Payments** acquires **Worldpay** for $24.25B (net) from GTCR and FIS, and sells its **Issuer Solutions** business to **FIS** for $13.5B.
 - FIS exits its remaining ~45% Worldpay stake (it had sold 55% to GTCR in a deal that closed in early 2024); GTCR takes a stake in Global Payments as part of its consideration.
+- Both legs closed in January 2026 (verify).
 
 ## Rationale
 - Global Payments becomes a scaled, pure-play merchant solutions company (acquiring, processing and software-led payments from SMB to enterprise and e-commerce).

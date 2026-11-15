@@ -11,7 +11,7 @@ screen and it behaves like a native app, offline included.
 
 | Section | What it does |
 |---|---|
-| **Flashcards** | 394 interview-style Q&As in 16 decks: bank fundamentals, capital & regulation, bank valuation & M&A, insurance, asset management, fintech/payments, rates & markets, accounting, EV, valuation/DCF, M&A, LBO, "walk me through" stories, fit & behavioral, product groups (DCM, LevFin, ECM, restructuring) and other industries. Uses spaced repetition (Missed / Shaky / Got it). |
+| **Flashcards** | 458 interview-style Q&As in 16 decks: bank fundamentals, capital & regulation, bank valuation & M&A, insurance, asset management, fintech/payments, rates & markets, accounting, EV, valuation/DCF, M&A, LBO, "walk me through" stories, fit & behavioral, product groups (DCM, LevFin, ECM, restructuring) and other industries. Uses spaced repetition (Missed / Shaky / Got it). |
 | **Your guides** | Decks that follow the study guides you uploaded chapter by chapter. Each chapter mixes existing cards with new ones written in our own words to cover its questions. |
 | **Terminology** | 201-term FIG glossary with a "why it matters" line on key terms. Searchable, filterable, and quizzable as flashcards. |
 | **Equations** | 119 formulas with notes and worked examples (NIM, efficiency ratio, ROTCE, CET1, SCB, justified P/TBV, TBV earnback, combined ratio, FRE/DE, take rate, duration…). Quizzable. |

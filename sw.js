@@ -1,6 +1,6 @@
 // Service worker: precache the whole app so it opens instantly and works offline.
 // Bump VERSION whenever any file changes so phones pick up the update.
-const VERSION = 'figprep-v1.0.5';
+const VERSION = 'figprep-v1.1.0';
 const ASSETS = [
   './',
   './index.html',

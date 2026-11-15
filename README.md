@@ -11,12 +11,13 @@ screen and it behaves like a native app, offline included.
 
 | Section | What it does |
 |---|---|
-| **Flashcards** | 238 interview-style Q&As in 13 decks: bank fundamentals, capital & regulation, bank valuation & M&A, insurance, asset management, fintech/payments, rates & markets, accounting, EV, valuation/DCF, M&A, LBO, and "walk me through" stories. Uses spaced repetition (Missed / Shaky / Got it). |
+| **Flashcards** | 364 interview-style Q&As in 16 decks: bank fundamentals, capital & regulation, bank valuation & M&A, insurance, asset management, fintech/payments, rates & markets, accounting, EV, valuation/DCF, M&A, LBO, "walk me through" stories, fit & behavioral, product groups (DCM, LevFin, ECM, restructuring) and other industries. Uses spaced repetition (Missed / Shaky / Got it). |
+| **Your guides** | Decks that follow the study guides you uploaded chapter by chapter. Each chapter mixes existing cards with new ones written in our own words to cover its questions. |
 | **Terminology** | 201-term FIG glossary with a "why it matters" line on key terms. Searchable, filterable, and quizzable as flashcards. |
 | **Equations** | 119 formulas with notes and worked examples (NIM, efficiency ratio, ROTCE, CET1, SCB, justified P/TBV, TBV earnback, combined ratio, FRE/DE, take rate, duration…). Quizzable. |
 | **Math drills** | 38 types of randomly generated mental-math problems (NIM, deposit beta, CET1/excess capital, P/TBV ↔ ROTCE, earnback, combined ratio, AUM roll-forward, accretion/dilution, WACC, TSM…), each with a worked solution. |
 | **Mock superday** | 10 timed questions in an interview-like mix. Answer out loud, then grade yourself. |
-| **Cheat sheets** | 7 one-pagers to skim right before you walk in (bank valuation in 60 seconds, bank M&A checklist, 3-statement walk-throughs, insurance, asset managers, superday game plan, mental-math rules of thumb). |
+| **Cheat sheets** | 8 one-pagers to skim right before you walk in (bank valuation in 60 seconds, bank M&A checklist, 3-statement walk-throughs, insurance, asset managers, superday game plan, mental-math rules of thumb, FIG numbers to know for Oct 2026). |
 | **Deal book** | 14 landmark and recent FIG deals with rationale, metrics to discuss, and the interview angle. |
 | **Firm prep** | Snapshot, talking points and a prep checklist for Citi, Bank of America, Wells Fargo and Barclays. Add your own notes, extra firms, and interview dates; Home shows a countdown. |
 | **Market notes** | Fill-in fields for the numbers interviewers ask about (Fed funds, 2Y/10Y, BKX/KRE, spreads), plus headlines and your market view. |

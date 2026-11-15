@@ -833,6 +833,15 @@ export default [
 - **Upfront price:** enters IRR as the first, negative cash flow, so paying more lowers IRR; PV ignores it.
 - **So compare** PV with the price, or IRR with the discount rate.
 - **Example:** pay $1,000 today for $2,000 in five years → IRR ≈ 14.9% (2^(1/5) − 1). At a 10% discount rate, PV = $2,000 ÷ 1.61 ≈ $1,242, above the $1,000 price. Both tests say invest.` },
+  { id: 'val-l001', t: 'val', q: `Private Companies: how does valuing a small private company differ from valuing a public one, including the statement adjustments and WACC?`, a: `**Normalize the financials first, then haircut the valuation for illiquidity, size and key-person risk.**
+## Adjust the statements
+- Mostly for small businesses; VC-backed and large private firms usually report under GAAP or IFRS already.
+- Recast into standard lines (revenue, COGS, SG&A); treat owner draws as market-rate pay; strip personal expenses run through the business.
+- Tax at a normal corporate rate rather than the owner's personal rate.
+## Value it
+- Discount comps multiples (often ~20–40%), haircut the terminal value, and consider a key-person discount on cash flows.
+- **WACC:** no share price or beta, so relever the comps' median unlevered beta at the comps' median capital structure; cost of debt from comps or risk-free plus an estimated spread; often add a size/illiquidity premium.
+- Deals are priced on EV multiples, cash-free/debt-free, often with earnouts.` },
   // ─── ma ───
   { id: 'ma-g001', t: 'ma', q: `What is a letter of intent (LOI), and how does it differ from an indication of interest (IOI)?`, a: `**An IOI is an early, non-binding price range; an LOI is a later, more detailed offer that usually locks the seller into exclusive talks.**
 - **IOI:** submitted after the first round on the CIM; a valuation range, financing sources, key assumptions and diligence needs. Used to narrow the field.
@@ -1550,6 +1559,148 @@ export default [
 - **Structure:** the problem → what you did → what changed.
 - Career switcher: same structure for [your pre-MBA role]: "I [built the analysis on X], which [changed the decision or kept the process on track]."
 - Use "we" for the team's work and "I" for your own.` },
+  { id: 'fit-k001', t: 'fit', q: `For an MBA associate, how do product and coverage groups compare day to day, and how should you decide between them?`, a: `**Product groups give depth in one deal type across sectors; coverage groups give depth in one sector across deal types. Choose by the work you want to master.**
+- **Deal exposure:** product goes deep on M&A, debt or equity; coverage sees every deal type within its sector.
+- **Expertise:** product associates are cross-sector generalists; coverage associates become sector specialists.
+- **Hours:** M&A and LevFin are hardest on live deals; ECM and DCM are steadier; coverage swings with sector activity.
+- **Client contact:** product work reaches clients mostly through senior bankers; coverage tends to bring it earlier.
+- **Modeling:** heaviest in product; coverage mixes models with pitching and sector analytics.
+- **Seats:** coverage groups together usually hire more associates; M&A is selective.
+- **Decide:** rank what matters to you (type of work, sector interest, hours, long-term role).
+
+**FIG angle:** FIG is coverage with real technical depth (bank merger math, capital, insurance accounting), so it blends both. In interviews, state a clear preference that includes the interviewer's group, and never cite exits.` },
+  { id: 'fit-k002', t: 'fit', q: `Why FIG rather than TMT, healthcare or energy?`, a: `**Show you understand the other sectors, then explain why FIG's problems fit you better; never knock another group.**
+## Quick contrast
+- **TMT:** growth and technology drive value; high-profile M&A, tech IPOs and software LBO financings.
+- **Healthcare:** clinical, IP and regulatory risk layered on top of the financials.
+- **Energy:** commodity prices and reserve-based (NAV) valuation drive everything.
+- **Industrials/consumer:** broad deal mix across manufacturing, brands and retail.
+- **FIG:** the balance sheet is the product; capital, rates, credit and regulation set value, and FIs finance every other sector.
+## Skeleton
+"TMT and healthcare are exciting, but my work at [pre-MBA role] centered on [credit / capital / regulation / FI clients], and I want to build on it. FIG's mix of [bank consolidation, insurance and asset manager deals, constant capital raising] is where that knowledge compounds."
+- Avoid: "FIG is less competitive" or dismissing a sector as hype.` },
+  { id: 'fit-k003', t: 'fit', q: `Bulge bracket vs. elite boutique vs. middle market: how do they differ for an MBA associate, and why a large bank for FIG?`, a: `**The core difference is platform: full service with a balance sheet, pure advisory, or smaller deals with earlier ownership.**
+- **Bulge bracket:** advisory plus lending and capital markets, large-cap focus, structured associate training, bigger classes, global brand.
+- **Elite boutique:** advisory only (no balance sheet), large-cap M&A, lean teams, small classes, learning by doing.
+- **Middle market:** smaller deals, more end-to-end ownership early, somewhat steadier hours, brand strongest in its segment.
+## FIG twist
+- FIG specialists such as KBW (Stifel) and Piper Sandler advise on many small and mid-size bank deals; large FI mandates and capital raises lean toward big banks.
+## Why a large bank for FIG
+- FI clients issue senior debt, sub debt, preferreds and equity constantly and value financing relationships, so FIG at Citi, Barclays, BofA or Wells Fargo spans advisory, DCM, ECM and the balance sheet.
+- Add one reason specific to the bank, and frame it as fit, never prestige.` },
+  { id: 'fit-k004', t: 'fit', q: `Which office should you target for FIG, and how do you answer "Why this office?"`, a: `**For FIG, New York is the default; if you name another office, tie it to the work done there and to genuine personal ties.**
+## The map
+- **New York:** the widest range of groups and most FIG coverage, and the most competition for seats.
+- **Charlotte:** a major hub for Bank of America and Wells Fargo; check which teams sit there (verify current).
+- **San Francisco:** technology and fintech; **Houston:** energy; **Boston:** healthcare and life sciences.
+- **Chicago:** industrials, consumer and middle market; **Los Angeles:** media and consumer.
+- Regional offices can be easier to break into, with smaller teams and sometimes faster responsibility, but offer fewer groups.
+## Answering "Why this office?"
+1. The clients and deals the office covers.
+2. Your ties to the city (family, prior work, [your link]).
+3. A long-term commitment to staying.
+- Avoid leading with lifestyle or cost of living.` },
+  { id: 'fit-k005', t: 'fit', q: `What does an MBA associate actually do, and how does the role differ from analyst and VP? What does that look like in FIG?`, a: `**The associate owns the quality of the team's work and the link between analysts and senior bankers.**
+## Roles on a deal team
+- **Analyst:** first drafts of models, comps and pages; data and diligence logistics.
+- **Associate:** checks and improves analyst work, drafts the storyline, turns comments from the VP and MD, runs workstreams and coordinates with product partners, lawyers and client staff.
+- **VP:** runs execution and the day-to-day client dialogue; manages associates.
+- **Director/MD:** client relationships, origination and senior advice.
+- Promotion to VP typically comes after about three years (verify current) and rests on judgment and ownership, not volume.
+## In FIG
+- Pitch books with P/TBV vs. ROTCE, pro forma capital, TBV dilution and earnback.
+- Execution alongside M&A, ECM and DCM partners, with regulatory approval and capital questions in every analysis.
+- Interview use: show you expect to be in the details and to manage analysts, not to lead deals on day one.` },
+  { id: 'fit-k006', t: 'fit', q: `What will your first months as an associate really be like, and how would you handle working with analysts who know the systems better than you?`, a: `**Expect to earn credibility through accuracy and reliability; the MBA got you the job, not the team's trust.**
+## Reality
+- Most time goes to models, pitch books and internal processes, not live deal leadership.
+- Analysts often know the templates, data tools and formatting standards better than you.
+- Long hours, especially in the first six months; comp is strong but modest per hour worked.
+## A typical day
+- Early: email, markets, overnight requests from senior bankers.
+- Midday: check-ins, model and comps updates, client diligence requests, page drafting.
+- Evening: review analyst output, send to the VP/MD, turn comments, final checks late at night.
+## Interview answer
+"I'd learn from the analysts quickly and openly, then add value through careful review, [prior client or team leadership experience] and anticipating the VP's next question."` },
+  { id: 'fit-k007', t: 'fit', q: `How does your pre-MBA background map to a banking group, and which backgrounds play best in FIG?`, a: `**FIG rewards backgrounds that give you credibility with financial institution clients or a credit and regulatory toolkit.**
+## Strong FIG feeders
+- Commercial or corporate banking, credit analysis, lending.
+- Regulators, government, policy or military roles with financial oversight.
+- Audit or advisory with bank, insurance or asset manager clients.
+- Consulting in a financial services practice; insurance, asset management, wealth or fintech roles.
+## Other common mappings
+- Consulting → M&A or coverage; tech → TMT or ECM; healthcare → healthcare; oil and gas → energy; accounting → M&A, LevFin or any coverage.
+## If your background isn't FI-related
+- Lead with transferable skills, then prove commitment: [FIG coursework], [finance club or case competition], fluency in bank and insurer metrics.
+## Skeleton
+"At [pre-MBA role] I [worked with or on X], which gives me [credibility with FI clients / a grounding in credit and regulation] that I want to apply in FIG."` },
+  { id: 'fit-k008', t: 'fit', q: `Where do bankers typically go after each group, and how should exits factor into your choice?`, a: `**Know the patterns for your own planning, but never raise exits in an associate interview; banks expect associates to commit to a long-term banking career.**
+- **M&A:** buyout PE and corporate development are the strongest paths.
+- **LevFin:** PE, credit funds and direct lending.
+- **ECM:** equity research, growth investing, investor relations. **DCM:** corporate treasury, fixed-income asset management.
+- **RX:** distressed and special situations funds, credit funds, turnaround advisory.
+- **Coverage:** sector-focused PE, growth equity and corporate development in that sector.
+- **FIG:** corporate development at banks, insurers and asset managers; financial-services PE and fintech investing; regulatory and policy roles. Generalist buyout PE is harder because FIG models are specialized.
+- **Staying in banking:** coverage plus M&A skills, since client relationships are the route to MD.`, adv: true },
+  { id: 'fit-k009', t: 'fit', q: `What does the MBA associate recruiting timeline look like, and what should a first-year be doing in November?`, a: `**Recruiting is front-loaded into the first-year fall; by November you should be in application and interview mode.**
+## Typical sequence (dates vary by bank and school rules; verify current)
+1. **Summer before the MBA:** research groups; first alumni outreach.
+2. **Early fall:** bank presentations, intensive networking with second-years and bankers, story refined.
+3. **Late fall:** applications; final technical drilling.
+4. **Winter (often January, sometimes earlier):** first rounds and superdays; offers can come within days, with short deadlines.
+5. **Spring:** technical prep; keep in touch with your future team.
+6. **Summer:** internship, aiming for a full-time offer.
+## Now (November)
+- Applications submitted; story and technicals rehearsed aloud.
+- A short update to every FIG contact at Citi, Barclays, BofA and Wells Fargo.
+- Rank banks and groups now, so you can respond to an exploding offer quickly and professionally.` },
+  { id: 'fit-k010', t: 'fit', q: `How do you convert a summer associate internship into a full-time offer?`, a: `**Treat the summer as a ten-week interview: the group decides return offers at the end, based on work quality, attitude and fit.**
+## Before you start
+- Refresh technicals in the spring, practice Excel and PowerPoint speed, follow FIG news and your group's recent deals.
+## During the summer
+- Zero-error work: check everything twice before it leaves your desk.
+- Respond fast, ask for comments early and never repeat a mistake.
+- Act like an associate: own workstreams, review analyst work, anticipate the next request.
+- Build relationships at every level (analysts, associates, VPs, MDs), not just upward.
+- Ask for staffing across FIG sub-sectors (banks, insurance, asset management, specialty finance).
+- Take the mid-summer review seriously and act on it visibly.
+## Avoid
+- Complaining about hours, disappearing on weekends without telling the team, or networking at the expense of deliverables.` },
+  { id: 'fit-k011', t: 'fit', q: `How should you network into a bank's FIG group? What are the rules and the outreach sequence?`, a: `**Be specific, memorable and politely persistent, and reach FIG bankers through second-years who interned at the bank.**
+## Rules
+- Ask about a deal, the group or a part of the job, never "banking in general."
+- Follow up with a thank-you that references something specific.
+- One polite nudge after about a week of silence; no more.
+## Sequence
+1. Email second-years who interned at your target bank (ideally in FIG); they answer most often.
+2. Ask them to introduce you to a FIG associate or VP.
+3. Hold a short call (about 20 minutes) with three prepared questions; take notes; send a thank-you the same day.
+4. Stay in touch about monthly, e.g., a note on a deal their group announced.
+5. When applications open, tell your contacts you've applied and ask for advice.
+- Track every contact (date, takeaways, next touch) and aim for several FIG contacts at each target bank across levels.` },
+  { id: 'fit-k012', t: 'fit', q: `What should you ask, and avoid, in a short networking call with a FIG banker?`, a: `**Ask three specific questions that show homework and give you something concrete to mention in your follow-up.**
+## Good questions
+- **Deal:** "On [recent FIG deal], what drove [the structure or pricing], and what did the associate own?"
+- **Group:** "Which FIG sub-sectors are busiest for the group right now, and how are associates staffed across them?"
+- **Success:** "What set the strongest summer associates apart last year?"
+- **Person:** "What surprised you most about moving into FIG from [their prior role]?"
+## Conduct
+- Have a 30-second introduction ready, keep to time, take notes.
+- Close by asking who else in the group you should speak with.
+## Avoid
+- Compensation or hours, anything on the bank's website, asking for a job or referral outright on a first call, and long monologues about yourself.` },
+  { id: 'fit-k013', t: 'fit', q: `How technical are MBA associate interviews, and how should you plan your technical prep?`, a: `**Expect roughly half the interview to be technical, at the level of a strong first-year analyst.**
+## Priorities
+1. **Must be flawless:** the three statements, equity value to EV, DCF (WACC, terminal value), LBO basics.
+2. **Strong:** comps and multiples, accretion/dilution, capital structure, credit metrics.
+3. **Then:** precedent transactions and FIG valuation (P/TBV vs. ROTCE, DDM, bank merger math, insurer and asset manager basics).
+## Method
+- Build a DCF, an LBO and a merger model from scratch; reading is not enough.
+- Answer questions aloud under time pressure; drill weak decks until they stick.
+- Use a modeling course, a standard IB valuation textbook and free technical guides alongside this app.
+## Habits
+- Read financial news daily and keep about three recent FIG deals ready (see the Deal Book).
+- Use finance club pitches or case competitions to practice presenting valuations under pressure.` },
   // ─── prod ───
   { id: 'prod-g001', t: 'prod', q: `Should a company raise debt or equity? How would you structure the analysis?`, a: `**Debt is usually cheaper and non-dilutive, so start there; switch to equity or a mix when the company can't safely carry the debt or when equity is cheaper.**
 ## Why debt first
@@ -1795,6 +1946,123 @@ export default [
 - **SPACs:** PIPE money tops up the trust cash to fund the merger and offset redemptions.
 - **Banks:** a quick way to rebuild capital or fund a merger under stress, e.g., PacWest / Banc of California (2023, ~$400M from two PE firms) and New York Community Bancorp (2024, ~$1B+) (verify current).
 - **Bank structuring:** investors usually keep voting stakes below ~10% to avoid change-in-control approvals, taking extra exposure through non-voting shares.` },
+  { id: 'prod-k001', t: 'prod', q: `What does an M&A associate do day to day, and who is the group a good fit for?`, a: `**M&A associates are the analytical and process engine of buy-side and sell-side advisory mandates, across every sector.**
+## Day to day
+- Check and refine merger, DCF and LBO models built by analysts, and own the outputs.
+- Draft and review pitch books, teasers and CIMs.
+- Coordinate diligence and the data room, and keep the other advisors (lawyers, accountants, the other side's bankers) on schedule.
+- Prepare materials for MDs, boards and clients.
+## Skills built
+- Valuation depth, deal structuring, negotiation and running multi-party processes.
+## FIG link
+- Bank and insurance deals add workstreams such as TBV dilution and earnback, pro forma capital and regulatory approvals; FIG coverage and M&A often staff these jointly (varies by bank).
+
+**Suits you if:** you love modeling and orchestrating complex processes and accept the toughest hours on live deals.` },
+  { id: 'prod-k002', t: 'prod', q: `What does a leveraged finance associate do day to day, and how is LevFin different from DCM?`, a: `**LevFin associates structure and underwrite debt for sub-investment-grade borrowers, mostly in sponsor-backed deals.**
+## Day to day
+- Structure leveraged loans and high-yield bonds for LBOs, acquisitions, dividend recaps and refinancings.
+- Build credit models: cash flow, leverage and coverage by year, with downside cases.
+- Write credit memos for the bank's commitment committee.
+- Work with PE sponsors and with the syndicate desks that place the debt.
+## LevFin vs. DCM
+- **LevFin:** sub-IG, sponsor-heavy, covenants and underwriting risk, closely tied to M&A.
+- **DCM:** investment-grade issuers, ratings-driven, priced as a spread over Treasuries, higher volume and steadier hours.
+## FIG link
+- Sponsor-owned insurance brokers, specialty lenders and fintechs borrow in leveraged markets; private credit funds are both competitors and clients.
+
+**Suits you if:** you enjoy credit and sponsor work, especially with a commercial banking or credit background.` },
+  { id: 'prod-k003', t: 'prod', q: `What does an ECM associate do day to day, and how does ECM work with FIG?`, a: `**ECM associates execute equity raises: IPOs, follow-ons, block trades and convertibles.**
+## Day to day
+- Valuation and pricing analyses, offering timetables and market updates.
+- Input to registration statements and roadshow materials.
+- Work with the syndicate desk on investor demand, allocation and pricing.
+- Watch market conditions, because issuance depends on open windows.
+## Character
+- Markets-facing and fast: a marketed offering can launch and price within days, and the full process usually runs shorter than an M&A sale.
+- Hours are generally more predictable than M&A outside launch periods.
+## FIG link
+- Common and preferred raises for banks and insurers, often alongside a merger; IPOs of fintechs, insurers and asset managers; sponsor sell-downs in FIG companies.
+
+**Suits you if:** you like markets, investor dynamics and quick execution.` },
+  { id: 'prod-k004', t: 'prod', q: `What does a DCM associate do day to day, and why does DCM matter so much in FIG?`, a: `**DCM associates help investment-grade issuers raise bonds and manage their debt.**
+## Day to day
+- New-issue pricing analyses against comparable bonds and spreads, plus timing ideas.
+- Support for rating agency presentations and debt capacity and credit metric analyses.
+- Liability management ideas: tenders, exchanges and refinancings.
+- Market updates for issuers and coordination with the syndicate desk and investors.
+## Character
+- Clients include large corporates, financial institutions, sovereigns, supranationals and agencies.
+- Process-driven and high volume, usually with better hours than M&A.
+## FIG link
+- Banks and insurers are among the largest bond issuers: holdco senior and TLAC debt, subordinated (Tier 2) debt, preferreds, insurer senior and surplus notes. Many banks run a dedicated FIG DCM team.
+
+**Suits you if:** you enjoy fixed income markets and want more regular hours.` },
+  { id: 'prod-k005', t: 'prod', q: `What does a restructuring associate do day to day, and where does RX touch FIG?`, a: `**RX associates model and negotiate outcomes for companies or creditors when a capital structure no longer works.**
+## Day to day
+- Liquidity and 13-week cash flow analysis, distressed valuation, and recovery waterfalls by creditor class.
+- Materials for negotiations among the company, lenders and bondholders.
+- Support for court work in Chapter 11: plan of reorganization and disclosure statement analyses.
+- Advising creditor committees on maximizing recoveries.
+## Character
+- Countercyclical, legally intensive (bankruptcy code, creditor rights) and adversarial.
+## FIG link
+- Failed banks go through FDIC resolution rather than Chapter 11, but their holding companies can file (SVB Financial Group, 2023), and specialty lenders, mortgage firms and fintech lenders can need RX advice.
+
+**Suits you if:** you enjoy complexity and adversarial negotiation and accept a specialized track.` },
+  { id: 'prod-k006', t: 'prod', q: `Why do companies use debt, and what determines the optimal capital structure? (MM, tax shield, distress costs, pecking order)`, a: `**Debt adds value until rising distress costs outweigh its tax and cost advantages; the classic theories explain each piece.**
+- **Modigliani-Miller:** with no taxes, distress costs or information gaps, the debt/equity mix doesn't change firm value. It's the baseline; real-world reasons for an optimal mix come from relaxing those assumptions.
+- **Tax shield:** interest is deductible, so permanent debt adds roughly tax rate × debt in value.
+- **Distress costs:** more leverage raises default risk and its costs (lost customers, legal fees, management distraction). The trade-off between shield and distress sets the optimum, where WACC is lowest.
+- **Pecking order:** managers know more than investors, so issuing equity can signal overvaluation. Firms prefer internal cash, then debt, then equity.
+- Also: debt disciplines management; flexibility and rating targets keep firms below the theoretical maximum.
+
+**FIG angle:** banks are different: deposit insurance and regulation break MM, so regulatory minimums plus buffers set capital, and banks hold close to target and return the excess.` },
+  { id: 'prod-l001', t: 'prod', q: `Financial Sponsors Group: when should you pitch a PE client to exit a portfolio company, or to deploy its remaining committed capital?`, a: `**Time pitches to the sponsor's fund cycle and to market conditions.**
+## Exit (sale or IPO)
+- Holding period: sponsors typically hold ~5–7 years, so pitch as an asset nears that window.
+- Fundraising: realized wins help market the next fund, so an upcoming raise argues for exiting strong assets.
+- Markets: weak M&A or IPO windows argue for waiting, unless the slump looks prolonged.
+## Deploy capital
+- Best pitched before the next fundraise: LPs want to see earlier commitments put to work.
+- GPs may invest from a new fund before final close (e.g., once ~30% of the target is raised) to show prospective LPs the strategy in action.
+
+**FIG angle:** the same logic applies when sponsors own insurance brokers, wealth managers or specialty lenders that FIG bankers sell.` },
+  { id: 'prod-l002', t: 'prod', q: `Financial Sponsors Group: what types of private equity deals might you advise on?`, a: `**Sponsors buy, build, recapitalize and sell; each step is a banking mandate.**
+- **Carve-out:** buy a non-core division from a corporate and stand it up on its own.
+- **Founder succession:** buy a majority stake from a retiring founder and professionalize management.
+- **Management buyout:** managers team up with a sponsor to buy the business they run.
+- **Take-private:** acquire and delist a public company.
+- **Add-on:** a portfolio company buys smaller rivals (buy-and-build).
+- **Dividend recap:** new debt funds a payout to the sponsor before exit.
+- **Secondary buyout:** one sponsor sells a whole company to another (not the same as a fund-stake secondaries deal).
+
+**FIG angle:** insurance brokers, RIAs and fund administrators are classic sponsor platforms for add-ons and secondary buyouts.` },
+  { id: 'prod-l003', t: 'prod', q: `Private Capital Advisory: what do TVPI, DPI and RVPI measure, and how would you price a $100M LP stake at 2.0x TVPI, 0.2x DPI and 1.8x RVPI?`, a: `**TVPI = DPI + RVPI: cash already returned plus remaining marked value, per dollar paid in.**
+- Here (assuming the $100M is fully called): $20M distributed and $180M of NAV remaining.
+- **Pricing drivers:**
+  - Fund age: a NAV-heavy profile is normal in year 3 but a warning sign in year 9.
+  - Asset quality: are the companies performing, and do the marks line up with public comps and deals?
+  - The GP's track record and how conservatively it marks.
+- **Return math:** a buyer paying par for $180M of NAV needs $270M back to earn 1.5x, i.e., a fund TVPI of ~2.9x (0.2x + 2.7x). At a 10% discount ($162M paid), it needs $243M, or ~2.6x.
+
+**FIG angle:** alternative managers report these fund metrics; at the firm level they're valued on FRE vs. carry, AUM growth and TEV/AUM.` },
+  { id: 'prod-l004', t: 'prod', q: `Private Capital Advisory: how do LP-led and GP-led secondaries differ, for investors and for the advising banker?`, a: `**LP-led sells an existing fund interest; GP-led moves specific assets into a new vehicle.**
+## LP-led
+- An LP (e.g., a pension) sells its interest in a fund to a secondary buyer, who diligences the fund and its holdings.
+- Banker role: a high-volume intermediary running the sale and diligence, with no company-level CIMs or models; lower fees, large sizes, steadier through cycles.
+## GP-led
+- The GP sets up a continuation vehicle funded by secondary investors, which buys one or a few assets from the old fund. Existing LPs choose to cash out or roll over.
+- Banker role: M&A-like (materials, valuation, buyer outreach, closing); higher fees, more cyclical, busiest when dry powder is ample and markets are calm.` },
+  { id: 'prod-l005', t: 'prod', q: `Private Capital Advisory: why do LPs sell fund stakes early, even in good funds, and why do GPs set up continuation funds?`, a: `**LPs sell for portfolio reasons, not just performance; GPs use continuation funds to hold winners longer.**
+## Why LPs sell
+- **Denominator effect:** public markets fall, so private equity becomes overweight and must be trimmed.
+- Institutional change: a new CIO or committee prunes non-core holdings.
+- Strategy, return-target or political shifts, or a plain need for liquidity.
+## Why GPs form continuation funds
+- Offer existing LPs liquidity.
+- Keep compounding a strong asset beyond the fund's term.
+- Reset fee and carry economics.
+- Raise fresh capital for follow-ons and add-ons, and bring in new LPs.` },
   // ─── ind ───
   { id: 'ind-a001', t: 'ind', q: `How is modeling and valuing a consumer/retail company different from a typical corporate, and which operating drivers would you project?`, a: `**Accounting and valuation are standard (EV/EBITDA, P/E, DCF); the differences sit in the operating drivers and a few sector metrics.**
 ## Drivers to project
@@ -1830,4 +2098,216 @@ export default [
 - Adjust for what the comps miss: location, age and condition, tenant quality, lease terms. A lower cap rate means a higher value.
 
 **FIG angle:** rising cap rates cut collateral values behind bank CRE loans. If the cap rate moves to 7.5%, value drops to ~$66.7M and a $52M loan goes from 65% to ~78% loan-to-value, raising credit and refinancing risk.` },
+  { id: 'ind-l001', t: 'ind', q: `Healthcare: how does valuation differ across the main verticals, and what drives a facilities operator such as a nursing-home chain?`, a: `**Mostly standard (DCF, TEV/EBITDA, P/E); branded drugs and facilities need sector-specific forecasts.**
+- **Verticals:** pharma, biotech and life-science tools vs. equipment and services (hospitals, labs, managed care, devices).
+- **Branded pharma with a pipeline:** forecast each marketed drug to patent expiry, then cut its revenue sharply as generics arrive; weight pipeline drugs by approval odds. Haircut the terminal value or use negative growth, since products must keep being replaced.
+- **Facilities:** sites × beds × occupancy × revenue per occupied bed (driven by price per admission and length of stay); staffing and costs scale with beds; capex funds new sites and upkeep.
+
+**FIG angle:** managed care companies are insurers in substance (premiums, medical loss ratios) but are usually covered by healthcare bankers rather than FIG.` },
+  { id: 'ind-l002', t: 'ind', q: `Biotech: how would you value a clinical-stage (e.g., Phase II) company with no revenue, and which multiples are useful?`, a: `**A risk-adjusted DCF built drug by drug, cross-checked against forward-revenue multiples.**
+1. Project the R&D needed to finish trials and win approval, weighted by the odds of reaching each phase.
+2. Commercial revenue = addressable patients × market share × price per patient, times the cumulative probability of approval.
+3. Cut revenue steeply (often ~90%) when exclusivity ends; most costs scale with revenue.
+4. Discount unlevered FCF with no terminal value. With several drugs, sum each drug's value and subtract capitalized corporate overhead; then bridge to equity value.
+- **Multiples** (once long-range forecasts are credible): TEV / peak sales and TEV / revenue five years after launch.` },
+  { id: 'ind-l003', t: 'ind', q: `Industrials: what sets the sector apart, and how do backlog and book-to-bill work for manufacturers with long lead times?`, a: `**Standard accounting and valuation, but highly cyclical and run on sector KPIs.**
+- Customers are mostly businesses and governments; results swing with GDP, credit, interest rates and trade policy.
+- **Verticals:** capital goods (aerospace/defense, machinery, building products), transportation (airlines, rail, shipping, freight) and commercial services.
+- **Long lead times** (aircraft, rail cars): ending backlog = beginning backlog + new orders − revenue recognized. Book-to-bill = orders ÷ revenue; above 1.0x means the backlog is growing.
+- Contract assets, contract liabilities and work in progress can swing working capital sharply.
+- **SOTP** helps for conglomerates or shippers with mixed fleets; it adds little for pure plays such as a single airline.` },
+  { id: 'ind-l004', t: 'ind', q: `Industrials: how would you forecast an airline, and what is different about valuing shipping companies?`, a: `**Airlines run on capacity and yield; shippers are valued more on fleet assets and post-capex cash flow.**
+## Airline
+- Capacity in available seat miles (ASMs) × load factor = revenue passenger miles (RPMs).
+- Passenger revenue = RPMs × yield (revenue per RPM), plus ancillary and cargo revenue.
+- Costs split into fuel and non-fuel (labor, maintenance, rent); heavy D&A and aircraft capex.
+## Shipping
+- Some use partnership (GP/LP) structures, so distributions are split between holders.
+- Capex is so large that EBITDA − capex (distributable cash flow) matters more than EBITDA; EBITDAR normalizes lease mix and accounting regimes.
+- NAV = market value of the fleet less liabilities; compare via P/NAV.` },
+  { id: 'ind-l005', t: 'ind', q: `Metals & Mining: how do producers and miners differ in valuation, and how would you value a steel producer?`, a: `**Producers are manufacturers valued normally; miners are valued on decades of reserves.**
+- **Miners:** NAV model (a long DCF with no terminal value), P/NAV, TEV/reserves, TEV/resources.
+- **Steel producer:** volume = capacity × utilization; revenue at the realized price per ton; gross margin per ton less opex gives EBITDA. Split maintenance capex from growth capex (new mills add capacity).
+- Run DCF scenarios on steel prices and spreads; comps on TEV/EBITDA and P/E.
+- **TEV/NOPAT vs. TEV/EBITDA:** NOPAT is after D&A and tax, so it captures capital intensity and tax differences. Use it if those drive value; EBITDA is better for normalizing across different policies.` },
+  { id: 'ind-l006', t: 'ind', q: `Mining: walk me through a NAV model for a gold miner. Which reserve categories go in, and should short-term NAV growth drive P/NAV?`, a: `**Model each mine to the end of its economic life, discount, and bridge to equity.**
+1. Existing mines produce until uneconomic; new mines get development capex, a ramp-up, a peak and a decline.
+2. Revenue from a gold price deck (high/base/low).
+3. Mine-level capex and opex (a fixed per-mine amount plus a cost per ounce); add corporate overhead and taxes.
+4. Discount with no terminal value at a sector-norm rate (often ~5% for gold, higher for copper), add cash, subtract debt → NAV vs. market cap.
+- **Reserves** (proved, probable) are economically recoverable; **resources** (measured, indicated, inferred) are broader and less certain. Base the case on reserves; risk-weight anything more speculative.
+- A year or two of NAV growth barely moves a multi-decade value, so expect little correlation with P/NAV.` },
+  { id: 'ind-l007', t: 'ind', q: `Mining: which multiples and comps criteria are sector-specific, why might gold miners trade richer than copper miners, and what are metal-equivalent units?`, a: `**Miners trade on what's in the ground, so multiples and comps key off reserves and production.**
+- **Multiples:** P/NAV, TEV/reserves, TEV/resources, and P/cash flow (which captures capex, tax and working capital, unlike EBITDA).
+- **Comps:** size by reserves, resources or annual production; screen by primary metal; use broad regions since miners operate globally.
+- **Gold vs. copper:** gold miners often trade near or above 1.0x P/NAV and copper miners below it; gold is a store of value with steadier perceived demand, while copper tracks industrial cycles.
+- **Metal equivalents** convert a mix into one unit at relative prices: 1,000 oz gold + 10,000 lb copper at $2,000/oz and $4/lb → 1,000 + (10,000 × $4 ÷ $2,000) = 1,020 gold-equivalent oz.` },
+  { id: 'ind-l008', t: 'ind', q: `Oil & Gas: what are the main verticals, and how does valuation differ across E&P, midstream and downstream?`, a: `**E&P is the specialized one; midstream adds MLP and yield quirks; the rest are fairly standard.**
+- **Upstream (E&P):** price-takers with depleting reserves → NAV model, TEV/EBITDAX, TEV/proved reserves, TEV/daily production.
+- **Midstream** (pipelines, storage): forecast capacity × utilization × fee; DCF and TEV/EBITDA, plus distribution yield, CAFD, P/CAFD or a DDM given high payouts.
+  - MLPs pay no entity-level tax, distribute most cash and raise capital constantly; GP and LP payouts differ under the partnership agreement, so value differs by holder.
+- **Downstream (refiners):** standard DCF, TEV/EBITDA, P/E; drivers are refinery count, capacity, utilization and refining margins (crack spreads).
+- Oilfield services and integrateds: mostly standard.` },
+  { id: 'ind-l009', t: 'ind', q: `Oil & Gas: walk me through a NAV model for an E&P company. How would you choose its comps?`, a: `**A well-level DCF of the reserve base with no terminal value.**
+1. Existing wells decline until proved developed reserves are no longer economic.
+2. Undeveloped inventory (PUDs; optionally probable/possible) is drilled at X wells a year; each well starts at its initial production rate and declines toward its estimated ultimate recovery (EUR).
+3. Revenue = volumes × price deck (oil, gas, NGLs; high/mid/low cases).
+4. Costs: drilling and completion capex, lease operating expense, production taxes, transport; then cash taxes and G&A at the corporate level.
+5. Discount at the customary 10%, add cash and undeveloped acreage, subtract debt and preferred → NAV, compared with market cap.
+- **Comps:** size on proved reserves or production; keep pure E&Ps apart from integrateds; avoid mixing US GAAP and IFRS reporters.` },
+  { id: 'ind-l010', t: 'ind', q: `Oil & Gas: how do you calculate a single well's IRR, and a gas-weighted producer's reserve life?`, a: `**Well IRR: net upfront cost vs. net cash flows. Reserve life: reserves ÷ annual production in common units.**
+## Well IRR (80% working interest, 10% royalty, $10M well cost)
+- Upfront cost = 80% × $10M = $8M.
+- Year 1: 1,000 bbl/day × 365 = 365,000 bbl, declining 20% a year until cumulative output reaches the 1M bbl EUR.
+- Company revenue = volume × price × 80% × (1 − 10%), i.e., 72% of gross.
+- Deduct its share of LOE, production taxes and transport; IRR on −$8M then the yearly cash flows.
+## Reserve life
+- 6 Mcf of gas ≈ 1 bbl: 50 MBbl of oil = 300 MMcfe, so output = 600 + 300 = 900 MMcfe a year.
+- 10 Bcfe = 10,000 MMcfe; 10,000 ÷ 900 ≈ 11.1 years.`, adv: true },
+  { id: 'ind-l011', t: 'ind', q: `Oil & Gas: how do successful efforts and full cost accounting differ? And an E&P with a $5B internal NAV but a $3B market cap says it's undervalued: is it?`, a: `**Normalize accounting with EBITDAX; be skeptical when reserve metrics are weak.**
+## Successful efforts vs. full cost
+- Productive wells are capitalized under both; dry holes are expensed under SE but capitalized under FC.
+- SE → lower operating income, net income and PP&E; FC → higher DD&A and more frequent ceiling-test write-downs.
+- EBITDAX adds back exploration expense to put both on one basis.
+## The undervaluation claim (reserve life 7.0, replacement 80%)
+- Reserve life = proved reserves ÷ annual production; 7 years is short.
+- Replacing only 80% of output means proved reserves are shrinking.
+- The internal NAV likely leans on probable/possible reserves or rosy prices. It might be cheap, but aggressive assumptions are the likelier explanation.`, adv: true },
+  { id: 'ind-l012', t: 'ind', q: `Power & Utilities: how does valuation differ between regulated utilities and independent power producers, and why use TEV/rate base?`, a: `**IPPs are valued like normal companies; regulated utilities are valued on their rate base and allowed returns.**
+- **Verticals:** regulated electric, gas and water utilities; unregulated IPPs; multi-utilities.
+- **Regulated:** the regulator sets the rate base (roughly net PP&E), allowed debt/capital and allowed ROE, and customer rates are backed into from those.
+- **Multiples:** TEV/rate base and TEV per MW size the asset base regardless of capital structure or local rules; EBITDA is effectively capped by equity × allowed ROE, so it embeds those choices. P/BV and P/TBV also matter.
+- **IPP vs. regulated:** IPPs gain when power prices are high relative to fuel (wide spark/dark spreads) and suffer when spreads compress, so they carry higher betas; which trades richer depends on the cycle.` },
+  { id: 'ind-l013', t: 'ind', q: `Power & Utilities: back into a regulated electric utility's rate: $2,000M rate base, 50% debt, 12% allowed ROE, 6% cost of debt, $60M O&M, $20M depreciation, 1,500 GWh sold, 25% tax.`, a: `**Build the revenue requirement up from the allowed profit, then divide by volume.**
+1. Equity = 50% × $2,000M = $1,000M; allowed net income = 12% × $1,000M = $120M.
+2. Pre-tax income = $120M ÷ (1 − 25%) = $160M.
+3. Add interest (6% × $1,000M = $60M), O&M $60M and depreciation $20M → revenue requirement = $300M.
+4. Rate = $300M ÷ 1,500 GWh (1.5 billion kWh) = $0.20 per kWh.
+- **Multi-utility SOTP:** the segment with the highest allowed ROE and rate-base growth usually earns the top multiple; with similar ROEs, lower operating costs leave room for rate increases.
+
+**FIG angle:** utility earnings = allowed ROE × regulated equity, much as a bank's growth is capped by regulatory capital; both trade on P/BV relative to ROE.` },
+  { id: 'ind-l014', t: 'ind', q: `Project Finance: how does it differ from corporate finance, and how would a lender stress-test an infrastructure asset?`, a: `**Project finance lends to one asset, not a company, and is repaid only from that asset's cash flows.**
+- **Structure:** a special-purpose vehicle with a finite life; debt is non- or limited-recourse to the sponsor.
+- **Credit:** long-term contracts (PPAs, concessions, tolls) support high leverage; debt is sized and sculpted to CFADS against a minimum DSCR rather than to EBITDA multiples.
+- **Corporate finance:** many assets, indefinite life, balance-sheet credit, leverage multiples and covenants.
+- **Lender stress test:** model construction overruns and delays, opex inflation and downtime, combine them into a worst case, and check that DSCRs hold and debt repays within its tenor.
+
+**FIG angle:** banks, life insurers (via long-dated private placements) and private credit funds are the main project lenders; infrastructure debt suits insurers' long-duration liabilities.` },
+  { id: 'ind-l015', t: 'ind', q: `Project Finance: walk me through a brownfield acquisition model, and what changes for a greenfield project?`, a: `**Brownfield: forecast CFADS, size the debt off it, and compute equity returns. Greenfield adds a construction phase first.**
+## Brownfield
+1. Price, dates and flags for each operating phase.
+2. Volume drivers (MWh, tonnes, traffic) → CFADS = EBITDA − cash taxes − maintenance capex ± working capital ± reserve account movements.
+3. Size and sculpt debt to a minimum DSCR or LLCR.
+4. Cash flow to equity = CFADS − debt service → IRR and MOIC.
+## Greenfield
+- Equity and a construction loan fund the build; interest and fees during construction are capitalized or paid with equity.
+- At completion, a term loan sized on DSCR/LLCR refinances the construction loan.
+- Circularity: fees and capitalized interest depend on loan size and vice versa; fix with hard-coded total costs (a paste macro) and interest on opening balances.`, adv: true },
+  { id: 'ind-l016', t: 'ind', q: `Project Finance: why is debt sculpted to cash flows, what are DSCR and LLCR, and why is sculpting tricky in Excel?`, a: `**Debt service is set as a fraction of each period's cash flow, so repayment rises and falls with the asset.**
+- **DSCR** = CFADS ÷ (interest + scheduled principal + fees), each period.
+- **LLCR** = PV of CFADS over the remaining loan life ÷ debt outstanding.
+- **Sculpting:** maximum debt service each period = CFADS ÷ target DSCR; debt = PV of those payments at the loan rate. E.g., $13M of CFADS at 1.30x → $10M of debt service.
+- **Why:** contracted cash flows are predictable; lenders get repayment matched to cash flow; sponsors get more leverage.
+- **Excel pain:** after-tax CFADS depends on interest, which depends on debt size (circular; use goal seek or a macro); uneven dates and rates; sweeps, reserve accounts, refinancings and revolvers.`, adv: true },
+  { id: 'ind-l017', t: 'ind', q: `Project Finance: how would you forecast a gas-fired power plant, and how do an airport, a solar plant with a 10-year PPA and a merchant solar plant compare on risk?`, a: `**Plant revenue = capacity payments + energy payments; risk rises with market-price exposure and construction complexity.**
+## Gas plant
+- Generation (MWh) = capacity (MW) × hours × capacity factor (often 50%+ for gas).
+- Revenue: fixed capacity payments plus variable energy payments, often with escalators set in a PPA.
+- Costs: fuel and labor (variable), O&M tied to capacity; then D&A, interest, tax and maintenance capex.
+## Risk ladder (lowest to highest)
+1. **Solar with a 10-year PPA:** prices locked; limited upside.
+2. **Merchant solar:** market prices cut both ways.
+3. **Airport:** complex, overrun-prone build, but traffic and fees can grow and it can add terminals; highest return potential.` },
+  { id: 'ind-l018', t: 'ind', q: `Real Estate: how do the main property types differ, and how do stabilized acquisition and development models work?`, a: `**Lease length and tenant type set the modeling approach; development adds construction and lease-up risk.**
+- **Office, retail, industrial:** business tenants on 5–10 year leases with bespoke terms (free rent, reimbursements, tenant improvements); model lease by lease. Industrial is quicker to build, with fewer tenants.
+- **Multifamily** (~1-year leases) and **hotels** (nightly): model average rent or ADR and occupancy. **Condos** are sold, often presold.
+- **Stabilized acquisition:** price via cap rate or $/sq ft, fund with debt and equity, project the pro forma, exit at forward NOI ÷ cap rate → equity IRR.
+- **Development:** buy land, fund construction with equity first and then a construction loan (capitalized interest), refinance into a permanent loan, lease up, sell on stabilized NOI.` },
+  { id: 'ind-l019', t: 'ind', q: `Real Estate: walk me through a property pro forma. How do NOI, adjusted NOI and cash flow to equity differ?`, a: `**Start at potential rent and step down to what equity investors actually receive.**
+1. Potential rent at full occupancy and market rates.
+2. Less vacancy, free rent and loss to lease; plus expense reimbursements and percentage rent → effective gross income.
+3. Less operating expenses and property taxes → **NOI**: the EBITDA analogue, before debt and most capital costs (capital reserves are treated inconsistently).
+4. Less tenant improvements, leasing commissions and capex net of reserves → **adjusted NOI** (unlevered cash flow).
+5. Less interest and principal → **cash flow to equity**.
+- No corporate tax: properties sit in pass-through entities (partnerships, LLCs, REITs).
+- NOI sets exit value; the debt-service line shows financing capacity.` },
+  { id: 'ind-l020', t: 'ind', q: `Real Estate: what are the three main ways to value a property, and why can deals carry 60–70% leverage?`, a: `**Cap rates, DCF and replacement cost; leverage works because property cash flows are high-margin and steady.**
+## Valuation
+- **Cap rate:** forward stabilized NOI ÷ market cap rate (a 5% cap rate = 20x NOI).
+- **DCF:** discount adjusted NOI plus an exit value.
+- **Replacement cost:** what it would cost to build today vs. the asking price.
+## Why 60–70% debt works
+- NOI margins are often 50%+ with modest ongoing capex.
+- Loans amortize over 20–30 years even when the hold is 5–10 years.
+- Interest-only periods ease early debt service.
+
+**FIG angle:** banks size CRE loans on loan-to-value and DSCR, so rising cap rates erode collateral coverage directly; CRE concentration is a core bank-credit topic.` },
+  { id: 'ind-l021', t: 'ind', q: `Real Estate: what is a waterfall (promote) structure, and why is it common?`, a: `**Profits are split by IRR hurdles rather than pro rata to equity, so the developer or sponsor gets a bigger share as returns rise.**
+- Illustration: investors fund 90%, the developer 10%. Up to a 10% IRR, cash splits 90/10; from 10% to 15%, the developer takes 20%; above 15%, 30%.
+- Why: it rewards finishing on time and on budget and pushing rents, while investors, who fund most of the equity, still keep most of the profit.
+- Mechanics mirror PE carried interest: return of capital, preferred return, sometimes a catch-up, then the promote split.
+
+**FIG angle:** the same hurdle-and-carry logic drives alternative asset managers' performance fees.` },
+  { id: 'ind-l022', t: 'ind', q: `REITs: what are the main requirements, why use FFO instead of net income, and how do US and IFRS REITs differ?`, a: `**REITs avoid corporate tax by paying out most income, so they constantly raise outside capital, and net income is a poor earnings gauge.**
+- **US tests:** distribute at least 90% of taxable income; roughly 75%+ of assets and gross income real-estate related; ownership-dispersion rules.
+- **FFO** = net income + real estate D&A − gains (+ losses) on property sales + impairments. **AFFO** also deducts recurring capex and leasing costs and adjusts for straight-line rent.
+- **US vs. IFRS:** US REITs carry property at depreciated cost; IFRS REITs mark to fair value through income, so NAV is readily visible. Europe uses EPRA earnings in place of FFO.
+
+**FIG angle:** mortgage REITs hold loans and MBS rather than buildings, trade on P/BV and dividend yield, and are often covered by FIG.` },
+  { id: 'ind-l023', t: 'ind', q: `REITs: how do you value an equity REIT, and how does a REIT NAV model work?`, a: `**Comps, precedents and DCF still apply, but on REIT metrics, with NAV as a key cross-check.**
+- **Multiples:** P/FFO, P/AFFO, TEV/EBITDA, dividend yield; IFRS REITs also on P/BV.
+- **DCF vs. DDM:** an unlevered DCF is simplest; a levered DCF or DDM needs debt, equity and interest forecasts (the DDM adds FFO and a payout ratio). Worth it when dividends move around a lot.
+## NAV model
+Most useful for US REITs, carried at historical cost, after property values shift.
+1. Forward NOI ÷ cap rate = gross property value; value fee or other income at a higher cap rate.
+2. Add other assets; mark debt to market and subtract all liabilities.
+3. NAV ÷ shares vs. share price (premium or discount to NAV).` },
+  { id: 'ind-l024', t: 'ind', q: `REITs: how do REIT M&A deals differ from normal-company deals, and why do contribution and value creation analyses matter?`, a: `**REIT deals are mostly stock-funded, so ownership splits and the post-deal share price dominate.**
+- **Why stock:** payout rules leave little cash, and leverage is usually already high.
+- **Purchase accounting:** accumulated depreciation is eliminated, properties are written up to fair value, and lease intangibles (in-place leases, above/below-market leases) are recorded.
+- **Target debt and preferred:** assume, refinance or bridge; the choice can swing the economics.
+- **Accretion/dilution** on FFO or AFFO per share rather than EPS.
+- **Contribution analysis:** does each side's ownership match its share of revenue, FFO and real estate assets?
+- **Value creation analysis:** assume the larger combined REIT re-rates to a higher multiple, then back into the buyer's implied share price; speculative, so be wary if it needs a big re-rating.`, adv: true },
+  { id: 'ind-l025', t: 'ind', q: `REITs: how does a REIT choose between debt and equity, and how is a REIT LBO different from a normal LBO?`, a: `**Payout rules mean REITs keep raising capital, which shapes both funding choices and buyout returns.**
+- **Debt vs. equity:** debt is cheaper but capped by covenants (e.g., maximum debt/EBITDA). Run operating scenarios, borrow up to the covenant headroom, then issue equity, targeting the mix that minimizes WACC while staying compliant.
+- **REIT LBO:** the company usually keeps REIT status, so it must keep paying large dividends; acquisitions and development continue, funded mostly with debt because the sponsor doesn't want to inject more equity.
+- Returns come from EBITDA growth, multiple expansion and dividends, with little or no debt paydown, so exit timing matters even more.`, adv: true },
+  { id: 'ind-l026', t: 'ind', q: `Renewables: what are the main verticals, and which metrics and multiples are used to value them?`, a: `**Mostly standard valuation; the drivers borrow from power, industrials or oil & gas depending on the vertical.**
+- **Verticals:** solar, wind, storage/batteries, biofuels, EVs and diversified platforms; smaller hydro, geothermal, hydrogen and carbon capture.
+- **Power producers:** TEV/MW separates installed capacity from how well it's monetized.
+- **Asset-holding yieldcos:** spending is front-loaded capex, so cash yields are high; valued on dividend yield, CAFD and equity value/CAFD, much like MLPs or REITs.
+- **Manufacturers and services:** the usual TEV/revenue, TEV/EBITDA, P/E.
+- **Biofuels/RNG:** producers resemble chemicals companies (realized price vs. feedstock cost); transporters resemble midstream (capacity, utilization, fees), with yield metrics and a DDM if structured as MLPs.` },
+  { id: 'ind-l027', t: 'ind', q: `Renewables: two solar developers each hold 2,000 MW with similar revenue and EBITDA, yet one trades 30% higher. Why? And how do solar and wind assets compare?`, a: `**Same headline size, different asset quality and economics.**
+- **Contracts:** longer remaining PPA tenor (e.g., 20 vs. 10 years), better pricing and escalators.
+- **Location:** stronger sun, grid access and power markets.
+- **Project financing:** the debt and tax equity attached to each plant change what common equity actually owns.
+- **Execution:** lower build cost per MW or faster completion.
+## Solar vs. wind
+- Onshore wind is larger, riskier and costlier than solar; offshore wind is the riskiest, with frequent delays and overruns.
+- Wind's higher output potential supports higher $/MW values, but with a wider spread.` },
+  { id: 'ind-l028', t: 'ind', q: `TMT: what are the main verticals, and how do software, telecom, semiconductors and hardware differ for valuation?`, a: `**Standard methods throughout; the differences are capital intensity, cyclicality, regulation and operating metrics.**
+- **Verticals:** technology (software, internet, hardware, semiconductors, IT services), media, telecom.
+- **Software:** labor-heavy, light capex; subscription metrics (churn, ARPU, LTV/CAC); NOLs often matter in the DCF.
+- **Telecom:** capex-heavy, regulated, inelastic demand; holding-company structures make SOTP common.
+- **Semis that fabricate** (TSMC, unlike a fabless designer such as Nvidia): heavy capex plus high R&D; more cyclical and theme-driven (AI, crypto); watch book-to-bill and utilization.
+- **Hardware:** gross margin and capex efficiency drive relative value.
+- **Media:** content amortization matters.` },
+  { id: 'ind-l029', t: 'ind', q: `TMT: your Netflix FCF conversion is over 70%, but a colleague says the real figure is about half that. Who's right?`, a: `**The colleague: content spending is the hidden capex.**
+- Content amortization sits in cost of revenue, reducing EBITDA, then is added back as non-cash in cash from operations.
+- Cash spent on new content shows up as additions to content assets, a large outflow that behaves like capex.
+- An EBITDA-based FCF that skips those additions overstates conversion; include all content cash flows (or start from CFO) and conversion drops well below 70%.
+- Lesson: for any content company, compare cash content spend with amortization.` },
+  { id: 'ind-l030', t: 'ind', q: `TMT: a SaaS company signs a $240, 2-year contract on Jan 1, billed every 6 months with 2 months to collect. Walk through bookings, billings, revenue, AR and deferred revenue for January and February.`, a: `**Bookings = contract value signed; billings = invoices sent; revenue = service delivered.**
+## January
+- Bookings $240; billings $240 ÷ 4 invoices = $60; revenue $240 ÷ 24 months = $10.
+- The Jan 1 invoice adds $60 to AR and $60 to deferred revenue; after $10 is earned, deferred revenue ends January at $50.
+## February
+- Bookings $0, billings $0 (next invoice July 1), revenue $10.
+- AR stays $60 until collected on March 1; deferred revenue ends February at $40.` },
+  { id: 'ind-l031', t: 'ind', q: `TMT: estimate customer LTV ($10K a year, 10% annual churn, 5% price rise every 2 years). What does a 4.0x LTV/CAC with a 24-month CAC payback tell you, and how is SaaS valued?`, a: `**LTV ≈ $110K; trust the payback period over the ratio; value on ARR and growth.**
+- **LTV:** average life ≈ 1 ÷ 10% = 10 years. Annual value steps $10.0K, $10.5K, ~$11.0K, ~$11.6K, ~$12.2K (two years each), averaging ~$11.05K → LTV ≈ $110K undiscounted (lower once discounted).
+- **LTV/CAC vs. payback:** LTV rests on churn, pricing and margin assumptions; payback uses actual contract terms. Under ~12 months is a common target, so 24 months suggests the 4.0x relies on optimistic inputs.
+- **Valuation:** screen on revenue and growth; pair ARR with EV; revenue multiples while unprofitable, EBITDA or UFCF later (UFCF captures upfront cash from growing deferred revenue); a longer DCF with a discount rate that falls as the company matures.`, adv: true },
 ];

@@ -1,6 +1,271 @@
 // Flashcards written to cover the study guides the user uploaded.
 // Original wording — no text is copied from the guides. Topics map to the app's decks.
 export default [
+  // ─── bank ───
+  { id: 'bank-h001', t: 'bank', q: `At a high level, how do you build a projection model for a bank?`, a: `**Start with the balance sheet, because for a bank it drives the income statement.**
+1. **Balance sheet:** project loans and deposits by category first, then securities, cash and borrowings to balance the funding
+2. **Rates:** link asset yields and funding costs to a benchmark (fed funds, SOFR, the curve) using deposit betas → interest income, interest expense, NII
+3. **Fees and expenses:** growth rates or simple drivers (e.g., wealth fees on client assets, expenses vs an efficiency target)
+4. **Provision:** expected net charge-offs plus reserve build on loan growth under CECL → pre-tax income → net income
+5. **Capital:** compare CET1 with the target ratio × projected RWA; the gap sets dividends and buybacks (or limits loan growth)
+6. **Cash flow statement:** mostly falls out of the balance-sheet changes and the income statement
+
+- **Don't add back the provision** to "find cash flow" when valuing a bank: credit losses are as real an operating cost as interest expense, and charge-offs follow the reserve` },
+  { id: 'bank-h002', t: 'bank', q: `What's the most important bank metric, and how do the other metrics roll up into it?`, a: `**ROTCE versus the cost of equity, since the gap between them sets the P/TBV multiple.**
+## The chain
+1. Average earning assets × NIM = **NII** (levers: balance-sheet growth, asset mix, funding cost)
+2. + fee income − non-interest expense = **PPNR** (levers: efficiency ratio, fee mix)
+3. − provision − taxes = **net income** (levers: credit quality, reserve builds and releases)
+4. ÷ average tangible common equity = **ROTCE** (lever: capital level; surplus capital dilutes it)
+5. ROTCE vs cost of equity → **P/TBV**, e.g., 15% ROTCE, 11% COE, 4% growth → (15 − 4) ÷ (11 − 4) ≈ 1.6x
+## Return terminology
+- **ROE:** net income ÷ average equity
+- **ROCE:** in banking, return on common equity = (net income − preferred dividends) ÷ average common equity; if unsure, ask "return on common, right?"
+- **ROTCE:** net income to common (often + after-tax intangible amortization) ÷ average tangible common equity
+- **Example (BofA, 3Q26):** ROE 9.4% (on common) vs ROTCE 12.6% reported (verify current)` },
+  { id: 'bank-h003', t: 'bank', q: `Give me Bank of America's 3Q26 scorecard and the story behind it.`, a: `**Know these cold for a BofA interview, and round when you speak (3Q26; verify current).**
+- **Revenue** ~$30.0B (+3%); **NII** $16.4B (+8%), ~55% of revenue; **net interest yield** 2.16% (+15 bp)
+- **Net income** $6.9B reported, $8.1B adjusted (excluding a $1.2B one-time charge); **diluted EPS** $0.91 reported, $1.08 adjusted
+- **Returns:** ROE 9.4% and ROTCE 12.6% reported; 11.1% and 14.9% adjusted
+- **Efficiency ratio** 66% reported, 62% adjusted; **NCO ratio** 0.44%
+- **Capital:** CET1 10.9% vs a 10.0% requirement; $8.3B returned, including $6.0B of buybacks
+- **Per share:** BVPS ~$39.26, TBVPS ~$29.14
+- **Balance sheet:** average deposits ~$2.02T, average loans ~$1.23T (+6%)
+- **The story:** NII growth as low-yielding fixed-rate securities and loans reprice higher, plus steady deposits, while excess CET1 is returned through buybacks` },
+  // ─── cap ───
+  { id: 'cap-h001', t: 'cap', q: `What's the difference between loss reserves and regulatory capital, and why do banks and insurers need both?`, a: `**Reserves cover the losses you expect; capital covers the ones you don't.**
+- **Expected losses** are booked ahead of time through earnings: the allowance for credit losses at a bank, loss and claim reserves at an insurer
+- **Unexpected losses** are absorbed by regulatory capital, mostly tangible common equity (CET1 at a bank, total adjusted capital in an insurer's RBC ratio)
+- **Who's protected:** when a loan is written down, the right side of the balance sheet must shrink too; with enough capital, shareholders' equity takes the loss instead of depositors or policyholders
+- **How it's policed:** capital ÷ risk-weighted assets (or ÷ total assets for leverage) must stay above minimums, e.g., CET1 ≥ 4.5% plus buffers
+- **Liquidity is a separate test:** enough liquid assets to survive a 30-day run (LCR) and stable funding for the asset base (NSFR)
+- **Link:** when a bank raises its loss estimate, a loss moves from "unexpected" to "expected": the reserve rises and capital falls` },
+  { id: 'cap-h002', t: 'cap', q: `A bank has $1,000 of assets and $70 of CET1. Work out its RWA, CET1 ratio and leverage ratio. Why do regulators require both ratios?`, a: `**Same equity, very different ratios: RWA $590, CET1 ratio ~11.9%, leverage 7.0%.**
+- $100 cash × 0% = $0
+- $200 agency MBS × 20% = $40
+- $300 first-lien mortgages × 50% = $150
+- $400 C&I loans × 100% = $400
+
+1. RWA = 0 + 40 + 150 + 400 = **$590**
+2. CET1 ratio = 70 ÷ 590 ≈ **11.9%**
+3. Tier 1 leverage = 70 ÷ 1,000 = **7.0%** (assuming no preferred, so Tier 1 = CET1)
+
+- **Why both:** risk weights can understate risk (model error, 0% on Treasuries), so a leverage ratio acts as a blunt backstop
+- **Mix matters:** shift the $200 of MBS into C&I loans and RWA rise by $160 to $750 → CET1 ratio drops to ~9.3% with total assets unchanged
+- Securities-heavy, low-risk balance sheets tend to be bound by leverage; loan-heavy ones by CET1` },
+  { id: 'cap-h003', t: 'cap', q: `How is Bank of America's CET1 requirement built, how much cushion does it run, and why not hold more?`, a: `**4.5% minimum + 2.5% stress capital buffer + 3.0% GSIB surcharge = 10.0%; BofA ran ~10.9% at 3Q26 (verify current).**
+- **SCB:** BofA sits at the 2.5% floor; the Fed kept existing SCBs in place in early 2026
+- **GSIB surcharge:** the higher of Method 1 (~1.5% for BofA) and Method 2 (~3.0%, which penalizes short-term wholesale funding) → 3.0%
+- No countercyclical buffer on top (set at 0% in the US)
+- **Management cushion ~90 bp** (10.9% − 10.0%); the ratio fell ~37 bp in 3Q26 as BofA returned $8.3B
+- **Why keep a cushion:** a ratio inside the buffer zone automatically restricts payouts (dividends, repurchases, discretionary bonuses)
+- **Why not hold far more:** surplus capital inflates the ROTCE denominator and drags returns, so banks keep a modest cushion and return the rest
+- **Talking point:** easing rules (Basel re-proposal, SCB and surcharge changes) → more room for buybacks and M&A` },
+  { id: 'cap-h004', t: 'cap', q: `What changed in US bank capital and accounting rules in 2025–26?`, a: `**The direction is easing: lower capital requirements, faster deal approvals and a fix to a CECL quirk (verify each before citing).**
+- **Basel III endgame re-proposal (Mar 19, 2026):** combined with the GSIB-surcharge and SCB changes, CET1 requirements for Category I–II banks fall ~5%; a separate proposal ends the AOCI opt-out for Category III–IV banks, with a five-year transition; comments closed June 18, 2026, so check for a final rule
+- **eSLR recalibration:** BofA's all-in SLR requirement dropped to 3.75% from January 1, 2026
+- **Stress capital buffers:** the Fed left current SCBs in place (February 2026) while revisiting the stress-test framework
+- **CECL double count fixed:** ASU 2025-08 (Nov 2025) ends the day-one provision on acquired seasoned loans, effective for fiscal years starting after Dec 15, 2026
+- **Merger approvals:** far quicker than in 2021–24
+- **So what:** more excess capital for buybacks, lending and M&A, and smaller TBV hits in bank deals` },
+  { id: 'cap-h005', t: 'cap', q: `How much CET1 are the big US banks running (3Q26), and what's the read-through?`, a: `**Closer to their requirements, with the excess going back to shareholders (3Q26; verify current).**
+- **Bank of America:** CET1 10.9% vs a 10.0% requirement, down ~37 bp q/q after $8.3B of capital return
+- **JPMorgan:** ~13.9%, down from 14.2% in 2Q26; ROE ~17%
+- **Wells Fargo:** ~10.0%, down from 11.0% a year earlier; SLR 5.7%, LCR 122%
+- **Read-through:** with rules easing, the largest banks are letting CET1 drift down toward requirements and paying out the difference through buybacks and dividends
+- **Context:** euro-area significant banks averaged ~16% CET1 in 2Q26 (ECB), so US banks run leaner
+- **How to use it:** quote the ratio, the requirement and the trend, then say what it means for buybacks or M&A capacity` },
+  // ─── bval ───
+  { id: 'bval-h001', t: 'bval', q: `What are FIG's sub-sectors, and which valuation methods fit each? When do EV/EBITDA and a DCF work?`, a: `**Sort FIG by where profit comes from: balance-sheet spread businesses get equity methods; capital-light fee businesses can use corporate methods.**
+## Balance-sheet businesses (value the equity)
+- **Banks:** spread + fees → P/TBV vs ROTCE, P/E, excess-capital DDM
+- **Insurers:** underwriting + income on float → P/BV ex-AOCI vs ROE, P/E; life adds DDM/free cash flow and (mostly outside the US) embedded value
+- **Specialty lenders:** spread on receivables → P/E and P/TBV vs ROE; **BDCs** on P/NAV, dividend yield and NII coverage
+## Fee businesses (corporate methods work)
+- **Traditional asset managers:** P/E, EV/EBITDA, DCF; organic growth and fee rate drive the multiple
+- **Alternative managers:** sum of the parts: FRE at a high multiple, performance fees at a lower one, plus balance-sheet investments
+- **Insurance brokers, payments, fintech, broker-dealers:** EV/EBITDA, P/E, EV/Revenue for high growth
+- **Quick test:** if most income comes off the balance sheet (interest spread, investment income, underwriting), use equity methods; if it comes from fees, transactions or subscriptions, debt is a financing choice again and EV methods work` },
+  { id: 'bval-h002', t: 'bval', q: `Work a simple excess-capital DDM for a bank, and show how it ties to the justified P/TBV formula.`, a: `**Setup ($M):** RWA 10,000; CET1 1,100 (11.0%) vs a 10.0% target → required 1,000, so **100 of excess**; year-1 net income 150; NI and RWA grow 4%; cost of equity 11%.
+
+1. **Distributable capital** = NI − increase in required CET1 (+ the starting excess in year 1)
+2. Yr 1: 150 − 40 + 100 = 210 → PV 189.2; Yr 2: 156.0 − 41.6 = 114.4 → PV 92.8
+3. Yrs 3–5: ~119.0, ~123.7, ~128.7 → PVs 87.0, 81.5, 76.4 (sum of yrs 1–5 ≈ 526.9)
+4. **Terminal value:** yr-6 distribution ≈ 128.7 × 1.04 ≈ 133.8 ÷ (11% − 4%) ≈ 1,912 → PV ≈ 1,134.6
+5. **Equity value** ≈ 526.9 + 1,134.6 ≈ **1,661.5**, about 1.51x the starting 1,100 of tangible equity
+
+- ~68% of the value is terminal → always show sensitivities to cost of equity and growth
+## Tie-out to P/TBV
+- Year-1 earnings over the capital the bank must hold: 150 ÷ 1,000 = 15% ROTCE
+- Justified P/TBV = (15% − 4%) ÷ (11% − 4%) ≈ 1.571x → ~1,571 on the 1,000 of required capital
+- Add the PV of the 100 of excess paid out in year 1 (≈ 90) → ≈ **1,661**: justified P/TBV is just a DDM in compact form`, adv: true },
+  { id: 'bval-h003', t: 'bval', q: `Work through a bank deal: TBV dilution, EPS accretion and earnback.`, a: `**Setup:** buyer earns $500M on 200M shares at $30 (12.0x EPS, 1.5x TBV of $4.0B = $20.00/share). Target earns $100M, has $1.0B of TBV, $250M of non-interest expense and $8.0B of core deposits. Terms: 100% stock at 1.6x target TBV = $1.6B. Assume $600M of goodwill + CDI (fair-value marks offset), $60M of after-tax one-time charges, cost saves equal to 35% of the target's expense base, $10M of pre-tax CDI amortization and a 21% tax rate.
+
+1. New shares = 1,600 ÷ 30 ≈ 53.3M → 253.3M pro forma
+2. Pro forma TBV = 4,000 + 1,600 − 600 − 60 = 4,940 → TBVPS ≈ $19.50 vs $20.00 → **−2.5%**
+3. Pro forma NI = 500 + 100 + 69.1 (87.5 of saves × 0.79) − 7.9 (CDI amortization after tax) = 661.2 → EPS ≈ $2.61 vs $2.50 → **+4.4%**
+4. Tangible EPS adds back CDI amortization: 669.1 ÷ 253.3 ≈ $2.64 → ~$0.14/yr uplift
+5. Simple earnback ≈ 0.50 ÷ 0.14 ≈ **3.5 years**, a bit beyond the ~3-year comfort zone
+
+- **Price paid:** 1.6x TBV, 16.0x P/E (1,600 ÷ 100), core deposit premium (1,600 − 1,000) ÷ 8,000 = **7.5%**
+- **Why dilutive:** paid 1.6x the target's TBV using stock worth only 1.5x its own TBV, plus deal charges`, adv: true },
+  { id: 'bval-h004', t: 'bval', q: `Where does US bank M&A stand heading into 2026? Give numbers and deals.`, a: `**The busiest stretch in years, powered by faster approvals and stronger bank stocks (verify current).**
+- **2025:** roughly 176–181 announced US bank deals, ~45% more than 2024; the largest was Fifth Third–Comerica (~$10.9B, Oct 2025)
+- **1Q26:** 33 deals worth ~$15.7B, the biggest first quarter by value since 2019 (excluding Capital One–Discover)
+- **Santander–Webster (~$12.2B, 1Q26):** the biggest US bank acquisition since 2021 (BMO–Bank of the West); a foreign bank buying US scale
+- **Prosperity–Stellar (~$2.0B, 1Q26):** a serial Texas acquirer adding scale
+- **Valuations:** $10–100B banks went into 2026 at ~11x 2026E EPS and ~1.6x TBV
+- **Why now:** quicker regulatory approvals, firmer share prices to use as currency, and a sense the window may close when the political cycle turns
+- **Active buyers:** Huntington, PNC and other regionals` },
+  // ─── ins ───
+  { id: 'ins-h001', t: 'ins', q: `How is modeling and valuing an insurer different from a bank?`, a: `**Both are valued on equity, but an insurer's model runs off premiums, not off the balance sheet.**
+## What's shared
+- Equity value only (no EV/EBITDA), cost of equity rather than WACC, dividend discount models
+- P/E and book-value multiples read against ROE; regulators limit capital and payouts
+## What's different
+- **Driver:** a bank model starts with loans and deposits; an insurer's starts with premiums written and earned, then losses, expenses and investment income on the float
+- **Revenue mix:** premiums make non-interest revenue the bulk of an insurer's top line
+- **Accounting:** statutory accounting (more conservative, closer to cash) runs alongside GAAP and sets capital and dividend capacity
+- **Capital:** RBC ratio = total adjusted capital ÷ a formula-based risk charge, instead of CET1 ÷ RWA
+- **Valuation extras:** book value is usually taken ex-AOCI; life insurers add embedded value (especially outside the US)` },
+  { id: 'ins-h002', t: 'ins', q: `Walk a P&C premium through the statements: $100 written, $40 earned, 10% commissions, 25% tax. Then show a full year of the policy's economics.`, a: `## Statement walk (ignore claims; tax paid in cash)
+- Commissions are paid in cash on written premium (10% × 100 = 10), but only the earned share is expensed (10% × 40 = 4); the other 6 is capitalized as **DAC**
+- **IS:** earned premium +40, commissions −4 → pre-tax +36 → NI +27
+- **CFS:** NI 27 + rise in unearned premium reserve 60 − rise in DAC 6 → **cash +81**
+- **BS:** cash +81, DAC +6 → assets +87; UPR +60, equity +27 → +87
+- Sanity check: collected 100, paid 10 of commission and 9 of tax → 81
+## A full year on a $100 policy
+- At writing: cash +100 and UPR +100, no revenue yet; premium is earned evenly over 12 months
+- Losses 65 + loss adjustment expense 5 → 70% loss ratio, carried as loss reserves until paid
+- Underwriting expenses 25 → 25% expense ratio
+- Combined ratio 95% → **$5 of underwriting profit**, plus investment income on the float until claims are paid` },
+  { id: 'ins-h003', t: 'ins', q: `How do you build an embedded value for a life insurer, and what are P/EV and VNB?`, a: `**Embedded value = adjusted net asset value + present value of future profits from policies already in force.**
+1. **Adjusted NAV:** mark assets and liabilities to market and take the difference
+2. **Freeze the book:** assume no new sales, so every future cash flow comes from today's policies
+3. **Project revenue:** premiums net of lapses (cancellations) plus investment income on the backing assets
+4. **Subtract** cash claims, commissions and operating costs; apply tax; adjust for capital the block must hold or can release
+5. **Discount** after-tax profits at the cost of equity until the block runs off, then add to adjusted NAV
+
+- **Related metrics:** price ÷ EV (P/EV), return on EV (ROEV), and value of new business (VNB): the value created by the year's new sales
+- Mostly used by European and Asian insurers; US investors lean on P/BV ex-AOCI, P/E and free cash flow
+- **Other life metrics:** investment spread (new-money and portfolio yield vs crediting rate), persistency, mortality and morbidity vs pricing` },
+  { id: 'ins-h004', t: 'ins', q: `What are the main insurance segments, and how do P&C and life insurers compare?`, a: `**All insurers take premiums up front and pay claims later, but the segments run very different businesses.**
+## Segments
+- **P&C:** auto, home, commercial lines; profit = underwriting margin + float income; risks: cats, social inflation, reserves, the pricing cycle
+- **Life & annuity:** life policies, annuities, group benefits; profit = investment spread + mortality/morbidity margins + fees; risks: rates, credit, longevity, lapses, guarantees
+- **Reinsurers:** insure insurers (treaty or facultative, quota share or excess of loss) and give cedents capital relief; tail and counterparty risk
+- **Brokers:** asset-light intermediaries (Marsh, Aon, Gallagher, WTW) earning commissions and fees; valued on EV/EBITDA
+## P&C vs life
+- **Policy length:** ~1–3 years vs 20–30+ years
+- **Model:** P&C is a flow business won on underwriting; life is a spread business that lives on investment returns and rates
+- **Balance sheet:** life is more complex (e.g., separate accounts for policyholder funds)
+- **Valuation:** both on P/E, P/BV and DDMs; life adds embedded value, P/EV and ROEV` },
+  { id: 'ins-h005', t: 'ins', q: `Where is the US P&C market in 2025–26? Cover the combined ratio, cat load, pricing and capital.`, a: `**Very profitable and flush with capital, which is why property pricing is softening (verify current).**
+- **Combined ratio:** 92.9% in 2025 (96.6% in 2024), the best in over a decade, ~$63B of underwriting profit; 92.7% in 1H26 vs 96.5% a year earlier
+- **Cat load:** cat losses are quoted in combined-ratio points; the January 2025 Los Angeles wildfires alone added ~14.5 points to the industry's 1Q25 ratio
+- **Premiums:** net written ~$976B in 2025 (+5%), with growth slowing to ~2% in 1H26
+- **Pricing (Marsh, 2Q26):** US commercial property −13%, casualty +7% (+11% excluding workers' comp) → soft property, firm casualty on social inflation
+- **Capital:** policyholders' surplus ~$1.3T → premium-to-surplus (NWP ÷ surplus, a P&C leverage gauge) ~0.8x, far below the ~3x level regulators flag
+- **So what:** excess capital and fat margins push rates down; adverse casualty reserve trends are the risk to watch` },
+  { id: 'ins-h006', t: 'ins', q: `Beyond the RBC ratio, how do you assess an insurer's capital?`, a: `**Regulators, rating agencies and the holding company each test capital differently, and the tightest one binds.**
+- **What NAIC RBC charges (life):** C-1 asset/credit, C-2 insurance, C-3 interest-rate and market, C-4 business risk, with a covariance adjustment; for P&C the big charges are reserve, premium and asset risk
+- **Acronym traps:** in RBC, ACL = authorized control level (not a bank's allowance) and company action level = 2 × ACL, so 400% of ACL = 200% of CAL; NII here means net investment income
+- **Benchmarks:** large public life insurers target ~400%+ of ACL; the NAIC industry aggregate (885% at YE25, median ~1,016%) isn't comparable
+- **Rating agencies** (AM Best's BCAR, S&P, Moody's) often bind before regulators, because ratings drive sales
+- **P&C leverage:** written premium and loss reserves each measured against surplus (premium-to-surplus gets flagged above ~3x)
+- **Outside the US:** Solvency II ratio = own funds ÷ SCR (≥100%); Bermuda's BSCR matters for reinsurers and sidecars
+- **Holdco:** debt-to-capital ~20–30%, fixed-charge coverage, 1–2 years of debt service and dividends in cash
+- **Don't overshoot:** surplus capital dilutes ROE, just as at banks` },
+  { id: 'ins-h007', t: 'ins', q: `Why do life insurers do big reinsurance and block deals, and how are they structured? Use Lincoln–Fortitude Re.`, a: `**To free statutory capital, de-risk legacy blocks and lift free cash flow, even at a GAAP earnings cost.**
+## Structures
+- **Coinsurance:** a pro-rata slice of the risk moves to the reinsurer, together with the matching reserves and assets
+- **Modified coinsurance (modco) / funds withheld:** similar risk transfer, but the assets stay on the ceding insurer's balance sheet
+- **Yearly renewable term (YRT):** transfers mortality risk only
+- **Block deals:** offload old books of business, e.g., long-term care, variable annuities or secondary-guarantee UL, by sale or reinsurance
+- **Sidecars, captives, cat bonds:** bring outside capital to specific risks
+## Case: Lincoln–Fortitude Re (2023)
+- Ceded ~$28B of in-force statutory reserves (UL with secondary guarantees, MoneyGuard and fixed annuities) through coinsurance; Lincoln kept policy administration
+- Expected to add ~15 RBC points at close (from 375–385% at 3Q23 toward 400–410% at YE23) and raise ongoing free cash flow, while diluting GAAP earnings
+- **Lesson:** for a capital-constrained life insurer, statutory capital and cash beat GAAP EPS` },
+  { id: 'ins-h008', t: 'ins', q: `What insurance deals and trends should you know going into 2026?`, a: `**Megadeals in life and retirement, private capital buying in, and insurers owning asset managers (verify current).**
+- **Volume:** ~$29.6B across 191 insurance deals from Dec 2025 to May 2026 (PwC), led by megadeals
+- **Corebridge–Equitable (~$22B, Mar 2026):** combines two retirement/life/wealth franchises (~$1.5T of AUM/AUA) → scale in annuities and retirement
+- **Private capital in life & annuity:** Aquarian–Brighthouse, plus big asset-intensive reinsurance deals (RGA–Equitable)
+- **Insurers owning origination:** Sun Life bought out the last 49% of Crescent for C$829M, a ~$50B private-credit manager (Mar 2026)
+- **Specialty P&C consolidation:** the announced Zurich–Beazley combination
+- **Partnerships short of ownership:** Sixth Street–Northwestern Mutual ($13B, 2025) and AIG–CVC (up to $3.5B)
+- **Theme to voice:** long-dated insurance liabilities need private-credit assets, and alternative managers want permanent capital` },
+  // ─── am ───
+  { id: 'am-h001', t: 'am', q: `Why is asset management consolidating, and why are traditional managers buying alternatives?`, a: `**Fee pressure on one side, a richer profit pool in alternatives on the other.**
+- **Fee compression:** money keeps shifting to cheap passive products, and many active managers suffer net outflows
+- **Rising fixed costs:** technology, data and distribution reward scale
+- **Not all AUM is equal:** by one industry estimate, alternatives are ~18% of AUM but ~57% of revenue → higher, stickier fees
+- **The response:** acquire scale to cut costs, and buy alternatives or private-credit capabilities (to defend fee rates)
+- **Examples (verify current):**
+  - Victory Capital–First Eagle (Aug 2026, ~$7.0B): scale plus a $41B CLO and alternative-credit platform
+  - Nuveen–Schroders (Feb 2026, ~£9.9B): ~$2.5T combined AUM, incl. ~$414B in private markets
+  - Private-credit roll-ups: Brookfield taking the rest of Oaktree, Franklin Templeton–Apera, Sun Life–Crescent
+- **Activity:** ~156 asset and wealth manager deals worth ~$113B in 2025 (McKinsey)
+- **The catch:** the assets can walk out the door, so talent retention and client consents decide whether a deal works` },
+  { id: 'am-h002', t: 'am', q: `How do RIA aggregators create value, and who is driving wealth consolidation?`, a: `**They roll up independent advisory firms and make the combined platform worth more than the pieces.**
+- **Buy:** stakes in independent RIAs, usually with private-equity backing
+- **Improve:** centralize compliance, technology and back office; give founders a succession path; recruit advisors onto the platform
+- **Multiple arbitrage:** buy small firms at lower EBITDA multiples than the scaled platform commands, then add organic growth on top
+- **Who's buying:** of 120 RIA transactions in 1H26 (Fidelity data), 89% had PE-backed buyers; deal count fell ~9% y/y while assets acquired rose ~88% → bigger targets (verify current)
+- **Risks:** advisor and client retention, integration, leverage at PE-owned platforms, rising prices as buyers compete
+- **Valuation:** EV/EBITDA, driven by organic growth, margins and retention` },
+  { id: 'am-h003', t: 'am', q: `What matters in an asset-management acquisition, and why do client consents decide deals?`, a: `**The assets are people and client relationships, so retention and consents decide the outcome.**
+## Rationale
+- Scale (platform, operations, distribution), new capabilities (alternatives, private credit, ETFs, international), distribution access (wealth, retirement, insurance general accounts), permanent capital
+## Risks
+- Portfolio-manager and client departures, culture clashes, product overlap, revenue dis-synergies when clients cap their exposure to any one manager
+## Structures and metrics
+- Deal forms: earnouts, retention pools and rollover equity to keep people; minority GP stakes or full take-privates
+- P/E, EV/EBITDA, EV/FRE for alternatives; EV/AUM only as a rough check because fee rates and margins vary so much
+## Why consents matter
+- **Advisers Act:** advisory agreements need client consent to be assigned, and a change of control is treated as an assignment
+- **Investment Company Act:** a US mutual fund's advisory contract ends automatically on assignment → the fund's board and shareholders must approve a new one
+- So client consents become a standard closing condition (Janus Henderson's take-private needed them)` },
+  { id: 'am-h004', t: 'am', q: `Pitch the Janus Henderson take-private.`, a: `**A contested take-private where the investment teams' support decided the winner (verify current).**
+- **Deal:** Trian and General Catalyst signed on Dec 21, 2025 to buy Janus Henderson (JHG) at $49/share (~$7.4B equity value), with QIA, Lunate and Sun Hung Kai in the investor group
+- **Contest:** Victory Capital floated a rival proposal of nearly $9B; investment teams overseeing most of JHG's assets opposed it, and Victory withdrew
+- **Close:** June 30, 2026 at $52/share; JHG delisted
+- **Thesis:** invest in growth, AI and distribution away from public-market pressure
+- **Banks involved:** committed debt from JPMorgan, Citi, BofA, Jefferies, MUFG, SMBC, UBS and Morgan Stanley; Goldman Sachs was the special committee's advisor; Jefferies and Citi represented the buyers
+- **Lesson:** an asset manager's value walks around on two legs; without team backing and client consents, a bigger headline bid can still lose
+- **Interview angle:** at Citi or BofA, mention the firm's financing or advisory role` },
+  { id: 'am-h005', t: 'am', q: `What is the Victory Capital–First Eagle deal, and why does it matter?`, a: `**One deal that delivers both scale and an alternatives arm (announced Aug 26, 2026; verify current).**
+- **Consideration:** ~$7.0B = ~$4.4B cash + ~$2.0B of new Victory stock + $575M of assumed 7.25% notes due 2032
+- **Scale:** ~$222B of First Eagle AUM → ~$571B pro forma
+- **Capability:** First Eagle's ~$41B CLO and alternative-credit business becomes Victory's alternatives platform
+- **Integration model:** First Eagle keeps its brand and investment independence on Victory's shared operating and distribution platform → cost saves without losing the investment teams
+- **Timing:** expected to close by the end of 1Q27
+- **Advisors:** PJT (lead) and RBC for Victory; UBS for First Eagle
+- **Context:** Victory had earlier made a rival bid for Janus Henderson; this is a serial consolidator finding another route to scale` },
+  { id: 'am-h006', t: 'am', q: `What was the LPL–Commonwealth deal, and what does it teach about wealth M&A economics?`, a: `**In wealth management you're buying advisors who can leave, so retention is the deal (verify current).**
+- **Deal:** LPL paid ~$2.7B in cash for Commonwealth (~3,000 advisors, ~$285–305B of assets); announced Mar 2025, closed Aug 1, 2025
+- **Target:** ~90% advisor retention, with full asset conversion expected by 4Q26
+- **Recruiting war:** rivals reportedly offered more than 100% of an advisor's trailing-12-month compensation; LPL reportedly paid retention bonuses worth ~10–50 bps of assets; trackers counted ~650 advisor departures in 2025
+- **Platform economics:** revenue = advisory fees + commissions + product fees + net interest on swept client cash; independent broker-dealers pay most of it out to advisors (LPL's payout runs in the high-80s %)
+- **Lesson:** model retention scenarios, not just the purchase price; every departing advisor takes revenue along` },
+  // ─── fin ───
+  { id: 'fin-h001', t: 'fin', q: `Listed vs non-traded BDCs: how do they differ, and how did BDCs hold up in the 2026 private-credit stress?`, a: `**Same kind of loans, different liquidity: listed BDCs trade on an exchange, non-traded BDCs redeem at NAV but ration redemptions.**
+## Structure
+- Both are regulated closed-end vehicles that make mostly senior secured, floating-rate loans to mid-sized private companies; they distribute ≥90% of taxable income and must keep 150% asset coverage (at most ~2.0x debt/equity; most run ~1.0–1.25x)
+- **Listed:** daily liquidity at the market price, so shares can sit well below NAV in stress
+- **Non-traded (perpetual):** subscribe and redeem at NAV, but redemptions are usually capped at ~5% of NAV per quarter
+## The 2026 stress (verify current)
+- 1Q26 redemption requests at non-traded BDCs averaged ~12.3% of NAV, ~2.4x what was paid out; most funds held the 5% cap, a few raised it with sponsor support (BCRED paid 7.9%)
+- Listed BDCs averaged ~0.85x price-to-NAV in late April 2026
+- Top-20 listed BDCs: ~2.1% average non-accruals; PIK ~8.1% of income
+- Pain concentrated in corporate direct lending; asset-based finance held up better` },
+  { id: 'fin-h002', t: 'fin', q: `Why are banks lending to nonbank lenders, and what's the evidence?`, a: `**Banks are financing the lenders that took share from them: partner rather than compete head-on.**
+- **Evidence:** the FDIC reported bank loans up 6.8% y/y in 2Q26, with growth led by loans to nondepository financial institutions (NDFIs) and loans to purchase or carry securities (verify current)
+- **How:** subscription lines to private-credit funds, warehouse lines to consumer and mortgage lenders, asset-based facilities and back leverage
+- **Why banks like it:** senior, secured, diversified exposure that sits ahead of the fund's equity, plus fee and deposit relationships with large asset managers
+- **Why nonbanks need it:** without insured deposits, bank leverage is how they fund growth and lift returns
+- **Risks:** opacity and interconnectedness, concentration in a few sponsors, correlated losses if private credit turns
+- **Interview hook:** it's the clearest sign that banks, private credit and insurers are converging` },
   // ─── mkt ───
   { id: 'mkt-g001', t: 'mkt', q: `Explain the difference between a bond's coupon rate, its current yield and its yield to maturity.`, a: `**The coupon is fixed cash interest on par; current yield is that coupon over today's price; YTM is your full annualized return if you buy now and hold to maturity.**
 - **Coupon rate:** annual interest ÷ par, set at issuance. 6% on $1,000 par = $60 a year.
@@ -46,6 +311,14 @@ export default [
 5. **Your view:** what it all means for deal flow over the next 12 months, plus one key risk.
 - Refresh every number the week of the interview (verify current); precise figures beat vague adjectives.
 - Take a position, but acknowledge the other side.` },
+  { id: 'mkt-h001', t: 'mkt', q: `What do the latest FDIC numbers say about the US banking industry (2Q26)?`, a: `**Healthy and improving: steady margins, higher profits, better credit (FDIC, 2Q26; verify current).**
+- **NIM ~3.3%** (3.32%, up 1 bp q/q) and **ROA ~1.4%** (1.37%)
+- **Net income ~$90B** for the quarter, up ~12% q/q
+- **Loans +1.8% q/q, +6.8% y/y**, with growth led by loans to nondepository financial institutions (NDFIs) and margin-type lending against securities
+- **Domestic deposits +0.8% q/q**, the eighth quarterly increase in a row
+- **Credit:** delinquencies, nonaccruals and net charge-offs all declined
+- ~4,240 insured institutions, 47 on the problem-bank list; Deposit Insurance Fund reserve ratio ~1.48%
+- **So what:** banks are growing by financing private-credit and specialty lenders rather than fighting them, and improving credit plus stable margins support earnings and capital return` },
   // ─── acc ───
   { id: 'acc-g001', t: 'acc', q: `How do you calculate EBIT and EBITDA for a public company from its filings?`, a: `**Start from reported operating income, strip out one-offs to get EBIT, then add D&A from the cash flow statement to get EBITDA.**
 1. **EBIT:** take operating income from the income statement.
@@ -386,6 +659,19 @@ export default [
 - Shows what a financial buyer can pay vs. a strategic with synergies; often sets a floor in a sale; screens LBO candidates.
 
 **FIG angle:** relevant for sponsor-owned targets such as insurance brokers, wealth managers and payments firms; rarely for banks.` },
+  // ─── wmt ───
+  { id: 'wmt-h001', t: 'wmt', q: `How is a FIG group organized (take Bank of America), and what do FIG bankers actually work on?`, a: `**FIG is split by sub-sector; at BofA that means four teams (verify current).**
+## Bank of America's FIG teams
+- **BCM:** banks and other depositories
+- **INS:** insurance carriers and brokers
+- **WAM:** wealth and asset management
+- **Specialty Finance:** nonbank lenders, BDCs, mortgage and consumer finance
+- Payments and fintech sit in BofA's **Technology** group, not FIG; coverage maps vary by firm (fintech or exchanges may live inside FIG elsewhere), so check each firm's setup
+## The work
+- **M&A:** bank mergers, insurer and block deals, asset-manager consolidation, RIA roll-ups, take-privates (e.g., Janus Henderson, 2026)
+- **Capital raising:** common and preferred equity, holdco senior and subordinated debt; for insurers, surplus notes and reinsurance-backed capital
+- **Capital management:** reinsurance and block trades, repositioning securities portfolios, buyback and dividend strategy
+- **Strategic advice:** crossing the $10B / $100B / $250B thresholds, moving into wealth, payments or private credit, activist defense` },
   // ─── fit ───
   { id: 'fit-a001', t: 'fit', q: `What should you have ready before any fit or behavioral interview, in person or on recorded video?`, a: `**Four assets, drafted in writing and rehearsed aloud: your story, three stories, strengths and weaknesses, and answers to likely objections.**
 1. **Your story** ("walk me through your resume"): a short outline (~100–150 words) plus a full spoken version (~200–300 words, about 90 seconds).

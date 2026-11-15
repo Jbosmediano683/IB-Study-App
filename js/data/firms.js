@@ -47,12 +47,12 @@ export const FIRMS = [
 - **Leadership:** 2025 senior appointments put CEO succession in focus (verify).
 
 ## Why it matters in FIG
-- Balance sheet and funding capacity (acquisition financing, DCM, leveraged finance) plus deep corporate and commercial banking relationships that feed IB; FIG coverage spans depositories, insurance, asset/wealth managers and fintech.
+- Balance sheet and funding capacity (acquisition financing, DCM, leveraged finance) plus deep corporate and commercial banking relationships that feed IB. FIG runs four teams — banks/depositories (BCM), insurance (INS), wealth & asset management (WAM) and specialty finance; payments and fintech are covered by the Technology group (verify current).
 `, angles: `
 ## Why this firm — talking points
 - **Balance sheet + platform:** can lead financings and back acquisitions — integrated across commercial banking, IB and markets.
 - **Insight into bank economics:** BofA's own scale in deposits, consumer lending, cards and wealth gives FIG bankers real-world expertise to share with bank clients.
-- **Breadth of FIG coverage** across depositories, insurance, asset/wealth management and fintech, with a strong debt capital markets franchise for FI issuers.
+- **Breadth of FIG coverage** across banks, insurance, wealth & asset management and specialty finance (fintech sits with Technology), with a strong debt capital markets franchise for FI issuers.
 - **Make it personal:** cite specific conversations and people.
 
 ## Likely FIG talking points

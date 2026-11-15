@@ -1,6 +1,7 @@
 // Cheat sheets (quick reference pages)
 export const SHEETS = [
-  { id: 'bank-val-60', title: 'Bank valuation in 60 seconds', sub: 'The answer, the formulas, the follow-ups', body: `## The 60-second answer
+  { id: 'bank-val-60', title: 'Bank valuation in 60 seconds', sub: 'The answer, the formulas, the follow-ups', body: `
+## The 60-second answer
 "Banks are valued on equity, not enterprise value: deposits and borrowings are the raw material of the business and interest expense is an operating cost, so EV, EBITDA and unlevered DCFs don't work. I'd triangulate three ways:"
 1. **Trading comps** – P/E on forward EPS and P/TBV, judged against ROTCE (regress P/TBV on ROTCE across the peer group).
 2. **Precedent transactions** – P/TBV, P/E and core deposit premium paid in comparable bank deals.
@@ -31,9 +32,10 @@ export const SHEETS = [
 - **Why not EV/EBITDA?** Interest is operating; you can't separate operating from financing activities.
 - **Why would a bank trade below TBV?** ROTCE below Ke, credit fears, AOCI/HTM losses, regulatory problems, weak deposit franchise.
 - **How do rates affect value?** NII/NIM path, AOCI (and so TBV), deposit costs and mix, credit quality.
-- **How are insurers different?** P/BV (often ex-AOCI) vs. ROE and P/E; statutory capital limits dividends to the holdco.` },
-
-  { id: 'bank-ma', title: 'Bank M&A checklist', sub: 'What to analyze and the numbers investors care about', body: `## Strategic rationale
+- **How are insurers different?** P/BV (often ex-AOCI) vs. ROE and P/E; statutory capital limits dividends to the holdco.
+` },
+  { id: 'bank-ma', title: 'Bank M&A checklist', sub: 'What to analyze and the numbers investors care about', body: `
+## Strategic rationale
 - Scale: technology spend, compliance, funding costs
 - Market overlap (drives cost saves) or entry into growth markets
 - Deposit franchise: non-interest-bearing mix, deposit costs and betas
@@ -72,9 +74,10 @@ export const SHEETS = [
 - Cash deals consume CET1: goodwill and intangibles are deducted and cash leaves
 - Target holders share the upside, and the exchange can be tax-deferred
 - A fixed exchange ratio is standard
-- All-stock is TBV dilutive if deal P/TBV > acquirer's own P/TBV` },
-
-  { id: 'three-statements', title: '3-statement walk-throughs', sub: 'Classic scenarios, including bank-specific ones', body: `Assume a **25% tax rate** unless told otherwise. Go IS → CFS → BS and confirm the balance sheet balances.
+- All-stock is TBV dilutive if deal P/TBV > acquirer's own P/TBV
+` },
+  { id: 'three-statements', title: '3-statement walk-throughs', sub: 'Classic scenarios, including bank-specific ones', body: `
+Assume a **25% tax rate** unless told otherwise. Go IS → CFS → BS and confirm the balance sheet balances.
 
 ## Depreciation +$10
 - **IS:** EBIT −10, taxes −2.5 → NI −7.5
@@ -127,9 +130,10 @@ export const SHEETS = [
 - **IS:** no impact (unrealized, not a credit loss)
 - **BS:** Securities −10, DTA +2.5 → assets −7.5; AOCI −7.5 → equity −7.5
 - **If HTM instead:** no entry (amortized cost) — but it's disclosed and economically real
-- **Capital:** AOCI flows into CET1 only for banks without the AOCI opt-out (today Category I–II)` },
-
-  { id: 'insurance', title: 'Insurance quick guide', sub: 'P&C vs. life vs. brokers', body: `## Three business models
+- **Capital:** AOCI flows into CET1 only for banks without the AOCI opt-out (today Category I–II)
+` },
+  { id: 'insurance', title: 'Insurance quick guide', sub: 'P&C vs. life vs. brokers', body: `
+## Three business models
 - **P&C carriers** – collect premiums up front, pay claims later; earn underwriting profit plus investment income on float
 - **Life & annuity carriers** – long-duration liabilities; earn spread (portfolio yield − crediting rate), mortality/morbidity margins and fees
 - **Brokers** (Marsh, formerly Marsh McLennan; Aon, WTW, Gallagher, Brown & Brown) – no underwriting risk; earn commissions and fees; capital-light
@@ -162,9 +166,10 @@ export const SHEETS = [
 ## Themes to discuss (verify current)
 - P&C cycle: property pricing softened as capital returned; casualty pressured by social inflation and adverse development
 - Alternative asset managers in life and annuities (Apollo–Athene, KKR–Global Atlantic, Brookfield–American Equity) and Bermuda reinsurance
-- Broker consolidation and PE-backed brokers; cat bonds and other insurance-linked securities` },
-
-  { id: 'asset-mgmt', title: 'Asset managers & alts quick guide', sub: 'Traditional vs. alternative, FRE/DE, valuation', body: `## How they make money
+- Broker consolidation and PE-backed brokers; cat bonds and other insurance-linked securities
+` },
+  { id: 'asset-mgmt', title: 'Asset managers & alts quick guide', sub: 'Traditional vs. alternative, FRE/DE, valuation', body: `
+## How they make money
 - **Traditional** (BlackRock, T. Rowe Price, Invesco, Franklin): management fees = average AUM × fee rate; some performance and distribution fees
 - **Alternatives** (Blackstone, Apollo, KKR, Ares, Carlyle, Blue Owl): management fees on fee-paying AUM (~1–2%, lower for credit and large mandates), carried interest (~20% above a hurdle), transaction fees, balance-sheet gains
 - **Wealth / brokerage** (Schwab, Morgan Stanley Wealth, RIAs): asset-based advisory fees, NII on client cash sweep, trading and other fees
@@ -193,9 +198,10 @@ export const SHEETS = [
 - Traditional managers buying private-markets capabilities (BlackRock: GIP, HPS, Preqin)
 - Private credit growth and bank partnerships (e.g., Citi–Apollo, Wells Fargo–Centerbridge)
 - Retail and 401(k) access to alternatives: evergreen/semi-liquid funds; 2025 executive order on 401(k) plans
-- Insurance balance sheets as permanent capital for alternative managers` },
-
-  { id: 'superday', title: 'Superday game plan', sub: 'Answer structure, stories to have ready, night-before checklist', body: `## How to answer technicals
+- Insurance balance sheets as permanent capital for alternative managers
+` },
+  { id: 'superday', title: 'Superday game plan', sub: 'Answer structure, stories to have ready, night-before checklist', body: `
+## How to answer technicals
 1. Lead with the one-sentence answer, then the structure ("three ways..."), then one detail.
 2. Think out loud on math; round sensibly; state assumptions (tax rate, timing).
 3. If you're stuck, say what you know and reason from first principles — don't guess silently.
@@ -229,9 +235,10 @@ export const SHEETS = [
 ## During the day
 - Bring the same energy to the last interview as the first
 - Jot down every question after each round, then log the misses in the Error Log
-- Send short, specific thank-you notes` },
-
-  { id: 'mental-math', title: 'Mental math & rules of thumb', sub: 'Multiples, IRRs, after-tax shortcuts', body: `## P/E ↔ earnings yield
+- Send short, specific thank-you notes
+` },
+  { id: 'mental-math', title: 'Mental math & rules of thumb', sub: 'Multiples, IRRs, after-tax shortcuts', body: `
+## P/E ↔ earnings yield
 - 8x → 12.5% · 10x → 10.0% · 12.5x → 8.0% · 15x → 6.7% · 20x → 5.0% · 25x → 4.0%
 - All-stock deal: accretive if acquirer P/E > P/E paid for the target
 
@@ -265,5 +272,55 @@ export const SHEETS = [
 
 ## Perpetuity math
 - Value = CF ÷ (r − g): 100 ÷ (10% − 2%) = 1,250
-- 1 ÷ (r − g) as a multiple: 5% → 20x · 6% → 16.7x · 7% → 14.3x · 8% → 12.5x` },
+- 1 ÷ (r − g) as a multiple: 5% → 20x · 6% → 16.7x · 7% → 14.3x · 8% → 12.5x
+` },
+  { id: 'fig-numbers-2026', title: 'FIG numbers to know (Oct 2026)', sub: 'Industry, big-bank, insurance and deal numbers to drop in an interview', body: `
+Figures compiled in October 2026 from your FIG study guide (public filings through 3Q26). They have not been re-checked here — verify before citing, and round when you speak.
+
+## U.S. banking industry (FDIC, 2Q26)
+- **NIM ~3.3%** (3.32%, +1bp q/q) — margins holding up as rates come down
+- **ROA ~1.4%**; industry net income ~$90B for the quarter (+12% q/q)
+- **Loans +1.8% q/q, +6.8% y/y**, led by lending to non-bank financial institutions — the bank / private-credit link
+- **Deposits +0.8% q/q**, the eighth straight quarterly increase
+- **Credit improving:** past-due, nonaccrual and net charge-off rates all fell
+- ~4,240 insured institutions; 47 problem banks; Deposit Insurance Fund reserve ratio ~1.48%
+
+## Big-bank capital & returns (3Q26)
+- **JPMorgan:** CET1 ~13.9% (from 14.2% in 2Q26); ROE ~17%
+- **Bank of America:** CET1 10.9% vs a 10.0% requirement; ROTCE 12.6% reported, ~14.9% adjusted
+- **Wells Fargo:** CET1 ~10.0% (from 11.0% a year earlier); SLR 5.7%; LCR 122%
+- **So what:** the big banks are letting CET1 drift toward their requirements and returning the excess as capital rules ease. Euro-area significant banks averaged ~16% CET1 in 2Q26 (ECB), so U.S. banks run leaner.
+
+## Bank of America 3Q26 scorecard
+- Revenue ~$30.0B (+3%); NII $16.4B (+8%); net interest yield 2.16% (+15bp)
+- Net income $6.9B reported, $8.1B adjusted (excluding a $1.2B one-time charge); diluted EPS $0.91 reported, $1.08 adjusted
+- Efficiency ratio 66% reported, 62% adjusted; net charge-off ratio 0.44%
+- BVPS ~$39.26, TBVPS ~$29.14; $8.3B returned, of which $6.0B buybacks
+- Average deposits ~$2.02T; average loans ~$1.23T (+6%)
+- **So what:** NII growth from fixed-rate asset repricing is the core of the BofA story; know it cold for a BofA interview.
+
+## Insurance
+- **P&C combined ratio 92.9% in 2025** (96.6% in 2024; best in over a decade, ~$63B underwriting gain) and **92.7% in 1H26**
+- P&C net written premium ~$976B in 2025 (+5%); growth slowed to ~2% in 1H26
+- Policyholders' surplus ~$1.3T, so premium-to-surplus is ~0.8x — plenty of capital, which is why pricing is softening
+- Pricing (Marsh, 2Q26): property −13%, casualty +7% (+11% ex-workers' comp) — soft property, firm casualty (social inflation)
+- Life RBC: NAIC aggregate ~885% at YE25 (median ~1,016%) on the authorized-control-level basis; public life insurers target ~400%+ on the company-action-level basis
+
+## Deals to know
+- **Santander–Webster** (1Q26, ~$12.2B): largest U.S. bank deal since 2021; a foreign bank buying U.S. scale
+- **Fifth Third–Comerica** (announced Oct 2025, ~$10.9B; closed Feb 2026): regional scale, crossing $250B
+- **Prosperity–Stellar** (1Q26, ~$2.0B): a serial Texas acquirer adding scale
+- **Corebridge–Equitable** (Mar 2026, ~$22B): scale in retirement and annuities (~$1.5T AUM/AUA)
+- **Janus Henderson take-private** (closed June 2026; $52/share vs $49 at signing): contested; team support and client consents mattered
+- **Victory–First Eagle** (Aug 2026, ~$7.0B): scale plus a ~$41B alternative-credit platform
+- **Nuveen–Schroders** (Feb 2026, ~£9.9B): ~$2.5T combined AUM, private markets push
+- **LPL–Commonwealth** (closed Aug 2025, ~$2.7B cash): in wealth deals, advisor retention is the deal (~90% target)
+- **Sun Life–Crescent** (Mar 2026, C$829M for the remaining 49%): an insurer owning private-credit origination
+
+## Regulation & accounting
+- **Basel III endgame re-proposal** (Mar 19, 2026): roughly 5% lower CET1 requirements for Category I–II banks once combined with the G-SIB and SCB changes; AOCI phased into CET1 for Category III–IV; comments closed June 18 — check whether it has been finalized
+- **SLR:** BofA's all-in requirement fell to ~3.75% after the eSLR recalibration (early 2026)
+- **SCB:** held at current levels in Feb 2026; BofA at the 2.5% floor
+- **ASU 2025-08:** ends the CECL double count on acquired loans; effective for fiscal years beginning after Dec 15, 2026
+` },
 ];

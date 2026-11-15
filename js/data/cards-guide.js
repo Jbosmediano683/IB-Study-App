@@ -602,6 +602,62 @@ export default [
 - Example: PP&E $500 + capex $80 − depreciation $60 = $520.
 
 **FIG angle:** the key bank roll-forward is the allowance: beginning ACL + provision − net charge-offs = ending ACL.` },
+  { id: 'acc-o001', t: 'acc', q: `What's your framework for answering any "walk me through the three statements" question?`, a: `**Same order every time (IS, CFS, BS), and spot which of six patterns the change follows.**
+1. **IS:** what moves, down to net income (state the tax rate).
+2. **CFS:** net income, reverse non-cash items (including deferred taxes), then working capital, investing and financing.
+3. **BS:** the change on each side, and why it still balances.
+## Six patterns
+- **Cash IS items** (revenue, COGS, opex, interest): only net income, cash and equity move. Revenue +$100 at 25% → each +$75.
+- **Working capital:** was something delivered this period? If not, only the BS and CFS move.
+- **Non-cash expenses** (D&A, SBC, write-downs): add back on the CFS; the related asset (equity for SBC) changes. Not tax-deductible → the DTA rises instead of cash.
+- **Leases:** asset and liability rise by the PV at signing, then follow the US GAAP or IFRS expense pattern.
+- **Non-operating items** (capex, debt, stock, dividends): no IS hit; cash and one BS line move, with after-effects (depreciation, interest).
+- **Multi-step:** ask whether to go cumulatively or step by step.
+
+**FIG angle:** for a bank, finish with CET1. Retained earnings changes flow into it, but goodwill or intangible impairments barely move it, since those assets are already deducted.` },
+  { id: 'acc-o002', t: 'acc', q: `How can you tell whether a change in a working capital item affects the income statement?`, a: `**Ask one question: did a product or service change hands this period? If yes, the income statement moves; if only cash is catching up, it doesn't.**
+- **IS changes (a delivery happened):**
+  - AR up: revenue booked, cash not yet collected.
+  - AP or accrued expenses up: an expense incurred but unpaid.
+  - Prepaid expenses down: a service paid for earlier is used up.
+  - Inventory down: goods delivered, so COGS (alongside revenue).
+  - Deferred revenue down: a prepaid order is delivered, so revenue.
+- **Only BS and CFS change (cash moving):** AR down (collection), AP or accruals down (payment), prepaids up, inventory up (purchase), deferred revenue up (cash collected in advance).
+- **Trap:** AP can rise with no expense. Buying $50 of inventory on credit lifts inventory and AP by $50; nothing hits the IS until the goods sell.
+- **Cash direction:** operating asset up = less cash; operating liability up = more cash.` },
+  { id: 'acc-o003', t: 'acc', q: `Walk me through how you would build and link a three-statement projection model.`, a: `**Simplify, project the income statement and operating drivers, build the cash flow statement, then link the balance sheet and check it balances.**
+1. **Simplify:** 5–10 balance sheet lines per side, one net deferred tax line, one equity line.
+2. **Income statement:** revenue, costs and taxes; leave interest for the end.
+3. **Operating items:** AR, inventory, AP and accruals as a % of revenue, COGS or opex.
+4. **Cash flow statement:** net income, add back D&A, SBC and deferred taxes, change in each working capital line, then capex and financing.
+5. **Link:** ending cash feeds the balance sheet. Assets = prior balance − the CFS line (capex is negative, so it raises PP&E); liabilities and equity = prior balance + the CFS line. Each change appears once.
+6. **Check it balances, then add interest** on cash and debt.
+- **Rough map:** CFO ↔ operating current items, CFI ↔ long-term assets, CFF ↔ debt and equity (but DTLs and SBC move through CFO).
+
+**FIG angle:** a bank model starts from the balance sheet: grow loans and deposits, derive net interest income from average balances × yields, then size dividends and buybacks to the CET1 target.` },
+  { id: 'acc-o004', t: 'acc', q: `An IFRS company's cash flow statement starts from "cash generated from operations." How do you make it, and its FCF, comparable with US peers?`, a: `**Rebuild it in US format starting from net income, and make sure CFO bears every interest, tax and lease cost before you subtract capex.**
+- **Restart at net income:** use the note reconciling cash generated from operations to operating profit; keep its non-cash items (D&A, impairments) and working capital changes.
+- **Reclassify:** move dividends paid into financing. If interest paid sits in financing, pull it into CFO so FCF is after interest, as under US GAAP.
+- **Cash definition:** treat money-market deposits and restricted cash as part of cash rather than as flows.
+- **Book vs. cash gaps:** when interest or taxes paid differ from the income statement, put the tax gap in deferred taxes and the rest in an "other" line.
+- **Leases (IFRS 16):** depreciation on the right-of-use asset is added back in CFO while lease principal sits in financing, so CFO looks too high. Remove that add-back (or subtract lease principal) before taking CFO − capex.
+- Strip unusual non-cash add-backs beyond D&A and deferred taxes.`, adv: true },
+  { id: 'acc-o005', t: 'acc', q: `What are the components of shareholders' equity, and does any of them change when the share price moves?`, a: `**Five pieces, all recorded at historical amounts, so none moves with today's share price.**
+- **Common stock:** par value × shares issued. 1,000 shares with $1 par → $1,000.
+- **APIC (additional paid-in capital):** (issue price − par) × shares issued. Sold at $10 → ($10 − $1) × 1,000 = $9,000. SBC also builds APIC.
+- **Retained earnings:** cumulative net income to common minus dividends.
+- **Treasury stock:** a negative balance at the price paid for buybacks; it stays at that cost if the stock later rises or falls.
+- **AOCI:** gains and losses that bypass net income, such as FX translation, cash-flow hedges, pension items and unrealized gains or losses on available-for-sale debt securities.
+- Models usually show one common equity line, since the split rarely matters for valuation.
+
+**FIG angle:** AOCI matters for banks. When rates jumped in 2022, unrealized losses on AFS bonds cut book and tangible book value. The largest US banks must count AOCI in CET1, while many smaller banks have opted out.` },
+  { id: 'acc-o006', t: 'acc', q: `How would you project the change in working capital, and why doesn't the historical CFS figure match balance sheet changes?`, a: `**Continue any clear pattern; otherwise tie it to the change in revenue, and trust the reported CFS numbers for history.**
+- **Projection:** take the historical change in WC as a % of the change in revenue and hold it near that average (often within 0–10%). Example: revenue grows $200 and the WC drag runs at 5% → −$10 of cash flow.
+- **Item by item:** for more detail, drive AR from DSO, inventory from DIO and AP from DPO.
+- **Sign check:** a growing retailer usually uses cash (inventory comes first); a growing subscription business usually generates it (deferred revenue).
+- **Why history doesn't tie:** acquisitions and divestitures add or remove balances with no working capital line on the CFS, FX moves foreign balances, and companies regroup lines or change accounting policies.
+- So use the CFS figures for history rather than re-deriving them from the balance sheet.
+- **Materiality:** usually small next to revenue, so don't over-engineer it; it matters more for retailers, subscription software and contractors.`, adv: true },
   // ─── ev ───
   { id: 'ev-g001', t: 'ev', q: `For forward multiples (e.g., EV / next-year EBITDA), do you use today's EV or a projected future EV?`, a: `**Always today's equity value or EV; only the denominator looks forward.**
 - Today's price already reflects the market's view of both past results and future prospects; a forward multiple simply shows what investors pay now for next year's earnings.
@@ -798,6 +854,72 @@ export default [
 - **DTAs:** subtract only the NOL component, a non-operating asset an acquirer may be able to use; the rest are operating timing differences. Haircut it by the valuation allowance as a share of gross DTAs.
   - Example: NOL-related DTA $40, allowance equal to 25% of gross DTAs → subtract $40 × 75% = $30.
 - **Working capital:** no adjustment; operating working capital is part of both net assets and net operating assets. Exception: M&A price adjustments when a target delivers more or less working capital than normal.` },
+  { id: 'ev-p001', t: 'ev', q: `A company sells $100 of product on credit with no related costs, then collects the cash later. How do equity value and EV change after each step (25% tax), and what general rule does this show?`, a: `**Step 1: equity value +$75, EV +$100. After collection: equity value still +$75, EV back to unchanged.**
+
+## Step 1: the credit sale
+- Revenue +$100, no costs → pre-tax income +$100 → net income +$75.
+- Accounts receivable (an operating asset) +$100; cash −$25 for the tax.
+- Common equity +$75 → equity value +$75. Net operating assets +$100 → EV +$100.
+
+## Step 2: collection
+- AR −$100, cash +$100; nothing hits the income statement.
+- Cumulative: cash +$75, common equity +$75 → equity value +$75; AR is back to where it started → EV unchanged.
+
+## The general rule
+- **Working capital swings** (AR, inventory, payables) move EV only until the cash cycle completes.
+- **Long-term operating assets** (PP&E) change EV for good when paid for with cash, debt or stock.
+- **Pure financing moves** never change EV; equity value moves only when common equity does.
+- Hence EV multiples ignore capital structure, while P/E doesn't.` },
+  { id: 'ev-p002', t: 'ev', q: `A company decides a past acquisition is worth $100 less and books a goodwill impairment. How do equity value and EV change (25% tax)?`, a: `**Equity value −$75, EV −$100.**
+- Pre-tax income −$100 → net income −$75 (assuming a tax benefit and ignoring book vs. cash tax differences).
+- Cash flow statement: −$75 + $100 non-cash add-back → cash +$25.
+- Balance sheet: goodwill −$100, cash +$25 → assets −$75; common equity −$75.
+- **Equity value −$75:** common equity fell by $75.
+- **EV −$100:** goodwill represents businesses the company still runs, so it's an operating asset; net operating assets fall $100.
+- Bridge check: −$75 of equity value, less $25 more cash subtracted = −$100.
+- Same pattern as a PP&E write-down: losing operating assets hits EV in full. (If the impairment isn't tax-deductible, as is common, net income and equity value fall the full $100.)
+
+**FIG angle:** goodwill is already deducted from tangible book value and CET1, so a bank's goodwill impairment cuts book value and EPS but leaves TBV and CET1 largely intact.` },
+  { id: 'ev-p003', t: 'ev', q: `What are free cash flow, levered FCF and unlevered FCF? What does each tell you, and which valuation figure does each pair with?`, a: `**All three measure cash generation; they differ in how they treat interest and debt flows, so they pair with different numerators.**
+- **FCF = cash flow from operations − capex.** After interest and taxes, before any debt or equity flows. Answers: how much debt can it repay, or how much must it borrow? Used in credit and financing analysis. Pairs with equity value.
+- **Levered FCF = FCF + new borrowing − debt repayments.** What's left for common shareholders after debt flows (some definitions deduct only mandatory repayments). Used in levered DCFs and LBO models. Pairs with equity value.
+- **Unlevered FCF = EBIT × (1 − t) + D&A and other recurring non-cash items ± change in working capital − capex.** Pre-interest cash for all investors; the basis of the standard DCF. Pairs with EV.
+- Example: CFO $150, capex $60 → FCF $90; borrow $20 and repay $50 → levered FCF $60.
+
+## Clean-ups
+- Drop the stock-based compensation add-back; treat it as a real cost.
+- If you deduct the full lease cost, pair UFCF with EV excluding lease liabilities.
+- Rarely used for comps multiples: too many company-specific lines and judgment calls.` },
+  { id: 'ev-p004', t: 'ev', q: `What is EBITDA-AL (EBITDA after leases), how does it differ from EBITDAR, and which EV does each pair with?`, a: `**EBITDA-AL deducts every lease cost; EBITDAR deducts none. Each pairs with the EV whose lease treatment matches.**
+- **EBITDA-AL = EBITDA − lease depreciation − lease interest.**
+  - IFRS: subtract these for all leases. US GAAP: only for finance leases, since operating lease rent already sits above EBITDA.
+  - Pairs with EV excluding lease liabilities: the lease cost has been paid, so the lease claim stays out of the numerator.
+  - Popular with European telecom operators.
+- **EBITDAR = EBITDA + all rent and lease costs.** Pairs with EV including all lease liabilities. Under IFRS it's close to plain EBITDA, because little rent is left above EBITDA.
+- **Example (IFRS):** EBITDA $100, lease depreciation $15, lease interest $5 → EBITDA-AL $80. EV excluding leases $700, lease liabilities $100.
+  - TEV / EBITDA = $800 / $100 = 8.0x; TEV / EBITDA-AL = $700 / $80 = 8.75x.
+- In practice, many bankers adjust as little as possible: keep reported EBITDA, match the lease treatment in EV, and use EBITDAR only for mixed US GAAP/IFRS or own-vs-lease peer sets.`, adv: true },
+  { id: 'ev-p005', t: 'ev', q: `Should the EV bridge use book or market values? Why might a company’s debt be worth more than its face value?`, a: `**Use market or fair values where you can; the gap is biggest for equity, then debt and preferred.**
+- **Equity value:** always current share price × diluted shares; book equity can be far from market value.
+- **Close to book anyway:** cash, assets held for sale, lease liabilities, NOLs.
+- **Moderate gaps:** debt and preferred stock; check the fair-value footnote.
+- **Can differ a lot but are rarely disclosed:** financial and equity investments, noncontrolling interests.
+- **Pensions:** dig the unfunded portion out of the footnotes.
+
+## Why debt can trade above face
+- Its coupon is fixed, while market yields and the issuer's credit risk change.
+- Example: $1,000 bond, 8% annual coupon, 10 years left; similar bonds now yield 6%.
+  - Price = $80 × 7.36 (10-year annuity factor at 6%) + $1,000 ÷ 1.06^10 ≈ $589 + $558 = $1,147.
+- Using $1,147 rather than $1,000 raises EV by ~$147; equity value is unchanged.
+
+**FIG angle:** banks felt the reverse in 2022: as rates jumped, fixed-rate bond portfolios fell below book, the unrealized losses behind SVB's 2023 failure. Bank deal PPAs mark securities, loans and the target's debt to fair value.` },
+  { id: 'ev-p006', t: 'ev', q: `How do you treat gray-area items in the EV bridge: provisions, legal or environmental liabilities, earnouts, deferred tax liabilities and industry-specific assets?`, a: `**Add an item only if it's debt-like (a funding source with an interest-like cost or a distinct investor group), and treat every comp the same way.**
+- **Industry-specific assets** (e.g., a streamer's content library): operating, so no adjustment.
+- **Provisions and "other liabilities":** read the footnote. Add any borrowings or unfunded pensions hidden inside; leave out timing items and estimated future expenses.
+- **Legal, restructuring and environmental liabilities:** usually left out. They're future cash outflows, but they carry no interest or required return and the claimants aren't investors. A case exists only for a huge liability that will need outside funding.
+- **Earnouts** (contingent payments for past acquisitions): either add a probability-weighted amount or treat them as operating; both are defensible if applied consistently.
+- **Deferred tax liabilities:** excluded. They come from operations, their reversal timing is uncertain, and no company raises capital through them.
+- **Goodwill and acquired intangibles:** operating, no adjustment.`, adv: true },
   // ─── val ───
   { id: 'val-g001', t: 'val', q: `Why do bankers use a DCF, and why is it split into an explicit forecast period and a terminal period?`, a: `**A company is worth the present value of its future cash flows; the two-stage split lets assumptions change over time before settling into a steady state.**
 - A single perpetuity formula, cash flow ÷ (discount rate − growth), only works if growth and risk never change, which is unrealistic for most companies.
@@ -1193,6 +1315,103 @@ export default [
 3. Discount that price and the interim dividends at the cost of equity, and compare with today's price.
 - Example: year 3 price $60 and $2 of dividends a year at a 10% cost of equity → $45.08 + $4.97 ≈ $50.05 today.
 - Adds little beyond comps, but helps a company test changes to its capital structure or dividend policy.` },
+  { id: 'val-q001', t: 'val', q: `Should you add back stock-based compensation when calculating unlevered FCF for a DCF? Which non-cash charges do you add back?`, a: `**Add back D&A (and sometimes deferred taxes), but generally not SBC: it's paid in shares, and dilution is a real cost.**
+- **D&A:** recurring and genuinely non-cash; its cash cost already shows up as capex.
+- **Deferred taxes:** add back if you want cash taxes rather than book taxes.
+- **Gains, losses, impairments, write-downs:** one-offs, so they shouldn't appear in projected years at all.
+- **SBC:** recurring, but every grant hands part of the company to employees. Pay your bakery's manager with a 2% stake each year instead of salary: no cash leaves, yet after five years you own only 90% of the bakery.
+- Adding SBC back books the benefit (no cash out) while ignoring the cost (a smaller slice for existing holders).
+- If you do add it back, stay consistent: include the future shares it creates in the diluted share count.` },
+  { id: 'val-q002', t: 'val', q: `How would you project revenue, capex and costs for a capital-intensive commodity producer such as a steelmaker?`, a: `**Build revenue from physical capacity and price, then tie capex to that capacity.**
+## Revenue
+- Shipments = capacity × utilization; revenue = shipments × price per ton.
+- Example: 12M tons × 85% = 10.2M tons × $900 ≈ $9.2B.
+- Commodity prices swing but revert, so fade today's price and utilization toward long-run averages.
+## Capex
+- **Maintenance capex** keeps existing capacity running: forecast it per ton (e.g., $25 × 12M tons = $300M).
+- **Growth capex** buys new capacity: a $2.4B mill adding 3M tons implies ~$800 per new ton, which then feeds revenue.
+## Costs
+- COGS (scrap, ore, energy) is mostly variable: a % of revenue.
+- Opex, mostly salaries, behaves as fixed: link it to headcount and capacity.
+- Order: revenue, capex, costs, then taxes, working capital and D&A → UFCF. Short on time? Use growth rates and margins.
+
+**FIG angle:** a bank's equivalent build is balance-sheet driven: earning assets × yield, with regulatory capital rather than capex limiting growth.` },
+  { id: 'val-q003', t: 'val', q: `Peer median unlevered beta is 0.80. Your company has $800 of debt and $2,000 of equity (market values), a 25% tax rate and a 6% pre-tax cost of debt; Rf 4%, ERP 5.5% (illustrative). What's WACC at current weights and at a 20/80 target?`, a: `**Relever the peer beta for each capital structure, run CAPM, then weight the after-tax costs.**
+## Current structure (D/E = 800 / 2,000 = 0.40)
+- Levered beta = 0.80 × (1 + 0.40 × 0.75) = 1.04
+- Ke = 4.0% + 1.04 × 5.5% = 9.72%
+- Weights: equity 2,000 / 2,800 = 71.4%; debt 28.6%
+- WACC = 9.72% × 71.4% + 6% × (1 − 25%) × 28.6% ≈ 6.94% + 1.29% ≈ 8.2%
+## Target 20/80 (D/E = 0.25)
+- Levered beta = 0.80 × (1 + 0.25 × 0.75) = 0.95
+- Ke = 4.0% + 0.95 × 5.5% ≈ 9.2%
+- WACC ≈ 9.2% × 80% + 4.5% × 20% ≈ 8.3% (Kd held at 6%)
+## Takeaways
+- Less debt cuts beta and Ke but shifts weight to pricier equity, so WACC barely moves.
+- Taxes matter: a 1.00 beta at D/E 0.5 unlevers to 1.00 / 1.375 ≈ 0.73, so debt explains ~27% of the risk, not 33%.
+- Show a range: peer beta at current and target weights, plus the company's own historical beta.` },
+  { id: 'val-q004', t: 'val', q: `When do you use scenarios versus sensitivity tables in a DCF, which inputs do you sensitize, and how do you read the result?`, a: `**Scenarios move correlated drivers together; sensitivity tables flex inputs that move independently. Use both, then judge any gap against the margin of error.**
+- **Scenarios (downside, base, upside):** for one environment that pushes many drivers the same way; in a recession, volumes, prices and margins tend to fall together.
+- **Sensitivity tables:** for inputs that don't move together; your discount rate might be too high while your terminal growth is also too high.
+- **Always sensitize** discount rate vs terminal growth or exit multiple, since they drive most of the value.
+- **Then** the few operating drivers that matter (e.g., commodity price, utilization, gross margin); skip lines too small to move value.
+## Reading the output
+- Compare the implied range with the stock's recent trading range, not one day's price.
+- A 5–15% gap is within modeling error: call it roughly fair value. Investors usually want a 50%+ mispricing before acting.` },
+  { id: 'val-q005', t: 'val', q: `How many comparable companies do you want, how do you set size and geography screens, and what if your company is too niche to have direct peers?`, a: `**Aim for roughly 5–10 peers: enough to dilute outliers, few enough to stay comparable.** Twenty or more stops being comparable; one or two lets a single odd result skew everything.
+- **Size:** keep revenue within an order of magnitude, then tighten. A $4B-revenue company might start at $1–20B and narrow to $2–10B.
+- **Geography:** a large home market (US, China, India) can stand alone; a small country needs a regional screen (e.g., the Nordics). Avoid mixing US GAAP and IFRS filers where possible.
+- **Never** screen on both a valuation figure and a financial metric (e.g., EV and EBITDA): it bakes in the multiple.
+- **Niche company:** widen the industry (dental-practice software → vertical software → SaaS), then narrow by size, growth and margins.
+
+**FIG angle:** bank comps are screened by total assets and region (e.g., $20–80B Southeast regionals), then refined by loan mix, deposit franchise and ROTCE.` },
+  { id: 'val-q006', t: 'val', q: `How do you build and read a football field?`, a: `**One chart showing every method's implied value range, so you can see where they overlap and where the stock trades.**
+## Building it
+1. Convert each method's range to implied value per share via the bridge and diluted shares.
+2. Comps and precedents: use 25th–75th percentile multiples; min to max is too wide.
+3. DCF: take the range from a sensitivity table (e.g., discount rate ± 1% vs terminal growth ± 0.5%).
+4. Add the 52-week trading range and analyst targets, plus a line at the current (or offer) price.
+## Reading it
+- Where the bars cluster is your defensible range.
+- Precedents sitting 20–40% above comps is normal: control premium.
+- A price above most bars looks rich; below most bars suggests upside.
+
+**FIG angle:** a bank football field typically shows P/TBV and P/E comps, precedent P/TBV, a DDM and the 52-week range.` },
+  { id: 'val-q007', t: 'val', q: `Your valuation shows a client's stock trades about 15–20% above intrinsic value. What do you tell the board, and how would a PE firm or hedge fund read the same result?`, a: `**Sell-side: probably not the moment to sell, but a good moment to use the stock as currency. Buy-side: most likely a pass.**
+## Advising the company
+- **Sale:** a buyer would have to add a control premium to an already rich price, so few strategic bidders will stretch, and sponsors rarely pay up.
+- **Raise equity:** a richly valued stock means fewer shares for the same proceeds. Raising $500M at $50 a share takes 10M shares; at $40 it would take 12.5M, 25% more dilution.
+- **Stock-funded acquisitions:** paying with expensive shares dilutes existing holders less.
+## Buy-side reads
+- **PE:** a rich entry price makes target IRRs hard to reach; it might still run an LBO model as a check.
+- **Hedge fund:** a possible short, but a 15–20% gap is close to modeling error. Most funds want a 50%+ mispricing plus a catalyst in the next 6–12 months.` },
+  { id: 'val-q008', t: 'val', q: `When is a dividend discount model the right tool, and why does it usually value a typical company below an unlevered DCF?`, a: `**A DDM values equity as the PV of future dividends plus a terminal value (often P/E-based) at the cost of equity: essential where FCF and EV break down, conservative elsewhere.**
+## Where it fits
+- **Essential:** banks and insurers, where debt is an operating input and regulatory capital limits payouts.
+- **Common:** steady payers that distribute most of their cash (REITs, MLPs, utilities).
+- **Poor fit:** tech, healthcare, retail and growth companies that pay little.
+## Why it usually comes out lower
+- Dividends, even with buybacks, usually fall short of the cash the business could distribute; retained cash gets no credit.
+- The cost of equity is at least as high as WACC.
+- Example: debt-free, next year's FCF $100, growing 2%, cost of equity 9%. FCF-based: 100 / 7% ≈ $1,429. Paying out only $60: 60 / 7% ≈ $857.
+
+**FIG angle:** bank DDMs fix the payout problem by modeling distributable capital (earnings above what the target CET1 ratio requires), not the declared dividend.` },
+  { id: 'val-q009', t: 'val', q: `How do you value a company's NOLs, and why might an acquirer get far less from them than the deferred tax asset suggests?`, a: `**NOLs are worth the PV of the taxes they will actually save, which depends on future profits, expiry dates and, after a deal, Section 382.**
+## Standalone
+- DTA ≈ NOLs × tax rate: $1,000 × 25% = $250.
+- If only $150 of pre-tax income a year is expected in the three years before expiry, $450 is used and $550 lapses: valuation allowance ≈ $550 × 25% = $137.50.
+- Better: schedule usage and discount each year's tax saving (usually at WACC).
+## In a US acquisition
+- After an ownership change, Section 382 caps annual NOL use at about the target's equity value × the IRS long-term tax-exempt rate (illustrative ~3.5%; verify current).
+- Example: $2B equity price → ~$70M usable a year. $1B of NOLs at 21% tax → ~$14.7M saved a year for ~14 years, worth ~$110M at 10%, vs a $210M face-value DTA.
+
+**FIG angle:** for banks, DTAs from NOL carryforwards are deducted from CET1, so a troubled target's NOLs add little regulatory capital.` },
+  { id: 'val-q010', t: 'val', q: `Rapid fire: what does a higher equity risk premium, a higher beta, more preferred stock or more equity do to Ke, Kd, WACC and DCF value?`, a: `**Equity-only inputs move only the cost of equity; changes in the capital mix move everything.**
+- **Higher ERP:** Ke ↑, WACC ↑, value ↓. With beta 1.2, a 1-point ERP rise adds 1.2 points to Ke. The cost of debt doesn't change: lenders earn a contractual return unrelated to the equity premium.
+- **Higher beta:** same pattern. At 1.1, investors expect an 11% move when the market moves 10%, so they demand more; the cost of debt is again unchanged.
+- **Contrast, higher risk-free rate:** lifts both Ke and Kd, since every investor's alternatives improve.
+- **More preferred stock:** like debt without the tax shield, so cheaper than equity but pricier than debt. Ke rises; WACC dips, then turns up sooner than it would with debt.
+- **More equity (less debt):** the reverse of adding debt. Ke and Kd fall; WACC moves depending on where the company sits on its U-shaped curve.` },
   // ─── ma ───
   { id: 'ma-g001', t: 'ma', q: `What is a letter of intent (LOI), and how does it differ from an indication of interest (IOI)?`, a: `**An IOI is an early, non-binding price range; an LOI is a later, more detailed offer that usually locks the seller into exclusive talks.**
 - **IOI:** submitted after the first round on the CIM; a valuation range, financing sources, key assumptions and diligence needs. Used to narrow the field.
@@ -1419,6 +1638,74 @@ export default [
 - ÷ (buyer shares + new shares) = implied share price; above the buyer's standalone price means value created.
 - Speculative; most credible when the #2 and #3 players combine to take on #1.
 **FIG angle:** bank mergers of equals lean on contribution analysis across deposits, loans, TBV and earnings to support the exchange ratio.` },
+  { id: 'ma-p001', t: 'ma', q: `Why do companies buy other companies? What is the financial test, and what strategic motives come up most often?`, a: `**A deal should be worth more to the buyer than the price, ideally without hurting EPS; strategy supplies the reason.**
+
+## Financial test
+- **Value above price:** pay $100 for a business the buyer values at $130 on its future cash flows.
+- **Return above the hurdle:** an expected 14% annual return vs. a 10% target.
+- **EPS:** boards watch it, so neutral or accretive deals are preferred, but it screens deals rather than deciding them.
+
+## Common strategic motives
+- **Scale and consolidation:** purchasing power, fewer duplicate functions.
+- **Growth:** new regions, products or faster-growing industries.
+- **Market share** in a fragmented, slow-growth market.
+- **Customers and distribution:** sell more through the target's channels.
+- **Technology, IP and talent** ("acqui-hires").
+- **Defense:** buy a disruptive rival before it grows.
+- **Ego and empire building:** the less flattering reason.
+- Pre-revenue targets get rough math: 50M users at ~$2 each ($100M) that could reach 200M ($400M) can justify a $250M offer.
+
+**FIG angle:** bank deals usually cite cost saves from overlapping branches and back offices, cheaper deposit funding and scale to spread tech and compliance costs. Capital One bought Discover (closed 2025) largely to own a payments network.` },
+  { id: 'ma-p002', t: 'ma', q: `What can a buyer do with a target’s existing debt and cash, and how do fees and minimum cash change the effective price? Work an example.`, a: `**However they're handled, target debt raises the effective price and excess target cash lowers it; fees and a minimum cash requirement add to it.**
+
+## Target debt
+- **Refinance:** by far the most common; new debt repays the old, so the buyer still takes on the obligation.
+- **Assume:** leave it in place; rare, since most debt has change-of-control clauses.
+- **Repay with cash on hand:** rare; it simply adds to what the buyer pays.
+
+## Target cash
+- **Paid out to sellers at close** (typical in cash-free, debt-free private deals): lowers the equity price.
+- **Kept by the buyer** (typical for public targets): offsets what the buyer paid.
+
+## Example
+- Equity price $800, target debt $300, target cash $100 → purchase EV $1,000.
+- The target needs $50 of minimum operating cash, so only $50 of its cash really offsets the price; add $40 of fees.
+- Effective cost = $800 + $300 − $50 + $40 = $1,090.
+- A cash-free, debt-free structure lands at the same economics; only the sources and uses look different.` },
+  { id: 'ma-p003', t: 'ma', q: `If purchase EV is the true price of a deal, why does the purchase equity value drive most of the merger model math?`, a: `**Because the target's existing debt and cash mostly flow straight into the combined income statement, whatever price is paid.**
+- **Refinanced or assumed debt:** combined interest expense ≈ buyer's + target's; the premium doesn't change it (only a modest rate change on refinancing).
+- **Target cash kept by the buyer:** combined interest income = buyer's + target's.
+- **Target cash paid to sellers:** the target's interest income disappears, but the equity price drops by the same cash, so the buyer spends less of its own cash; the two roughly offset.
+- **What's left to fund** is the purchase equity value (plus fees). It sets the cash used, debt raised and shares issued, and so the foregone interest, new interest expense and dilution.
+- Example: $600 equity price plus $200 of target debt refinanced at the same 6%. The target's $12 of interest is in the combined figures either way; the deal effects come from funding the $600.
+- Exception: if the buyer repays the target's debt outright, interest expense falls but more cash or stock is used; it's rare, so models usually ignore it.`, adv: true },
+  { id: 'ma-p004', t: 'ma', q: `In a purchase price allocation, how do write-ups and write-downs of assets and liabilities change goodwill? Work through a building write-up (25% tax).`, a: `**Goodwill is the plug: anything that raises the target's net assets leaves less for goodwill, and anything that lowers them needs more.**
+- **Less goodwill:** asset write-ups, liability write-downs.
+- **More goodwill:** asset write-downs, liability write-ups.
+- **Deferred taxes:** simple models write off the target's existing DTAs and DTLs (in practice they're remeasured) and book a new DTL on write-ups. In a stock purchase the extra book D&A isn't tax-deductible, so cash taxes exceed book taxes until the write-up is fully depreciated.
+
+## Example
+- Building bought for $1,000 with $100 of accumulated depreciation → $900 book value; appraised at $1,200 → $300 write-up.
+- New DTL = $300 × 25% = $75.
+- Goodwill falls by $300 − $75 = $225.
+- The extra $300 of depreciation (e.g., $15 a year over 20 years) lowers pro forma EPS.
+
+**FIG angle:** credit and interest-rate marks on a bank target's loans and securities are asset write-downs, so they raise goodwill (net of the related DTA). Goodwill comes out of TBV and CET1, so bigger marks mean more TBV dilution at close, though the rate mark accretes back into income over time.` },
+  { id: 'ma-p005', t: 'ma', q: `Your valuation says a public target is already overvalued, yet the buyer must pay a premium. How do you judge whether the price is justified? Work an example.`, a: `**Compare the target's standalone value plus the PV of net synergies with the purchase price; synergies must cover both the premium and any overvaluation.**
+- A public target can't be bought below its current share price, whatever your DCF says; holders need a premium (often 15–30%+) to sell.
+- Test: standalone implied equity value + PV of synergies (net of integration costs) ≥ purchase equity value. Comparing EVs works too.
+
+## Example
+- Standalone DCF value $1.8B; PV of net synergies $1.0B; purchase equity value $2.3B.
+- $1.8B + $1.0B = $2.8B → $0.5B cushion.
+- If only half the synergies arrive: $1.8B + $0.5B = $2.3B → breakeven.
+- The discount rate matters: synergies are worth more at the target's lower WACC than at the buyer's, so show both.
+
+## Watch-outs
+- Assumes synergies arrive on schedule, without overruns, and last indefinitely.
+- Cross-check with the deal IRR vs. the buyer's discount rate.
+
+**FIG angle:** bank investors add a second hurdle: TBV dilution should be earned back quickly (commonly ~3 years or less), so a deal can pass this value test and still be punished.` },
   // ─── lbo ───
   { id: 'lbo-g001', t: 'lbo', q: `What is a search fund?`, a: `**A vehicle in which an entrepreneur raises money first to find, then buy and run, one small private company.**
 1. **Search phase:** investors fund the searcher's salary and costs for roughly 1–2 years in exchange for the right (not the obligation) to invest in the eventual deal.

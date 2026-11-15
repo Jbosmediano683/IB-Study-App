@@ -4,6 +4,8 @@
 import core from './data/cards-core.js';
 import banks from './data/cards-banks.js';
 import fig from './data/cards-fig.js';
+import guideCards from './data/cards-guide.js';
+import { GUIDES } from './data/guide.js';
 import { TERMS, TERM_CATS } from './data/terms.js';
 import { FORMULAS, FORMULA_CATS } from './data/formulas.js';
 import { S, isDue, isNew, status, cardState, isStarred } from './store.js';
@@ -25,6 +27,10 @@ export const TOPICS = [
   { id: 'ma', name: 'M&A', short: 'M&A', group: 'core' },
   { id: 'lbo', name: 'LBO', short: 'LBO', group: 'core' },
   { id: 'wmt', name: 'Walk Me Through (stories)', short: 'Stories', group: 'interview' },
+  { id: 'fit', name: 'Fit, Behavioral & Career', short: 'Fit', group: 'interview' },
+  { id: 'prod', name: 'Product Groups (DCM, LevFin, ECM, RX, Sponsors)', short: 'Product groups', group: 'groups' },
+  // Other industries: kept out of Quick 10 and the headline "learned %" (off-target for FIG), still studyable.
+  { id: 'ind', name: 'Other Industry Groups', short: 'Industries', group: 'groups', pool: false },
   { id: 'terms', name: 'Terminology', short: 'Terms', group: 'ref' },
   { id: 'eq', name: 'Equations', short: 'Equations', group: 'ref' },
   { id: 'mine', name: 'My Cards', short: 'My cards', group: 'mine' },
@@ -32,17 +38,29 @@ export const TOPICS = [
 export const GROUPS = [
   { id: 'fig', name: 'FIG technicals' },
   { id: 'core', name: 'Core technicals' },
-  { id: 'interview', name: 'Interview stories' },
+  { id: 'interview', name: 'Interview stories & fit' },
+  { id: 'groups', name: 'Other groups & industries' },
   { id: 'ref', name: 'Drill the reference' },
   { id: 'mine', name: 'Your cards' },
 ];
 const TOPIC_MAP = Object.fromEntries(TOPICS.map((t) => [t.id, t]));
 TOPIC_MAP.starred = { id: 'starred', name: 'Starred', short: 'Starred', group: 'mine' };
+// Study-guide decks: each chapter is a deck of the cards (existing + new) that cover it.
+export { GUIDES };
+const CHAPTERS = new Map();
+for (const g of GUIDES) {
+  TOPIC_MAP[g.id] = { id: g.id, name: g.name, short: g.short || g.name, group: 'guide' };
+  for (const ch of g.chapters) {
+    CHAPTERS.set(ch.id, ch);
+    TOPIC_MAP[ch.id] = { id: ch.id, name: ch.name, short: ch.short || ch.name, group: 'guide', guide: g.id };
+  }
+}
 export const topic = (id) => TOPIC_MAP[id] || { id, name: id, short: id, group: 'core' };
-export const TECH_TOPICS = TOPICS.filter((t) => ['fig', 'core', 'interview'].includes(t.group)).map((t) => t.id);
+export const TECH_TOPICS = TOPICS.filter((t) => ['fig', 'core', 'interview', 'groups'].includes(t.group)).map((t) => t.id);
 export const FIG_TOPICS = TOPICS.filter((t) => t.group === 'fig').map((t) => t.id);
+const OFF_POOL = new Set(TOPICS.filter((t) => t.pool === false).map((t) => t.id));
 
-const BUILTIN = [...core, ...banks, ...fig];
+const BUILTIN = [...core, ...banks, ...fig, ...guideCards];
 
 const TERM_CARDS = TERMS.map((t) => ({
   id: 't:' + t.id,
@@ -75,9 +93,14 @@ export function deckCards(tid) {
   if (tid === 'terms') return TERM_CARDS;
   if (tid === 'eq') return EQ_CARDS;
   if (tid === 'starred') return [...STATIC, ...S.custom].filter((c) => isStarred(c.id));
+  const ch = CHAPTERS.get(tid);
+  if (ch) return ch.ids.map((id) => STATIC_MAP.get(id)).filter((c) => c && visible(c));
+  const g = GUIDES.find((x) => x.id === tid);
+  if (g) return [...new Set(g.chapters.flatMap((c) => c.ids))].map((id) => STATIC_MAP.get(id)).filter((c) => c && visible(c));
   return BUILTIN.filter((c) => c.t === tid && visible(c));
 }
-export const techCards = () => [...BUILTIN.filter(visible), ...S.custom];
+/** The everyday pool (Quick 10, due counts, headline progress): everything except off-target industries. */
+export const techCards = () => [...BUILTIN.filter((c) => visible(c) && !OFF_POOL.has(c.t)), ...S.custom];
 
 export function deckStats(cards) {
   const s = { total: cards.length, new: 0, learning: 0, familiar: 0, mastered: 0, due: 0, got: 0, answered: 0 };
@@ -115,7 +138,7 @@ export function deckQueue(tid, n = S.settings.sessionSize) {
 
 /** Interleave new cards across topics so a quick session is varied. FIG first. */
 function interleavedNew(limit) {
-  const order = ['bank', 'acc', 'bval', 'val', 'cap', 'ev', 'ins', 'ma', 'am', 'fin', 'mkt', 'lbo', 'wmt'];
+  const order = ['bank', 'acc', 'bval', 'val', 'cap', 'ev', 'ins', 'ma', 'am', 'fin', 'mkt', 'lbo', 'wmt', 'fit', 'prod'];
   const pools = order.map((t) => BUILTIN.filter((c) => c.t === t && visible(c) && isNew(c.id)));
   const mine = S.custom.filter((c) => isNew(c.id));
   const out = [...mine];
@@ -164,7 +187,7 @@ export function newCount() {
 
 /** Mock superday: 10 questions in an interview-like mix, weakest/unseen first. */
 export function mockQueue() {
-  const plan = [['wmt', 1], ['acc', 2], ['ev', 1], ['val', 1], ['ma', 1], ['bank', 1], ['bval', 1], ['cap', 1], [['ins', 'am', 'fin', 'mkt'], 1]];
+  const plan = [[['wmt', 'fit'], 1], ['acc', 2], ['ev', 1], ['val', 1], ['ma', 1], ['bank', 1], ['bval', 1], ['cap', 1], [['ins', 'am', 'fin', 'mkt'], 1]];
   const out = [];
   for (const [t, n] of plan) {
     const ts = Array.isArray(t) ? t : [t];

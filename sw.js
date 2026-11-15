@@ -21,6 +21,8 @@ const ASSETS = [
   './js/data/cards-core.js',
   './js/data/cards-banks.js',
   './js/data/cards-fig.js',
+  './js/data/cards-guide.js',
+  './js/data/guide.js',
   './js/data/terms.js',
   './js/data/formulas.js',
   './js/data/sheets.js',

@@ -4,7 +4,7 @@ import { S, save, openErrors } from './store.js';
 import { ACT, INPUT, CHANGE, SUBMIT, setRender, parseHash } from './ui.js';
 import { icon, esc } from './util.js';
 import { homeView } from './views/home.js';
-import { studyView, deckView, sessionView, drillView, summaryView, cardView, addView, sessionKey } from './views/study.js';
+import { studyView, deckView, sessionView, drillView, summaryView, cardView, addView, sessionKey, guidesView, guideView } from './views/study.js';
 import { libraryView, termsView, formulasView, sheetsView, sheetView, dealsView, dealView } from './views/library.js';
 import { firmsView, firmView, marketView } from './views/firms.js';
 import { errorsView, progressView } from './views/track.js';
@@ -24,6 +24,8 @@ const ROUTES = [
   [/^\/home$/, () => homeView()],
   [/^\/study$/, () => studyView()],
   [/^\/deck\/([^/]+)$/, (m) => deckView(decodeURIComponent(m[1]))],
+  [/^\/guides$/, () => guidesView()],
+  [/^\/guide\/([^/]+)$/, (m) => guideView(decodeURIComponent(m[1]))],
   [/^\/session$/, () => sessionView()],
   [/^\/drill$/, () => drillView()],
   [/^\/summary$/, () => summaryView()],

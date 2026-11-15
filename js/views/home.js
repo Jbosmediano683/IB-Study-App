@@ -1,12 +1,14 @@
 // Home: one-tap study launcher + what's next.
 
 import { S, streak, today, openErrors } from '../store.js';
-import { dueCount, newCount, techCards, deckStats, builtinCount, TERMS, FORMULAS } from '../content.js';
+import { dueCount, newCount, techCards, deckStats, deckCards, builtinCount, TERMS, FORMULAS, GUIDES } from '../content.js';
 import { SHEETS } from '../data/sheets.js';
 import { DEALS } from '../data/deals.js';
 import { sectionLabel, meter } from '../ui.js';
 import { icon, fmtDate, pct, plural, relTime } from '../util.js';
 import { nextInterview, countdownCard } from './firms.js';
+
+const guideCardCount = () => new Set(GUIDES.flatMap((g) => deckCards(g.id).map((c) => c.id))).size;
 
 export function homeView() {
   const st = streak();
@@ -56,10 +58,12 @@ export function homeView() {
 
   ${sectionLabel('Study')}
   <div class="tiles">
-    ${tile('#/study', 'cards', 'Flashcards', `${builtinCount} technicals`)}
+    ${tile('#/study', 'cards', 'Flashcards', `${builtinCount} cards`)}
+    ${tile('#/guides', 'book', 'Your guides', GUIDES.length ? `${GUIDES.length} guides · ${guideCardCount()} cards` : 'Guide decks')}
     ${tile('#/terms', 'list', 'Terminology', `${TERMS.length} terms`)}
     ${tile('#/formulas', 'sigma', 'Equations', `${FORMULAS.length} formulas`)}
     ${tile('#/sheets', 'file', 'Cheat sheets', `${SHEETS.length} one-pagers`)}
+    ${tile('#/deck/starred', 'star', 'Starred', 'Your saved cards')}
   </div>
 
   ${sectionLabel('Prep')}

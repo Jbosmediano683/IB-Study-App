@@ -5,6 +5,7 @@ import { TERMS, TERM_CATS, FORMULAS, FORMULA_CATS, cardById, deckCards } from '.
 import core from '../data/cards-core.js';
 import banks from '../data/cards-banks.js';
 import fig from '../data/cards-fig.js';
+import guideCards from '../data/cards-guide.js';
 import { SHEETS } from '../data/sheets.js';
 import { DEALS, DEALS_NOTE } from '../data/deals.js';
 import { ACT, INPUT, go, topbar, sectionLabel, empty, starBtn, hl } from '../ui.js';
@@ -12,7 +13,7 @@ import { esc, md, icon, plain, shuffle, relTime } from '../util.js';
 import { allFirms } from './firms.js';
 import { startCards, cardTopicLabel } from './study.js';
 
-const ALL_CARDS = [...core, ...banks, ...fig];
+const ALL_CARDS = [...core, ...banks, ...fig, ...guideCards];
 const lc = (s) => String(s || '').toLowerCase();
 
 // Pre-built search index (plain text, lower-cased) so typing stays instant.

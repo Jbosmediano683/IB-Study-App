@@ -2,7 +2,7 @@
 // session summaries, single-card view and the "add card / log a miss" form.
 
 import { S, save, gradeCard, GRADE, previewInterval, isStarred, toggleStar, recordDrill, bumpDaily, addCustomCard, logError, removeCustomCard } from '../store.js';
-import { TOPICS, GROUPS, topic, deckCards, deckStats, deckQueue, quickQueue, mockQueue, openErrorQueue, dueQueue, cardById, dueCount, newCount, TECH_TOPICS } from '../content.js';
+import { TOPICS, GROUPS, GUIDES, topic, deckCards, deckStats, deckQueue, quickQueue, mockQueue, openErrorQueue, dueQueue, cardById, dueCount, newCount, TECH_TOPICS } from '../content.js';
 import { DRILL_CATS, nextProblem, checkAnswer, fmtAnswer } from '../drills.js';
 import { ACT, SUBMIT, go, rerender, topbar, toast, segbar, segLegend, statusTag, starBtn, sectionLabel, empty, meter } from '../ui.js';
 import { esc, md, icon, shuffle, fmtClock, fmtDur, plural, pct } from '../util.js';
@@ -36,13 +36,15 @@ ACT.practiceErrors = () =>
   startCards(openErrorQueue().slice(0, 20), { title: 'Error review', source: 'Error review', back: '#/errors', again: { type: 'errors' } });
 ACT.starred = () => startCards(shuffle(deckCards('starred').map((c) => c.id)), { title: 'Starred', again: { type: 'starred' } });
 ACT.drill = (el) => startDrill(el.dataset.cat || 'mix', { onlyType: el.dataset.type || null });
+/** Where a deck's sessions return to: a whole guide → its guide page; anything else → its deck page. */
+const deckHome = (d) => (GUIDES.some((g) => g.id === d) ? `#/guide/${d}` : `#/deck/${d}`);
 ACT.deckStudy = (el) => {
   const d = el.dataset.deck;
-  startCards(deckQueue(d), { title: topic(d).short, back: `#/deck/${d}`, again: { type: 'deck', deck: d } });
+  startCards(deckQueue(d), { title: topic(d).short, back: deckHome(d), again: { type: 'deck', deck: d } });
 };
 ACT.deckCram = (el) => {
   const d = el.dataset.deck;
-  startCards(shuffle(deckCards(d).map((c) => c.id)), { title: `${topic(d).short} · all`, back: `#/deck/${d}`, again: { type: 'cram', deck: d } });
+  startCards(shuffle(deckCards(d).map((c) => c.id)), { title: `${topic(d).short} · all`, back: deckHome(d), again: { type: 'cram', deck: d } });
 };
 ACT.practiceCard = (el) => startCards([el.dataset.id], { title: 'Practice', back: el.dataset.back || '#/study' });
 ACT.star = (el) => {
@@ -104,8 +106,48 @@ export function studyView() {
   ${sectionLabel('Math drills')}
   <div class="chips" id="drills">${DRILL_CATS.map((c) => `<button class="chip" data-act="drill" data-cat="${c.id}">${icon(c.id === 'mix' ? 'shuffle' : 'calc', 16)}${esc(c.name)}</button>`).join('')}</div>
   <div class="mt8">${segLegend()}</div>
+  ${GUIDES.length ? `${sectionLabel('From your uploaded guides')}<div class="card flush">${guideRows()}</div>` : ''}
   ${groups}
   `;
+  return { html, tab: 'study' };
+}
+
+// ---------- study guides (decks built from the guides the user uploaded) ----------
+function guideRows() {
+  return GUIDES.map((g) => {
+    const st = deckStats(deckCards(g.id));
+    return `<a class="row" href="#/guide/${g.id}"><span class="lead">${icon('file', 18)}</span><div class="grow"><div class="title">${esc(g.name)}</div><div class="meta">${g.chapters.length} chapters · ${st.total} cards${st.due ? ` · ${st.due} due` : ''}</div><div class="mt8">${segbar(st)}</div></div>${icon('chevR', 20, 'chev')}</a>`;
+  }).join('');
+}
+export function guidesView() {
+  const html = `${topbar('Your guides', { back: '#/home', sub: 'Every question from the guides you uploaded, as flashcards' })}
+  ${GUIDES.length ? `${segLegend()}<div class="card flush">${guideRows()}</div>` : empty('file', 'No guides yet', 'Guide decks appear here once study guides have been added to the app.')}`;
+  return { html, tab: 'study' };
+}
+export function guideView(id) {
+  const g = GUIDES.find((x) => x.id === id);
+  if (!g) return { redirect: '#/guides' };
+  const st = deckStats(deckCards(g.id));
+  const n = Math.min(S.settings.sessionSize, st.total);
+  const rows = g.chapters
+    .map((ch) => {
+      const s = deckStats(deckCards(ch.id));
+      return `<a class="row" href="#/deck/${ch.id}"><div class="grow"><div class="title">${esc(ch.name)}</div><div class="meta">${s.due ? `${s.due} due · ` : ''}${s.new} new · ${s.total} cards${ch.note ? ` · ${esc(ch.note)}` : ''}</div><div class="mt8">${segbar(s)}</div></div>${icon('chevR', 20, 'chev')}</a>`;
+    })
+    .join('');
+  const html = `
+  ${topbar(g.name, { back: '#/guides', sub: g.sub ? esc(g.sub) : `${st.total} cards` })}
+  <div class="card">
+    <div class="flex between small text-2 mb8"><span><b class="text-2">${pct(st.familiar + st.mastered, st.total)}%</b> learned</span><span>${st.acc === null ? 'No answers yet' : `${st.acc}% accuracy`}</span><span>${st.due} due</span></div>
+    ${segbar(st)}
+    <div class="btn-row mt16">
+      <button class="btn" data-act="deckStudy" data-deck="${g.id}">${icon('bolt', 18)} Study ${n}</button>
+      <button class="btn secondary" data-act="deckCram" data-deck="${g.id}">${icon('shuffle', 18)} All ${st.total}</button>
+    </div>
+    ${g.note ? `<p class="tiny muted mt12">${esc(g.note)}</p>` : ''}
+  </div>
+  ${segLegend()}
+  <div class="card flush">${rows}</div>`;
   return { html, tab: 'study' };
 }
 
@@ -115,11 +157,12 @@ export function deckView(tid) {
   const cards = deckCards(tid);
   const st = deckStats(cards);
   const isMine = tid === 'mine';
+  const back = t.guide ? `#/guide/${t.guide}` : '#/study';
   const right = isMine ? `<a class="icon-btn" href="#/add" aria-label="Add a card">${icon('plus', 24)}</a>` : '';
   if (!cards.length) {
     return {
       html:
-        topbar(t.name, { back: '#/study', right }) +
+        topbar(t.name, { back, right }) +
         (isMine
           ? empty('note', 'No cards yet', 'Add questions you fumbled in interviews or want to drill. They join your spaced-repetition reviews automatically.', `<a class="btn" href="#/add">${icon('plus', 18)} Add a card</a>`)
           : tid === 'starred'
@@ -136,9 +179,9 @@ export function deckView(tid) {
     )
     .join('');
   const html = `
-  ${topbar(t.name, { back: '#/study', right, sub: `${st.total} cards` })}
+  ${topbar(t.name, { back, right, sub: `${st.total} cards${t.guide ? ` · ${esc(topic(t.guide).name)}` : ''}` })}
   <div class="card">
-    <div class="flex between small text-2 mb8"><span><b class="text-2">${pct(st.mastered, st.total)}%</b> mastered</span><span>${st.acc === null ? 'No answers yet' : `${st.acc}% accuracy`}</span><span>${st.due} due</span></div>
+    <div class="flex between small text-2 mb8"><span><b class="text-2">${pct(st.familiar + st.mastered, st.total)}%</b> learned</span><span>${st.acc === null ? 'No answers yet' : `${st.acc}% accuracy`}</span><span>${st.due} due</span></div>
     ${segbar(st)}
     <div class="btn-row mt16">
       <button class="btn" data-act="deckStudy" data-deck="${tid}">${icon('bolt', 18)} Study ${n}</button>

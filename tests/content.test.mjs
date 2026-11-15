@@ -7,6 +7,8 @@ import { fileURLToPath } from 'node:url';
 import core from '../js/data/cards-core.js';
 import banks from '../js/data/cards-banks.js';
 import fig from '../js/data/cards-fig.js';
+import guideCards from '../js/data/cards-guide.js';
+import { GUIDES } from '../js/data/guide.js';
 import { TERMS, TERM_CATS } from '../js/data/terms.js';
 import { FORMULAS, FORMULA_CATS } from '../js/data/formulas.js';
 import { SHEETS } from '../js/data/sheets.js';
@@ -15,8 +17,9 @@ import { FIRMS } from '../js/data/firms.js';
 import { md } from '../js/util.js';
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
-const TOPICS = ['acc', 'ev', 'val', 'ma', 'lbo', 'bank', 'cap', 'bval', 'ins', 'am', 'fin', 'mkt', 'wmt'];
-const CARDS = [...core, ...banks, ...fig];
+const CORE_TOPICS = ['acc', 'ev', 'val', 'ma', 'lbo', 'bank', 'cap', 'bval', 'ins', 'am', 'fin', 'mkt', 'wmt'];
+const TOPICS = [...CORE_TOPICS, 'fit', 'prod', 'ind'];
+const CARDS = [...core, ...banks, ...fig, ...guideCards];
 
 /** Markup lint: balanced bold markers per line, nothing left unrendered. */
 function lintMarkup(text, where) {
@@ -41,8 +44,29 @@ test('flashcards: unique ids, valid topics, non-empty, clean markup', () => {
     assert.ok(c.a && c.a.trim().length > 30, `${c.id}: answer too short`);
     lintMarkup(c.a, c.id);
   }
-  for (const t of TOPICS) assert.ok(CARDS.filter((c) => c.t === t).length >= 8, `topic ${t} has too few cards`);
+  for (const t of CORE_TOPICS) assert.ok(CARDS.filter((c) => c.t === t).length >= 8, `topic ${t} has too few cards`);
   assert.ok(CARDS.length >= 200, `expected 200+ cards, got ${CARDS.length}`);
+});
+
+test('guide cards are clean and guide chapters only reference real cards', () => {
+  for (const c of guideCards) {
+    assert.ok(!/[`]|\$\{/.test(c.q + c.a), `${c.id}: contains a backtick or template syntax`);
+    assert.ok(/^[a-z]+-[a-z]\d{3}$/.test(c.id), `${c.id}: guide card ids look like acc-g001 / fit-a001`);
+  }
+  const known = new Set([...CARDS.map((c) => c.id), ...TERMS.map((t) => 't:' + t.id), ...FORMULAS.map((f) => 'f:' + f.id)]);
+  const guideIds = new Set();
+  for (const g of GUIDES) {
+    assert.ok(g.id && g.name && Array.isArray(g.chapters) && g.chapters.length, `guide ${g.id} incomplete`);
+    assert.ok(!guideIds.has(g.id), `duplicate guide id ${g.id}`);
+    guideIds.add(g.id);
+    for (const ch of g.chapters) {
+      assert.ok(!guideIds.has(ch.id), `duplicate chapter id ${ch.id}`);
+      guideIds.add(ch.id);
+      assert.ok(ch.ids.length > 0, `chapter ${ch.id} is empty`);
+      for (const id of ch.ids) assert.ok(known.has(id), `chapter ${ch.id} references unknown card ${id}`);
+      assert.equal(new Set(ch.ids).size, ch.ids.length, `chapter ${ch.id} lists a card twice`);
+    }
+  }
 });
 
 test('glossary: unique ids, valid categories, plain-text definitions', () => {

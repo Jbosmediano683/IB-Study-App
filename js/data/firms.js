@@ -1,4 +1,4 @@
-// Firm prep — target banks (snapshot facts are as of mid-2026; verify latest)
+// Firm prep — target banks (snapshot facts as of late 2026; verify latest)
 export const FIRMS = [
   { id: 'citi', name: 'Citi', full: 'Citigroup Inc.', hq: 'New York', snapshot: `
 ## At a glance
